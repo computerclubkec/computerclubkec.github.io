@@ -1,4 +1,4 @@
-# Contributing to The Website
+# Contributing to The KEC Computer Club's Website
 
 Thank you for your interest in contributing to this project! Your contributions are essential to making this project successful. This document outlines the steps to contribute effectively.
 
