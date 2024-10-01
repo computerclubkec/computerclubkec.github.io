@@ -16,7 +16,7 @@ Thank you for your interest in contributing to this project! Your contributions 
 
 ## Forking the Repository
 
-1. Navigate to the [repository](https://github.com/your_username/repository_name).
+1. Navigate to the [computerclubkec/computerclubkec.github.io.git](https://github.com/computerclubkec/computerclubkec.github.io.git).
 2. Click the **Fork** button in the top right corner of the page.
 3. This creates a copy of the repository in your GitHub account.
 
@@ -27,13 +27,13 @@ Thank you for your interest in contributing to this project! Your contributions 
 3. Open your terminal (or Git Bash) and run the following command:
 
    ```bash
-   git clone https://github.com/your_username/repository_name.git
+   git clone https://github.com/computerclubkec/computerclubkec.github.io.git
    ```
 
 4. Navigate into the cloned repository:
 
    ```bash
-   cd repository_name
+   cd computerclubkec.github.io.git
    ```
 
 ## Creating a Branch
@@ -97,14 +97,3 @@ Please ensure to read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) to
 - [Markdown Guide](https://www.markdownguide.org/)
 
 Thank you for contributing!
-
-```
-
-### Customization Tips:
-- Replace `[Repository Name]` with the actual name of your repository.
-- Update URLs for your specific GitHub repository.
-- You can add more sections if necessary, such as testing guidelines or specific coding standards.
-- Make sure to link to your project's Code of Conduct if applicable.
-
-Feel free to adjust any part of this template to better fit your project's needs!
-```
