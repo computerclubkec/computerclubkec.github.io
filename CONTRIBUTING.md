@@ -27,7 +27,7 @@ Thank you for your interest in contributing to this project! Your contributions 
 3. Open your terminal (or Git Bash) and run the following command:
 
    ```bash
-   git clone https://github.com/computerclubkec/computerclubkec.github.io.git
+   git clone https://github.com/your-username/computerclubkec.github.io.git
    ```
 
 4. Navigate into the cloned repository:
