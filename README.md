@@ -39,7 +39,7 @@ To work on this project, ensure you have the following installed:
 
 3. Build and run the Docker container:
 
-`docker-compose up`
+`docker compose up`
 
 4. Access the website by navigating to _http://localhost:4000_ in your browser.
 
@@ -61,9 +61,6 @@ Please refer to the [contributing.md](CONTRIBUTING.MD) file for detailed instruc
 
 ### File Conventions
 To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the file-convention.md document for more information.
-
-### License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ### Contact
 For more information or to collaborate, feel free to reach out to us:
