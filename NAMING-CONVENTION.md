@@ -24,7 +24,7 @@ This guide provides essential conventions for naming Git branches and commit mes
 
 
 --- 
-<br>
+
 
 # Git Branch Naming Convention
 
@@ -109,7 +109,7 @@ hotfix/patch-security-vulnerability
 This convention will help maintain an organized and efficient repository for all contributors
 
 ---
-<br>
+
 
 # Commit Message Naming Convention
 
