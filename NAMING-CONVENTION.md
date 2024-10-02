@@ -17,7 +17,7 @@ This guide provides essential conventions for naming Git branches and commit mes
   - [Description](#3-description)
   - [Body (Optional)](#4-body-optional)
   - [Footer (Optional)](#5-footer-optional)
-  - [Using the "!" Symbol](#using-the-symbol)
+  - [Using the "!" Symbol](#using-the--symbol)
   - [Examples of Complete Commit Messages](#examples-of-complete-commit-messages)
   - [Using Commit Messages for Releases](#using-commit-messages-for-releases)
   - [Best Practices](#summary-of-best-practices-1)
