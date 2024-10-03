@@ -30,7 +30,6 @@ linkedin_username: computerclubkec
 facebook_username: computerclubkec
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
@@ -53,3 +52,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Custom colors
+colors:
+  primary: "#3498db"
+  secondary: "#fb8500"
+  accent: "#e74c3c"
+  background: "#ecf0f1"
+  text: "#2c3e50"
