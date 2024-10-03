@@ -30,7 +30,6 @@ linkedin_username: computerclubkec
 facebook_username: computerclubkec
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
