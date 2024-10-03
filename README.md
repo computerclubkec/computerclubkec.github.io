@@ -26,6 +26,7 @@ To work on this project, ensure you have the following installed:
 - [Docker](https://www.docker.com/) (for running the site locally in a container)
 - [Jekyll](https://jekyllrb.com/) (for building and serving the site)
 - [Git](https://git-scm.com/) (for version control)
+- [Tailwind CSS](https://tailwindcss.com/) (for utility-first CSS framework)
 
 ### Running the Project Locally with Docker
 
@@ -61,6 +62,10 @@ Please refer to the [contributing.md](CONTRIBUTING.MD) file for detailed instruc
 
 ### File Conventions
 To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the file-convention.md document for more information.
+
+### Contributors ✨
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 
 ### Contact
 For more information or to collaborate, feel free to reach out to us:
