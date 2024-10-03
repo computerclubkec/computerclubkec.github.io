@@ -61,7 +61,7 @@ If you prefer not to use Docker, you can run Jekyll directly:
 Please refer to the [contributing.md](CONTRIBUTING.MD) file for detailed instructions on how to contribute to this project. It outlines the workflow for making changes, submitting pull requests, and reviewing contributions.
 
 ### File Conventions
-To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the file-convention.md document for more information.
+To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the [NAMING-CONVENTION.md](NAMING-CONVENTION.md) document for more information.
 
 ### Contributors 
 Thanks goes to these wonderful people who have contributed for the project:
