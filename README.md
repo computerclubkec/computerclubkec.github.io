@@ -63,8 +63,9 @@ Please refer to the [contributing.md](CONTRIBUTING.MD) file for detailed instruc
 ### File Conventions
 To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the file-convention.md document for more information.
 
-### Contributors ✨
+### Contributors 
 Thanks goes to these wonderful people who have contributed for the project:
+[![Contributors](https://contrib.rocks/image?repo=computerclubkec/computerclubkec.github.io)](https://github.com/computerclubkec/computerclubkec.github.io/graphs/contributors)
 
 
 ### Contact
