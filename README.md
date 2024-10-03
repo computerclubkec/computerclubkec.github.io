@@ -19,6 +19,9 @@ The **Computer Club of Kantipur Engineering College (KEC)** was founded in 2013 
 
 ## Getting Started
 
+### Website Prototype
+On the basis of [this Figma design](https://www.figma.com/design/dWPncZwMB3Im5qntztKgpe/Computer-Club-Website?node-id=0-1&t=snFpqhd7gHsoBQL7-1), the club website is planned to be developed.
+
 ### Prerequisites
 
 To work on this project, ensure you have the following installed:
