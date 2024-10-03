@@ -1,0 +1,19 @@
+name: Update Contributors
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update contributors
+        uses: jaredpalmer/contributors-img-action@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          readme-path: README.md
