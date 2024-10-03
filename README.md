@@ -64,7 +64,7 @@ Please refer to the [contributing.md](CONTRIBUTING.MD) file for detailed instruc
 To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the file-convention.md document for more information.
 
 ### Contributors ✨
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people who have contributed for the project:
 
 
 ### Contact
