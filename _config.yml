@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: KEC Computer Club 
+title: KEC Computer Club
 email: computerclub@kec.edu.np
 description: >- # this means to ignore newlines until "baseurl:"
   KEC Computer Club, founded in 2013, empowers students to explore ideas and develop skills in the field of computers. Run by tech enthusiasts, the club exposes members to the latest advancements, offering guidance, workshops, and events that foster innovation and confidence. It's a platform for engineering students to implement their ideas and grow in the rapidly evolving tech world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: computerclubkec
-github_username:  computerclubkec
+github_username: computerclubkec
 linkedin_username: computerclubkec
 facebook_username: computerclubkec
 
@@ -52,3 +52,28 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+bg-colors:
+  orange-button: "#FB8500"
+  goldenOrange-button: "#FFB703"
+  darkBlue: "#023047"
+  gray: "#E0E5F5"
+  skyBlue: "#219EBC"
+  lightBlue: "#8ECAE6"
+  mustard: "#D4AC0D"
+  lightYellow: "#F7DC6F"
+  softBlue: "#85C1E9"
+  brightBlue: "#2980B9"
+  navyBlue: "#1A5276"
+  tangerine: "#FD9E26"
+  deepBlue: "#022D72"
+  oceanBlue: "#0061AE"
+
+text-colors:
+  base-black: "#0A0A0B"
+  gray: "#5A5555"
+  darkblue: "#023047"
+  white: "#FFFFFF"
+  base-white: "#FAFAFA"
+  neutral-200: "#CCCBCB"
+  blue: "#3328BF"
