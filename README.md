@@ -65,6 +65,7 @@ To maintain code consistency and best practices, we follow specific conventions 
 
 ### Contributors 
 Thanks goes to these wonderful people who have contributed for the project:
+
 [![Contributors](https://contrib.rocks/image?repo=computerclubkec/computerclubkec.github.io)](https://github.com/computerclubkec/computerclubkec.github.io/graphs/contributors)
 
 
