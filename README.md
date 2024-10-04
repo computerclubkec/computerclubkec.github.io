@@ -76,6 +76,11 @@ Thanks goes to these wonderful people who have contributed for the project:
 For more information or to collaborate, feel free to reach out to us:
 
 **Email:** _computerclub@kec.edu.np_
+
+**Linktree:** [linktr.ee/computerclubkec](https://linktr.ee/computerclubkec)
+
 **Location:** Dhapakhel, Lalitpur
 
 Thank you for contributing to the KEC Computer Club's website!
+
+**KEC Computer Club**
