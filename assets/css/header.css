@@ -10,13 +10,14 @@ body {
 
 .header {
     width: 100%;
+    max-width: 100%;
     height: 97px;
     background-color: #E0E5F5;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
     z-index: 1;
 }
 
@@ -58,8 +59,8 @@ body {
     background-color: #023047;
     color: white;
     border-radius: 8px;
-    padding: 10px 20px; /* Reduced padding */
-    white-space: nowrap; /* Ensure the text doesn't wrap */
+    padding: 10px 20px; 
+    white-space: nowrap; 
     text-align: center;
 }
 
@@ -89,7 +90,6 @@ a.contact-button, a.contact-button:hover {
     display: block;
 }
 
-/* Hamburger menu styling */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -107,81 +107,10 @@ a.contact-button, a.contact-button:hover {
     margin-bottom: 5px;
 }
 
-/* Hide the checkbox itself */
-#menu-toggle {
-display: none;
-}
-
-
-/* Responsive CSS
-@media (max-width: 768px) {
-    .header {
-        justify-content: space-between;
-        padding: 0 10px;
-    }
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #E0E5F5;
-        width: 100%;
-        position: absolute;
-        top: 97px;
-        left: 0;
-    }
-
-    .nav-list {
-        gap: 15px;
-        flex-direction: column;
-    }
-
-    .hamburger {
-        display: flex;
-        cursor: pointer;
-    }
-
-    #menu-toggle:checked + .hamburger + .nav {
-        display: flex;
-    }
-
-    .logo {
-        margin-right: auto;
-    }
-
-    Show the dropdowns on mobile
-    .dropdown-content {
-        position: relative;
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        left: 0;
-    }
-
-    .dropdown.active .dropdown-content {
-        display: flex;
-    }
-
-     Adjusting for mobile, ensuring button and items fit
-     .nav-list {
-        padding: 20px 0;
-    }
-
-    .contact-button {
-        width: 90%; Ensure it fits in mobile view
-    }
-}
-
-Hide the checkbox itself
-#menu-toggle {
-    display: none;
-} */
-
 
 @media (max-width: 900px){
     header{
         padding: 10px 20px;
-        position:relative;
     }
 
     .hamburger {
@@ -204,37 +133,28 @@ Hide the checkbox itself
     }
 
     .nav-list{
-        /* background-color: red; */
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
-        /* justify-content: center; */
         gap:0px;
-        /* height: max-content; */
     }
 
     .nav-list li{
         width: 100%;
-        /* background-color: red; */
         padding: 10px 0px;
     }
 
     .dropdown-content{
        display: none;
        width: 100%;
-       /* gap:0px */
     }
 
     .dropdown-content li{
         width: 100%;
-        /* background-color: green; */
-        /* height: fit-content; */
-        /* min-height: 30px; */
     }
 
     .dropdown-content li a{
         padding: 0px 30px;
-        /* display: inline-block; */
     }
 
     .dropdown:hover .dropdown-content{
@@ -244,8 +164,9 @@ Hide the checkbox itself
         gap:0px;
         position:relative;
         top: 10px;
-        /* background-color: red; */
     }
 }
 
-
+#menu-toggle {
+    display: none;
+}

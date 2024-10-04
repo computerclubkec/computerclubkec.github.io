@@ -8,19 +8,89 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
+
+  {% include header.html %}
+
+<div class="w-full max-w-[1440px] mx-auto px-5 py-8 flex justify-center relative top-[97px]">
+  <div class="w-full max-w-[1180px] flex flex-col items-center gap-6">
+    <h2 class="text-center text-[36px] md:text-[48px] font-bold leading-tight text-[#023047]" style="font-family: 'Montserrat';">
+        {{ page.title }}
+    </h2>
+    
+    <div class="flex flex-col gap-4">
+        <img src="{{ '../assets/images/kec-lite.jpg' | relative_url }}" alt="Description of Image" class="w-full h-auto rounded-t-[24px]">
+        <p class="text-[16px] font-normal leading-6 text-left text-[#000000]" style="font-family: 'Inter';">
+            {{ page.image_description }}
+        </p>
+    </div>
+
+    {% for section in page.sections %}
+      {% if section.type == "structured_topics" %}
+        <div class="w-full flex flex-col gap-4">
+          <h3 class="text-[20px] md:text-[24px] font-bold leading-normal text-left text-[#000000]" style="font-family: 'Inter';">
+            {{ section.heading }}
+          </h3>
+
+          {% if section.starting_paragraph %}
+          <p class="text-[16px] leading-6 text-left text-[#000000] mt-2" style="font-family: 'Inter';">
+            {{ section.starting_paragraph }}
+          </p>
+          {% endif %}
+
+          {% if section.numbered == false %}
+            <p class="w-full text-[16px] leading-6 text-left text-[#000000] mt-2" style="font-family: 'Inter';">
+              {% for content in section.content %}
+                <span class="font-bold">{{ content.bullet_title }}:</span> {{ content.bullet_content }}<br>
+              {% endfor %}
+            </p>
+          {% endif %}
+
+          {% if section.numbered == true %}
+            <ol class="list-decimal text-left text-[16px] leading-6 font-normal pl-5" style="font-family: 'Inter';">
+              {% for content in section.content %}
+                <li>
+                  <span class="font-bold">{{ content.bullet_title }}:</span> {{ content.bullet_content }}
+                </li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+
+          {% if section.ending_paragraph %}
+            <p class="text-[16px] leading-6 text-left text-[#000000] mt-2" style="font-family: 'Inter';">
+              {{ section.ending_paragraph }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if section.type == "bullets" %}
+        <div class="w-full flex flex-col gap-4">
+          <h3 class="text-[20px] md:text-[24px] font-bold leading-normal text-left text-[#000000]" style="font-family: 'Inter';">
+            {{ section.heading }}
+          </h3>
+          <ol class="list-inside text-left text-[16px] leading-6 font-normal pl-5" style="font-family: 'Inter'; list-style-type: decimal;">
+            {% for content in section.content %}
+              <li>{{ content }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+      {% endif %}
+
+      {% if section.type == "paragraph" %}
+        <div class="w-full flex flex-col gap-4">
+          <h3 class="text-[20px] md:text-[24px] font-bold leading-normal text-left text-[#000000]" style="font-family: 'Inter';">
+            {{ section.heading }}
+          </h3>
+          
+          <p class="text-[16px] font-normal leading-6 text-left text-[#000000]" style="font-family: 'Inter';">
+              {{ section.content }}
+          </p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
   
-  <!-- {% include header.html %}
 
-
-  <div>
-    <p>{{ page.title }}</p>
-  </div>
-  <div>
-    <img src="{{ './assets/images/logo.png' | relative_url }}" alt="KEC Logo"> 
-  </div>
-  <main class="container mx-auto my-8">
-    {{ content }}
-  </main>
-  {% include footer.html %} -->
 </body>
 </html>
