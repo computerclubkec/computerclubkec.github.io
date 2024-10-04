@@ -12,7 +12,6 @@ resourcesButton.addEventListener("click", () => {
     dropdownResources.classList.toggle("hidden");
 });
 
-// Close dropdowns when clicking outside
 document.addEventListener("click", (e) => {
     if (
         !eventsButton.contains(e.target) &&
