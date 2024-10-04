@@ -4,6 +4,14 @@
             <img src="{{ './assets/images/computer-club-logo.png' | relative_url }}" alt="Logo">
         </a>
     </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
     <nav class="nav">
         <ul class="nav-list">
             <li><a href="/">Home</a></li>
@@ -11,12 +19,12 @@
             
             <li class="dropdown">
                 <a href="#">Resources</a>
-                <div class="dropdown-content">
-                    <a href="/resource1/">BCT syallabus</a>
-                    <a href="/resource2/">Roadmaps</a>
-                    <a href="/resource2/">Brand assets</a>
-                    <a href="/resource2/">Proposal format</a>
-                </div>
+                <ul class="dropdown-content">
+                    <li><a href="/resource1/">BCT syallabus</a></li>
+                    <li><a href="/resource2/">Roadmaps</a></li>
+                    <li><a href="/resource2/">Brand assets</a></li>
+                    <li><a href="/resource2/">Proposal format</a></li>
+                </ul>
             </li>
           
             <li class="dropdown">
