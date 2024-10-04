@@ -82,3 +82,5 @@ For more information or to collaborate, feel free to reach out to us:
 **Location:** Dhapakhel, Lalitpur
 
 Thank you for contributing to the KEC Computer Club's website!
+
+**KEC Computer Club**
