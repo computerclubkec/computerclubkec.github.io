@@ -1,19 +1,87 @@
-<nav class="bg-gray-800 p-4">
-  <ul class="flex justify-center space-x-4">
-    <li><a href="{{ '/' | relative_url }}" class="text-white">Home</a></li>
-    <li>
-      <a href="{{ '/about/' | relative_url }}" class="text-white">About</a>
-    </li>
-    <li>
-      <a href="{{ '/events/' | relative_url }}" class="text-white">Events</a>
-    </li>
-    <li>
-      <a href="{{ '/resources/' | relative_url }}" class="text-white"
-        >Resources</a
-      >
-    </li>
-    <li>
-      <a href="{{ '/blog/' | relative_url }}" class="text-white">Blog</a>
-    </li>
-  </ul>
+<nav
+    class="flex items-center justify-between bg-slate-200 py-4 px-40 h-[107px]"
+>
+    <div class="flex items-center">
+        <img src="../assets/images/logo.png" alt="logo" class="h-20" />
+    </div>
+
+    <div class="flex items-center">
+        <ul class="flex text-[#5A5555] space-x-12 font-semibold text-xl">
+            <!-- Adjusted spacing -->
+            <li>
+                <a
+                    href="{{ '/' | relative_url }}"
+                    class="mx-4 hover:text-gray-800 py-2 px-6 flex items-center"
+                    >Home</a
+                >
+            </li>
+            <li>
+                <a
+                    href="{{ '/about/' | relative_url }}"
+                    class="mx-4 hover:text-[#023047] py-2 px-6 flex items-center"
+                    >About us</a
+                >
+            </li>
+            <li class="relative flex items-center">
+                <button
+                    id="eventsDropdown"
+                    type="button"
+                    class="flex items-center justify-between focus:outline-none py-2 px-6 hover:text-[#023047]"
+                    aria-expanded="false"
+                >
+                    Events
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 8l4 4 4-4"
+                        />
+                    </svg>
+                </button>
+                <ul
+                    id="dropdownEvents"
+                    class="absolute left-0 hidden mt-2 w-60 bg-white border border-gray-200 z-10 top-full"
+                >
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 font-semibold text-black"
+                            >KEC Lite</a
+                        >
+                    </li>
+                    <li class="border-t border-gray-300">
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 font-semibold text-black"
+                            >AWS ML/AI Bootcamp</a
+                        >
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a
+                    href="{{ '/blog/' | relative_url }}"
+                    class="mx-4 hover:text-[#023047] py-2 px-6 flex items-center"
+                    >Blog</a
+                >
+            </li>
+        </ul>
+        <div>
+            <a
+                href="{{ '/contact/' | relative_url }}"
+                class="bg-[#023047] text-white py-3 px-5 rounded-lg hover:bg-gray-800 ml-6 text-xl flex items-center"
+            >
+                Contact us
+            </a>
+        </div>
+    </div>
 </nav>
+
+<script src="../assets/js/event.dropdown.js" defer></script>
