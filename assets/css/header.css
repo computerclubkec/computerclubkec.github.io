@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    width: 1400px;
+    height: 97px;
+    background-color: #E0E5F5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+}
+
+.nav {
+    width: 1065px;
+    height: 56px;
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5A5555;
+    padding: 16px 20px;
+}
+
+.nav-list a:hover {
+    color: #000;
+}
+
+.contact-button {
+    background-color: #023047;
+    color: white;
+    border-radius: 8px;
+    padding: 16px 20px;
+}
+
+a.contact-button, a.contact-button:hover{
+    color: white
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    top: 45px;
+    left: 0px;
+    list-style: none;
+    min-width: 188px; 
+    height: 60px;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.2s ease,             visibility 0.2s ease; 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 16px 20px;
+    display: block;
+    text-decoration: none;
+    color: #5A5555;
+     white-space: nowrap; 
+    background-color :#f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .header {
+        width: 100%;
+        left: 0;
+        padding: 0 20px;
+    }
+
+    .nav-list {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+}

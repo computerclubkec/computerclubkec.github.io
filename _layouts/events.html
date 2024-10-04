@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="../assets/css/header.css"> 
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  {% include header.html %}
+  <div>
+    <p>{{ page.title }}</p>
+  </div>
+  <div>
+    <img src="{{ './assets/images/logo.png' | relative_url }}" alt="KEC Logo"> 
+  </div>
+  <main class="container mx-auto my-8">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>
