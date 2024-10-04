@@ -1,0 +1,47 @@
+name: Deploy to Vercel
+
+on:
+  pull_request:
+    branches-ignore:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Set up Ruby for Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install system dependencies
+        run: sudo apt-get install -y build-essential libssl-dev libxml2-dev libxslt1-dev zlib1g-dev
+
+      - name: Install Bundler
+        run: gem install bundler -v 2.1.4
+
+      - name: Install Dependencies
+        run: |
+          bundle install --jobs 4
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: vercel --token $VERCEL_TOKEN --scope $VERCEL_ORG_ID --prod --confirm
