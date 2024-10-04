@@ -1,5 +1,5 @@
 <nav
-    class="flex items-center justify-between bg-slate-200 py-4 px-40 h-[107px]"
+    class="flex items-center justify-between bg-[#E0E5F5] py-4 px-40 h-[107px] z-10"
 >
     <div class="flex items-center">
         <img src="../assets/images/logo.png" alt="logo" class="h-20" />
@@ -7,26 +7,27 @@
 
     <div class="flex items-center">
         <ul class="flex text-[#5A5555] space-x-12 font-semibold text-xl">
-            <!-- Adjusted spacing -->
             <li>
                 <a
                     href="{{ '/' | relative_url }}"
-                    class="mx-4 hover:text-gray-800 py-2 px-6 flex items-center"
+                    class="mx-4 hover:text-gray-800 py-2 px-4 flex items-center"
                     >Home</a
                 >
             </li>
             <li>
                 <a
                     href="{{ '/about/' | relative_url }}"
-                    class="mx-4 hover:text-[#023047] py-2 px-6 flex items-center"
+                    class="mx-4 hover:text-[#023047] py-2 px-4 flex items-center"
                     >About us</a
                 >
             </li>
+
+            <!-- Events Dropdown -->
             <li class="relative flex items-center">
                 <button
                     id="eventsDropdown"
                     type="button"
-                    class="flex items-center justify-between focus:outline-none py-2 px-6 hover:text-[#023047]"
+                    class="flex items-center justify-between focus:outline-none py-2 px-8 hover:text-[#023047]"
                     aria-expanded="false"
                 >
                     Events
@@ -47,28 +48,72 @@
                 </button>
                 <ul
                     id="dropdownEvents"
-                    class="absolute left-0 hidden mt-2 w-60 bg-white border border-gray-200 z-10 top-full"
+                    class="absolute left-0 hidden mt-2 w-[208px] bg-[#E0E5F5] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
                 >
-                    <li>
-                        <a
-                            href="#"
-                            class="block px-4 py-2 hover:bg-gray-100 font-semibold text-black"
-                            >KEC Lite</a
-                        >
+                    <li class="rounded-tr-xl hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">Upcoming Events</a>
                     </li>
-                    <li class="border-t border-gray-300">
-                        <a
-                            href="#"
-                            class="block px-4 py-2 hover:bg-gray-100 font-semibold text-black"
-                            >AWS ML/AI Bootcamp</a
-                        >
+
+                    <li class="hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">Past Events</a>
+                    </li>
+
+                    <li class="rounded-bl-xl rounded-br-xl hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">KEC Lite</a>
                     </li>
                 </ul>
             </li>
+
+            <!-- Resources Dropdown -->
+            <li class="relative flex items-center">
+                <button
+                    id="resourcesDropdown"
+                    type="button"
+                    class="flex items-center justify-between focus:outline-none py-2 px-4 hover:text-[#023047]"
+                    aria-expanded="false"
+                >
+                    Resources
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 8l4 4 4-4"
+                        />
+                    </svg>
+                </button>
+                <ul
+                    id="dropdownResources"
+                    class="absolute left-0 hidden mt-2 w-[208px] bg-[#E0E5F5] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+                >
+                    <li class="rounded-tr-xl hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">BCT Syllabus</a>
+                    </li>
+
+                    <li class="hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">Roadmaps</a>
+                    </li>
+
+                    <li class="hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">Brand Assets</a>
+                    </li>
+
+                    <li class="rounded-bl-xl rounded-br-xl hover:bg-gray-100">
+                        <a href="#" class="block px-4 py-3">Proposal Format</a>
+                    </li>
+                </ul>
+            </li>
+
             <li>
                 <a
                     href="{{ '/blog/' | relative_url }}"
-                    class="mx-4 hover:text-[#023047] py-2 px-6 flex items-center"
+                    class="mx-4 hover:text-[#023047] py-2 px-4 flex items-center"
                     >Blog</a
                 >
             </li>
@@ -84,4 +129,4 @@
     </div>
 </nav>
 
-<script src="../assets/js/event.dropdown.js" defer></script>
+<script src="../assets/js/dropdown.js" defer></script>
