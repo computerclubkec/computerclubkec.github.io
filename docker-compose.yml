@@ -1,8 +1,9 @@
 services:
   jekyll:
     build: .
-    command: jekyll serve --watch --force_polling
+    command: jekyll serve --watch --force_polling --disable-disk-cache --livereload
     ports:
       - "4000:4000"
+      - "35729:35729"
     volumes:
       - .:/srv/jekyll
