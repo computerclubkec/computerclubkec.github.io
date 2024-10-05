@@ -34,16 +34,19 @@ To work on this project, ensure you have the following installed:
 ### Running the Project Locally with Docker
 
 1. Clone the repository:
-
-`git clone https://github.com/kec-computer-club/website.git`
+```
+git clone https://github.com/kec-computer-club/website.git
+```
    
 2. Navigate to the project directory:
-
-`cd path_to_your_folder`
+```
+cd path_to_your_folder
+```
 
 3. Build and run the Docker container:
-
-`docker compose up`
+```
+docker compose up
+```
 
 4. Access the website by navigating to _http://localhost:4000_ in your browser.
 
@@ -54,14 +57,14 @@ If you prefer not to use Docker, you can run Jekyll directly:
 1. Install Jekyll and dependencies by following the official [Jekyll installation guide](https://jekyllrb.com/docs/installation/).
 
 2. Serve the website locally:
-
-`jekyll serve`
+```
+jekyll serve
+```
 
 3. Visit the website at _http://localhost:4000_.
 
 ### Contributing
-
-Please refer to the [contributing.md](CONTRIBUTING.md) file for detailed instructions on how to contribute to this project. It outlines the workflow for making changes, submitting pull requests, and reviewing contributions.
+Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed instructions on how to contribute to this project. It outlines the workflow for making changes, submitting pull requests, and reviewing contributions.
 
 ### File Conventions
 To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the [NAMING-CONVENTION.md](NAMING-CONVENTION.md) document for more information.
