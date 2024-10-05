@@ -17,34 +17,50 @@
   <body>
     {% include nav.html %}
 
-  <!-- Club Banner Starts Here -->
-  <section id="club-banner">
-    <div class="relative text-center">
-      <img src="/assets/images/banner.png" alt="KEC Computer Club Banner"
-        class="w-full h-[45vh] sm:h-[50vh] object-cover" />
-      <div class="absolute inset-0 bg-black opacity-55"></div>
-      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-20"
-        style="color: {{site.text-colors.base-white}}">
-        <h2
-          class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-[0_0px_3.5px_rgba(250,250,250,0.6)]">
-          Kantipur Engineering College
-        </h2>
-        <h2
-          class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-[0_0px_3.5px_rgba(250,250,250,0.6)]">
-          Computer Club
-        </h2>
-        <p class="mt-4 sm:mt-6 text-[10px] sm:text-base md:text-lg lg:text-xl">
-          {{page.banner-description}}
-        </p>
-        <a href="/about"
-          class="mt-4 sm:mt-6 focus:outline-none text-white bg-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}]/80 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 dark:focus:ring-yellow-900">
-          Find out more
-        </a>
+    <!-- Club Banner Starts Here -->
+    <section id="club-banner">
+      <div class="relative text-center">
+        <img
+          src="/assets/images/banner.png"
+          alt="KEC Computer Club Banner"
+          class="w-full h-[45vh] sm:h-[50vh] object-cover"
+        />
+        <div class="absolute inset-0 bg-black opacity-55"></div>
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-20"
+          style="color: {{site.text-colors.base-white}}"
+        >
+          <h2
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-[0_0px_3.5px_rgba(250,250,250,0.6)]"
+          >
+            Kantipur Engineering College
+          </h2>
+          <h2
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-[0_0px_3.5px_rgba(250,250,250,0.6)]"
+          >
+            Computer Club
+          </h2>
+          <p
+            class="mt-4 sm:mt-6 text-[10px] sm:text-base md:text-lg lg:text-xl"
+          >
+            {{page.banner-description}}
+          </p>
+          <a
+            href="/about"
+            class="mt-4 sm:mt-6 focus:outline-none text-white bg-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}]/80 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 dark:focus:ring-yellow-900"
+          >
+            Find out more
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Club Banner Ends Here -->
+    </section>
+    <!-- Club Banner Ends Here -->
 
+    <!-- Upcoming Events section starts Here -->
+
+    {% include event.html %}
+
+    <!-- Upcoming Events Section ends Here -->
 
     {% include footer.html %}
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
