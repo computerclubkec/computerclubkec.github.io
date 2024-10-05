@@ -26,8 +26,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: computerclubkec
 github_username: computerclubkec
-linkedin_username: computerclubkec
+linkedin_username: company/computerclubkec
 facebook_username: computerclubkec
+instagram_username: computerclubkec
 
 # Build settings
 plugins:
@@ -68,6 +69,7 @@ bg-colors:
   tangerine: "#FD9E26"
   deepBlue: "#022D72"
   oceanBlue: "#0061AE"
+  baseBlack: "#0A0A0B"
 
 text-colors:
   base-black: "#0A0A0B"
