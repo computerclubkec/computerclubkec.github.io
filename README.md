@@ -34,17 +34,17 @@ To work on this project, ensure you have the following installed:
 ### Running the Project Locally with Docker
 
 1. Clone the repository:
-```
+```bash
 git clone https://github.com/kec-computer-club/website.git
 ```
    
 2. Navigate to the project directory:
-```
+```bash
 cd path_to_your_folder
 ```
 
 3. Build and run the Docker container:
-```
+```bash
 docker compose up
 ```
 
@@ -57,7 +57,7 @@ If you prefer not to use Docker, you can run Jekyll directly:
 1. Install Jekyll and dependencies by following the official [Jekyll installation guide](https://jekyllrb.com/docs/installation/).
 
 2. Serve the website locally:
-```
+```bash
 jekyll serve
 ```
 
