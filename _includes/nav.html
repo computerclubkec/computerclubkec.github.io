@@ -1,23 +1,27 @@
 <nav
-    class="flex items-center justify-between bg-[#E0E5F5] py-4 px-40 h-[107px] z-10"
+    class="flex items-center justify-between bg-[{{ site.bg-colors.gray }}] py-4 px-40 h-[107px] z-10"
 >
     <div class="flex items-center">
         <img src="../assets/images/logo.png" alt="logo" class="h-20" />
     </div>
 
     <div class="flex items-center">
-        <ul class="flex text-[#5A5555] space-x-12 font-semibold text-xl">
+        <ul
+            class="flex font-semibold text-xl text-[{{ site.text-colors.gray }}]"
+        >
             <li>
                 <a
-                    href="{{ '/' | relative_url }}"
-                    class="mx-4 hover:text-gray-800 py-2 px-4 flex items-center"
+                    href="{{ '/'}}"
+                    class="m-2 p-6 flex items-center hover:text-[#023047]"
+                    id="home-page"
                     >Home</a
                 >
             </li>
             <li>
                 <a
-                    href="{{ '/about/' | relative_url }}"
-                    class="mx-4 hover:text-[#023047] py-2 px-4 flex items-center"
+                    href="{{ '/about/''}}"
+                    class="m-2 p-6 flex items-center hover:text-[#023047]"
+                    id="about-page"
                     >About us</a
                 >
             </li>
@@ -27,7 +31,7 @@
                 <button
                     id="eventsDropdown"
                     type="button"
-                    class="flex items-center justify-between focus:outline-none py-2 px-8 hover:text-[#023047]"
+                    class="flex items-center justify-between focus:outline-none p-6 m-2 hover:text-[#023047]"
                     aria-expanded="false"
                 >
                     Events
@@ -48,18 +52,22 @@
                 </button>
                 <ul
                     id="dropdownEvents"
-                    class="absolute left-0 hidden mt-2 w-[208px] bg-[#E0E5F5] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+                    class="absolute left-0 hidden mt-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
                 >
-                    <li class="rounded-tr-xl hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">Upcoming Events</a>
+                    <li class="rounded-tr-xl">
+                        <a href="#" class="block p-4 hover:text-[#023047]"
+                            >Upcoming Events</a
+                        >
                     </li>
 
-                    <li class="hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">Past Events</a>
+                    <li class="hover:text-[#023047]">
+                        <a href="#" class="block p-4">Past Events</a>
                     </li>
 
-                    <li class="rounded-bl-xl rounded-br-xl hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">KEC Lite</a>
+                    <li
+                        class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
+                    >
+                        <a href="#" class="block p-4">KEC Lite</a>
                     </li>
                 </ul>
             </li>
@@ -69,7 +77,7 @@
                 <button
                     id="resourcesDropdown"
                     type="button"
-                    class="flex items-center justify-between focus:outline-none py-2 px-4 hover:text-[#023047]"
+                    class="flex items-center justify-between focus:outline-none p-6 m-2 hover:text-[#023047]"
                     aria-expanded="false"
                 >
                     Resources
@@ -90,38 +98,42 @@
                 </button>
                 <ul
                     id="dropdownResources"
-                    class="absolute left-0 hidden mt-2 w-[208px] bg-[#E0E5F5] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+                    class="absolute left-0 hidden mt-1 w-[208px] bg-[{{site.bg-colors.gray}}] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
                 >
-                    <li class="rounded-tr-xl hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">BCT Syllabus</a>
+                    <li class="rounded-tr-xl hover:text-[#023047]">
+                        <a href="#" class="block p-4">BCT Syllabus</a>
                     </li>
 
-                    <li class="hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">Roadmaps</a>
+                    <li class="hover:text-[#023047]">
+                        <a href="#" class="block p-4">Roadmaps</a>
                     </li>
 
-                    <li class="hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">Brand Assets</a>
+                    <li class="hover:text-[#023047]">
+                        <a href="#" class="block p-4">Brand Assets</a>
                     </li>
 
-                    <li class="rounded-bl-xl rounded-br-xl hover:bg-gray-100">
-                        <a href="#" class="block px-4 py-3">Proposal Format</a>
+                    <li
+                        class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
+                    >
+                        <a href="#" class="block p-4">Proposal Format</a>
                     </li>
                 </ul>
             </li>
 
             <li>
                 <a
-                    href="{{ '/blog/' | relative_url }}"
-                    class="mx-4 hover:text-[#023047] py-2 px-4 flex items-center"
+                    href="{{ '/blog/'}}"
+                    class="m-2 hover:text-[#023047] p-6 flex items-center"
+                    id="blog-page"
                     >Blog</a
                 >
             </li>
         </ul>
         <div>
             <a
-                href="{{ '/contact/' | relative_url }}"
-                class="bg-[#023047] text-white py-3 px-5 rounded-lg hover:bg-gray-800 ml-6 text-xl flex items-center"
+                href="{{ '/contact/'}}"
+                class="bg-[{{site.bg-colors.darkBlue}}] text-white p-4 rounded-lg hover:bg-gray-800 m-2 text-xl flex items-center"
+                id="contact-page"
             >
                 Contact us
             </a>
@@ -130,3 +142,4 @@
 </nav>
 
 <script src="../assets/js/dropdown.js" defer></script>
+<script src="../assets/js/active.page.js" defer></script>
