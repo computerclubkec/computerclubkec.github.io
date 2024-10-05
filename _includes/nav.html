@@ -1,37 +1,40 @@
 <nav
-    class="flex items-center justify-between bg-[{{ site.bg-colors.gray }}] py-4 px-40 h-[107px] z-10"
+    class="flex items-center justify-between bg-[{{ site.bg-colors.gray }}] lg:py-4 px-4 sm:px-6 md:px-8 lg:px-20 xl:px-40 sm:h-20 md:h-28 z-10 py-2"
+    active-page-color="{{site.text-colors.base-black}}"
 >
     <div class="flex items-center">
-        <img src="../assets/images/logo.png" alt="logo" class="h-20" />
+        <img
+            src="../assets/images/logo.png"
+            alt="logo"
+            class="h-12 sm:h-12 md:h-16 lg:h-24"
+        />
     </div>
 
-    <div class="flex items-center">
+    <div class="hidden md:flex items-center relative">
         <ul
-            class="flex font-semibold text-xl text-[{{ site.text-colors.gray }}]"
+            class="flex font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-[{{ site.text-colors.gray }}]"
         >
             <li>
                 <a
-                    href="{{ '/'}}"
-                    class="m-2 p-6 flex items-center hover:text-[#023047]"
-                    id="home-page"
+                    href="{{ '/' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
                     >Home</a
                 >
             </li>
             <li>
                 <a
-                    href="{{ '/about/''}}"
-                    class="m-2 p-6 flex items-center hover:text-[#023047]"
-                    id="about-page"
+                    href="{{ '/about/' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
                     >About us</a
                 >
             </li>
 
             <!-- Events Dropdown -->
-            <li class="relative flex items-center">
+            <li class="relative">
                 <button
                     id="eventsDropdown"
                     type="button"
-                    class="flex items-center justify-between focus:outline-none p-6 m-2 hover:text-[#023047]"
+                    class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
                     aria-expanded="false"
                 >
                     Events
@@ -52,32 +55,30 @@
                 </button>
                 <ul
                     id="dropdownEvents"
-                    class="absolute left-0 hidden mt-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+                    class="absolute left-0 hidden m-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
                 >
                     <li class="rounded-tr-xl">
-                        <a href="#" class="block p-4 hover:text-[#023047]"
+                        <a href="#" class="block p-2 my-4 hover:text-[#023047]"
                             >Upcoming Events</a
                         >
                     </li>
-
                     <li class="hover:text-[#023047]">
-                        <a href="#" class="block p-4">Past Events</a>
+                        <a href="#" class="block p-2 my-4">Past Events</a>
                     </li>
-
                     <li
                         class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
                     >
-                        <a href="#" class="block p-4">KEC Lite</a>
+                        <a href="#" class="block p-2 my-4">KEC Lite</a>
                     </li>
                 </ul>
             </li>
 
             <!-- Resources Dropdown -->
-            <li class="relative flex items-center">
+            <li class="relative">
                 <button
                     id="resourcesDropdown"
                     type="button"
-                    class="flex items-center justify-between focus:outline-none p-6 m-2 hover:text-[#023047]"
+                    class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
                     aria-expanded="false"
                 >
                     Resources
@@ -98,32 +99,29 @@
                 </button>
                 <ul
                     id="dropdownResources"
-                    class="absolute left-0 hidden mt-1 w-[208px] bg-[{{site.bg-colors.gray}}] border border-gray-300 z-10 top-full rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+                    class="absolute left-0 hidden mt-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
                 >
                     <li class="rounded-tr-xl hover:text-[#023047]">
-                        <a href="#" class="block p-4">BCT Syllabus</a>
+                        <a href="#" class="block p-2 my-4">BCT Syllabus</a>
                     </li>
-
                     <li class="hover:text-[#023047]">
-                        <a href="#" class="block p-4">Roadmaps</a>
+                        <a href="#" class="block p-2 my-4">Roadmaps</a>
                     </li>
-
                     <li class="hover:text-[#023047]">
-                        <a href="#" class="block p-4">Brand Assets</a>
+                        <a href="#" class="block p-2 my-4">Brand Assets</a>
                     </li>
-
                     <li
                         class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
                     >
-                        <a href="#" class="block p-4">Proposal Format</a>
+                        <a href="#" class="block p-2 my-4">Proposal Format</a>
                     </li>
                 </ul>
             </li>
 
             <li>
                 <a
-                    href="{{ '/blog/'}}"
-                    class="m-2 hover:text-[#023047] p-6 flex items-center"
+                    href="{{ '/blog/' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
                     id="blog-page"
                     >Blog</a
                 >
@@ -131,15 +129,151 @@
         </ul>
         <div>
             <a
-                href="{{ '/contact/'}}"
-                class="bg-[{{site.bg-colors.darkBlue}}] text-white p-4 rounded-lg hover:bg-gray-800 m-2 text-xl flex items-center"
+                href="{{ '/contact/' }}"
+                class="bg-[{{site.bg-colors.darkBlue}}] text-white p-2 sm:p-3 md:p-4 rounded-lg hover:bg-gray-800 m-2 text-lg sm:text-xl"
                 id="contact-page"
+                >Contact us</a
             >
-                Contact us
-            </a>
         </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+        <button id="mobileMenuButton" class="p-2">
+            <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                />
+            </svg>
+        </button>
     </div>
 </nav>
 
-<script src="../assets/js/dropdown.js" defer></script>
-<script src="../assets/js/active.page.js" defer></script>
+<!-- responsive navbar for smaller screens -->
+<div id="mobileMenu" class="hidden md:hidden">
+    <ul
+        class="flex flex-col font-semibold text-lg sm:text-base border border-[{{site.bg-colors.gray}}] text-[{{ site.text-colors.gray }}]"
+    >
+        <li>
+            <a
+                href="{{ '/' }}"
+                class="m-2 p-4 flex items-center hover:text-[#023047]"
+                >Home</a
+            >
+        </li>
+        <li>
+            <a
+                href="{{ '/about/' }}"
+                class="m-2 p-4 flex items-center hover:text-[#023047]"
+                >About us</a
+            >
+        </li>
+
+        <!-- events dropdown for smaller screens -->
+        <li class="relative">
+            <button
+                id="mobileEventsDropdown"
+                type="button"
+                class="flex items-center justify-between focus:outline-none p-4 m-2 hover:text-[#023047]"
+                aria-expanded="false"
+            >
+                Events
+                <svg
+                    class="w-4 h-4 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 8l4 4 4-4"
+                    />
+                </svg>
+            </button>
+            <ul id="mobileDropdownEvents" class="hidden pl-6 mt-1 text-base">
+                <li class="rounded-tr-xl">
+                    <a href="#" class="block p-4 hover:text-[#023047]"
+                        >Upcoming Events</a
+                    >
+                </li>
+                <li class="hover:text-[#023047]">
+                    <a href="#" class="block p-4">Past Events</a>
+                </li>
+                <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+                    <a href="#" class="block p-4">KEC Lite</a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- resources dropdown for smaller screens -->
+        <li class="relative">
+            <button
+                id="mobileResourcesDropdown"
+                type="button"
+                class="flex items-center justify-between focus:outline-none p-4 m-2 hover:text-[#023047]"
+                aria-expanded="false"
+            >
+                Resources
+                <svg
+                    class="w-4 h-4 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 8l4 4 4-4"
+                    />
+                </svg>
+            </button>
+            <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-sm">
+                <li class="rounded-tr-xl hover:text-[#023047]">
+                    <a href="#" class="block p-4">BCT Syllabus</a>
+                </li>
+                <li class="hover:text-[#023047]">
+                    <a href="#" class="block p-4">Roadmaps</a>
+                </li>
+                <li class="hover:text-[#023047]">
+                    <a href="#" class="block p-4">Brand Assets</a>
+                </li>
+                <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+                    <a href="#" class="block p-4">Proposal Format</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a
+                href="{{ '/blog/' }}"
+                class="m-2 p-4 flex items-center hover:text-[#023047]"
+                >Blog</a
+            >
+        </li>
+        <li>
+            <a
+                href="{{ '/contact/' }}"
+                class="m-2 p-4 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
+                >Contact us</a
+            >
+        </li>
+    </ul>
+</div>
+
+<script src="../assets/js/navbar/dropdown.js" defer></script>
+<script src="../assets/js/navbar/active.page.js" defer></script>
+<script src="../assets/js/navbar/responsive.js" defer></script>
