@@ -35,7 +35,7 @@ To work on this project, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/kec-computer-club/website.git
+git clone https://github.com/computerclubkec/computerclubkec.github.io.git
 ```
    
 2. Navigate to the project directory:
