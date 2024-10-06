@@ -54,6 +54,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+collections:
+  events:
+    output: true
+    permalink: /events/:title
+
 bg-colors:
   orange-button: "#FB8500"
   goldenOrange-button: "#FFB703"
