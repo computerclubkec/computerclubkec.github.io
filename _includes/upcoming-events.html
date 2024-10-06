@@ -24,7 +24,7 @@
         <div class="md:w-2/3 w-full md:pl-6">
           <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
           <p class="text-sm text-gray-400 italic font-semibold">
-            {{ event.date }}
+            {{ event.date | date: "%a, %B %e, %Y" }}
           </p>
 
           <!-- Event Description with Show More/Show Less -->
