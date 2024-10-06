@@ -13,7 +13,7 @@ location: "Kantipur Engineering College"
 registration_link: "#"
 participants: "150+ people registered"
 
-completed: false
+completed: true
 
 tags: ["hackathon", "innovation", "coding"]
 published: true
