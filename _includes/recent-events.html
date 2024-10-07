@@ -2,12 +2,11 @@
   <h2
     class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
   >
-    Upcoming Events
+    Recent Events
   </h2>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
-    {% assign upcoming_events = site.events | where: 'completed', false | sort: 'date' | limit: 4 %}
-    {% for event in upcoming_events %}
+    {% for event in site.events %} {% if event.completed %}
     <div
       class="bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg"
     >
@@ -47,17 +46,20 @@
           <p class="text-sm mb-1 text-gray-400 font-bold">
             {{ event.participants }}
           </p>
-
-          <!-- Register Button -->
-          <a
-            href="{{ event.url }}"
-            class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80"
-          >
-            Register Now
-          </a>
         </div>
       </div>
     </div>
-    {% endfor %}
+    {% endif %} {% endfor %}
   </div>
+
+
+  <div class="flex justify-center mt-8">
+    <a
+      href="/past-events"
+      class="text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.bg-colors.orange-button}}] dark:text-[{{site.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.bg-colors.orange-button}}] dark:focus:ring-[{{site.bg-colors.orange-button}}]/80"
+    >
+      See More
+  </a>
+  </div>
+  
 </div>
