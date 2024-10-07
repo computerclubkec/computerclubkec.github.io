@@ -57,41 +57,46 @@
     <!-- Club Banner Ends Here -->
 
     <!-- Metrics Banner Starts Here -->
-    <div
-      class="w-full p-12 bg-[{{site.bg-colors.darkBlue}}] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 md:gap-40"
-    >
-      <div class="text-center text-[{{site.text-colors.white}}]">
-        <div class="text-6xl font-bold font-montserrat mb-2">50+</div>
-        <div class="text-2xl font-bold font-inter">Events Organized</div>
-      </div>
+    <section id="metrics-banner">
+      <div
+        class="w-full p-12 bg-[{{site.bg-colors.darkBlue}}] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 md:gap-40"
+      >
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">50+</div>
+          <div class="text-2xl font-bold font-inter">Events Organized</div>
+        </div>
 
-      <div class="text-center text-[{{site.text-colors.white}}]">
-        <div class="text-6xl font-bold font-montserrat mb-2">500+</div>
-        <div class="text-2xl font-bold font-inter">Students Impacted</div>
-      </div>
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">500+</div>
+          <div class="text-2xl font-bold font-inter">Students Impacted</div>
+        </div>
 
-      <div class="text-center text-[{{site.text-colors.white}}]">
-        <div class="text-6xl font-bold font-montserrat mb-2">10+</div>
-        <div class="text-2xl font-bold font-inter">Industry Collaborations</div>
-      </div>
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">10+</div>
+          <div class="text-2xl font-bold font-inter">
+            Industry Collaborations
+          </div>
+        </div>
 
-      <div class="text-center text-[{{site.text-colors.white}}]">
-        <div class="text-6xl font-bold font-montserrat mb-2">100+</div>
-        <div class="text-2xl font-bold font-inter">Members & Alumni</div>
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">100+</div>
+          <div class="text-2xl font-bold font-inter">Members & Alumni</div>
+        </div>
       </div>
-    </div>
+    </section>
     <!-- Metrics Banner Ends Here -->
 
     <!-- Upcoming Events section starts Here -->
-    {% include upcoming-events.html %}
+    <section id="upcoming-events">{% include upcoming-events.html %}</section>
     <!-- Upcoming Events Section ends Here -->
 
     <!-- Recent Events Section Starts Here -->
-     {% include recent-events.html %}
-     <!-- Recent Events Section Ends Here -->
+    <section id="recent-events">{% include recent-events.html %}</section>
+
+    <!-- Recent Events Section Ends Here -->
 
     <!-- Brands collabration section starts here -->
-    {% include brands_colab.html %}
+    <section id="brands-colab">{% include brands_colab.html %}</section>
     <!-- Brands collabration section ends here -->
 
     {% include footer.html %}
