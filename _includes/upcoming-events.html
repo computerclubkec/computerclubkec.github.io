@@ -8,8 +8,9 @@
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
     {% assign upcoming_events = site.events | where: 'completed', false | sort: 'date' | limit: 4 %}
     {% for event in upcoming_events %}
+    <a href="{{ event.url }}" class="block">
     <div
-      class="bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg"
+      class="bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
     >
       <div class="flex flex-col md:flex-row items-start md:items-center">
         <!-- Event Image -->
@@ -40,8 +41,8 @@
             >
 
             <!-- Read More / Read Less buttons -->
-            <a href="#" class="text-blue-400 read-more">Read More</a>
-            <a href="#" class="text-blue-400 read-less hidden">Show Less</a>
+            <button class="text-blue-400 read-more">Read More</button>
+            <button class="text-blue-400 read-less hidden">Show Less</button>
           </p>
 
           <p class="text-sm mb-1 text-gray-400 font-bold">
@@ -49,15 +50,15 @@
           </p>
 
           <!-- Register Button -->
-          <a
-            href="{{ event.url }}"
-            class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80"
-          >
-            Register Now
-          </a>
+          <button
+              class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+            >
+              Register Now
+            </button>
         </div>
       </div>
     </div>
+  </a>
     {% endfor %}
   </div>
 </div>
