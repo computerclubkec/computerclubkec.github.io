@@ -12,7 +12,7 @@
 
   <div class="hidden md:flex items-center relative">
     <ul
-      class="flex font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-[{{ site.text-colors.gray }}]"
+      class="flex font-semibold text-base sm:text-sm md:text-base lg:text-lg text-[{{ site.text-colors.gray }}]"
     >
       <li>
         <a
@@ -24,7 +24,7 @@
       <li>
         <a
           href="{{ '/about/' }}"
-          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
+          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047] whitespace-nowrap"
           >About us</a
         >
       </li>
@@ -55,18 +55,18 @@
         </button>
         <ul
           id="dropdownEvents"
-          class="absolute left-0 hidden m-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+          class="absolute pl-4 left-0 hidden m-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-base sm:text-sm md:text-base lg:text-lg"
         >
           <li class="rounded-tr-xl">
-            <a href="#" class="block p-2 my-4 hover:text-[#023047]"
+            <a href="#" class="block p-2 my-2 hover:text-[#023047]"
               >Upcoming Events</a
             >
           </li>
           <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-4">Past Events</a>
+            <a href="#" class="block p-2 my-2">Past Events</a>
           </li>
           <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-4">KEC Lite</a>
+            <a href="#" class="block p-2 my-2">KEC Lite</a>
           </li>
         </ul>
       </li>
@@ -97,19 +97,19 @@
         </button>
         <ul
           id="dropdownResources"
-          class="absolute left-0 hidden mt-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
+          class="absolute pl-4 left-0 hidden mt-1 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl"
         >
           <li class="rounded-tr-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-4">BCT Syllabus</a>
+            <a href="#" class="block p-2 my-2">BCT Syllabus</a>
           </li>
           <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-4">Roadmaps</a>
+            <a href="#" class="block p-2 my-2">Roadmaps</a>
           </li>
           <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-4">Brand Assets</a>
+            <a href="#" class="block p-2 my-2">Brand Assets</a>
           </li>
           <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-4">Proposal Format</a>
+            <a href="#" class="block p-2 my-2">Proposal Format</a>
           </li>
         </ul>
       </li>
@@ -126,7 +126,7 @@
     <div>
       <a
         href="{{ '/contact/' }}"
-        class="bg-[{{site.bg-colors.darkBlue}}] text-white p-2 sm:p-3 md:p-4 rounded-lg hover:bg-gray-800 m-2 text-lg sm:text-xl"
+        class="bg-[{{site.bg-colors.darkBlue}}] text-white px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 rounded-lg hover:bg-gray-800 text-sm sm:text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300"
         id="contact-page"
         >Contact us</a
       >
@@ -157,17 +157,17 @@
 <!-- responsive navbar for smaller screens -->
 <div id="mobileMenu" class="hidden md:hidden">
   <ul
-    class="flex flex-col font-semibold text-lg sm:text-base border border-[{{site.bg-colors.gray}}] text-[{{ site.text-colors.gray }}]"
+    class="flex flex-col font-semibold text-base sm:text-base border border-[{{site.bg-colors.gray}}] text-[{{ site.text-colors.gray }}]"
   >
     <li>
-      <a href="{{ '/' }}" class="m-2 p-4 flex items-center hover:text-[#023047]"
+      <a href="{{ '/' }}" class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
         >Home</a
       >
     </li>
     <li>
       <a
         href="{{ '/about/' }}"
-        class="m-2 p-4 flex items-center hover:text-[#023047]"
+        class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
         >About us</a
       >
     </li>
@@ -177,7 +177,7 @@
       <button
         id="mobileEventsDropdown"
         type="button"
-        class="flex items-center justify-between focus:outline-none p-4 m-2 hover:text-[#023047]"
+        class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
         aria-expanded="false"
       >
         Events
@@ -214,7 +214,7 @@
       <button
         id="mobileResourcesDropdown"
         type="button"
-        class="flex items-center justify-between focus:outline-none p-4 m-2 hover:text-[#023047]"
+        class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
         aria-expanded="false"
       >
         Resources
@@ -233,7 +233,7 @@
           />
         </svg>
       </button>
-      <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-sm">
+      <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-base">
         <li class="rounded-tr-xl hover:text-[#023047]">
           <a href="#" class="block p-4">BCT Syllabus</a>
         </li>
@@ -252,14 +252,14 @@
     <li>
       <a
         href="{{ '/blog/' }}"
-        class="m-2 p-4 flex items-center hover:text-[#023047]"
+        class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
         >Blog</a
       >
     </li>
     <li>
       <a
         href="{{ '/contact/' }}"
-        class="m-2 p-4 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
+        class="mx-6 my-2 px-3 py-2 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
         >Contact us</a
       >
     </li>
