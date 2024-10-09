@@ -5,63 +5,75 @@
     Upcoming Events
   </h2>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
-    {% assign upcoming_events = site.events | where: 'completed', false | sort: 'date' | limit: 4 %}
-    {% for event in upcoming_events %}
-    
-    <div
-      class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
-    >
-      <a href="{{ event.url }}" class="absolute inset-0 block"></a>
-      <div class="flex flex-col md:flex-row items-start md:items-center">
-        
-        <!-- Event Image -->
-        <div class="md:w-1/3 w-full mb-4 md:mb-0">
-          <img
-            src="{{ event.banner_image }}"
-            alt="{{ event.title }}"
-            class="w-full h-auto rounded-lg"
-          />
-        </div>
+  <!-- Fetch upcoming events -->
+  {% assign upcoming_events = site.events | where: 'completed', false | sort:
+  'date' | limit: 4 %} {% assign event_count = upcoming_events | size %}
 
-        <!-- Event Info -->
-        <div class="md:w-2/3 w-full md:pl-6">
-          <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
-          <p class="text-sm text-gray-400 italic font-semibold">
-            {{ event.date | date: "%a, %B %e, %Y" }}
-          </p>
+  <!-- Conditionally set grid based on the number of events -->
+  {% if event_count == 1 %}
+  <div class="grid grid-cols-1 place-items-center gap-4 md:gap-8">
+    {% else %}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
+      {% endif %} {% for event in upcoming_events %}
+      <div
+        class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
+      >
+        <a href="{{ event.url }}" class="absolute inset-0 block"></a>
+        <div class="flex flex-col md:flex-row items-start md:items-center">
+          <!-- Event Image -->
+          <div class="md:w-1/3 w-full mb-4 md:mb-0">
+            <img
+              src="{{ event.banner_image }}"
+              alt="{{ event.title }}"
+              class="w-full h-auto md:h-60 md:w-60 rounded-lg"
+            />
+          </div>
 
-          <!-- Event Description with Show More/Show Less -->
-          <p class="text-sm my-2">
-            <!-- Shortened version of the description -->
-            <span class="event-description-short"
-              >{{ event.description | truncate: 120, "..." }}</span
-            >
-            <!-- Full description, hidden initially -->
-            <span class="event-description-full hidden"
-              >{{ event.description }}</span
-            >
+          <!-- Event Info -->
+          <div class="md:w-2/3 w-full md:pl-6">
+            <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
+            <p class="text-sm text-gray-400 italic font-semibold">
+              {{ event.date | date: "%a, %B %e, %Y" }}
+            </p>
 
-            <!-- Read More / Read Less buttons -->
-            <button class="text-blue-400 read-more relative z-10">Read More</button>
-            <button class="text-blue-400 read-less hidden relative z-10">Show Less</button>
-          </p>
+            <!-- Event Description with Show More/Show Less -->
+            <p class="text-sm my-2">
+              <!-- Shortened version of the description -->
+              <span class="event-description-short"
+                >{{ event.description | truncate: 120, "..." }}</span
+              >
+              <!-- Full description, hidden initially -->
+              <span class="event-description-full hidden"
+                >{{ event.description }}</span
+              >
 
-          <p class="text-sm mb-1 text-gray-400 font-bold">
-            {{ event.participants }}
-          </p>
+              <!-- Read More / Read Less buttons -->
+              <button class="text-blue-400 read-more relative z-10">
+                Read More
+              </button>
+              <button class="text-blue-400 read-less hidden relative z-10">
+                Show Less
+              </button>
+            </p>
 
-          <!-- Register Button -->
-          <a href="{{ event.registration_link }}">
-            <div class="relative inset-0"><button
-              class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
-            >
-              Register Now
-            </button></div>
-          </a>
+            <p class="text-sm mb-1 text-gray-400 font-bold">
+              {{ event.participants }}
+            </p>
+
+            <!-- Register Button -->
+            <a href="{{ event.registration_link }}">
+              <div class="relative inset-0">
+                <button
+                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+                >
+                  Register Now
+                </button>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div>
