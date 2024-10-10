@@ -75,6 +75,7 @@ bg-colors:
   deepBlue: "#022D72"
   oceanBlue: "#0061AE"
   baseBlack: "#0A0A0B"
+  lightGray: "#D9D9D9"
 
 text-colors:
   base-black: "#0A0A0B"
