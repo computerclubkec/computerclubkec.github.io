@@ -33,7 +33,13 @@
           <div class="md:w-2/3 w-full md:pl-6">
             <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
             <p class="text-sm text-gray-400 italic font-semibold">
-              {{ event.date | date: "%a, %B %e, %Y" }}
+              <!-- Event Date Logic -->
+              {% if event.end_date and event.date != event.end_date %}
+              <!-- Display start and end date if it's a multi-day event -->
+              {{ event.date | date: "%a, %B %e, %Y" }} - {{ event.end_date |
+              date: "%a, %B %e, %Y" }} {% else %}
+              <!-- Display only the start date if it's a single-day event -->
+              {{ event.date | date: "%a, %B %e, %Y" }} {% endif %}
             </p>
 
             <!-- Event Description with Show More/Show Less -->
