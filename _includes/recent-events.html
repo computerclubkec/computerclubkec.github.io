@@ -27,10 +27,21 @@
 
             <!-- Event Date Logic -->
             <p class="text-sm text-gray-400 italic font-semibold">
-              {% if event.end_date and event.date != event.end_date %} {{
-              event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date:
-              "%a, %b %e, %Y" }} {% else %} {{ event.date | date: "%a, %b %e,
-              %Y" }} {% endif %}
+              <!-- Display event dates -->
+              {% if event.end_date and event.end_date != "" %}
+              <!-- Convert dates to Unix Epoch for comparison -->
+              {% assign event_start_epoch = event.date | date: "%s" %} {% assign
+              event_end_epoch = event.end_date | date: "%s" %}
+
+              <!-- Check if the event spans multiple days -->
+              {% if event_start_epoch != event_end_epoch %}
+              <!-- Multi-day event: Show start and end dates -->
+              {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date |
+              date: "%a, %b %e, %Y" }} {% else %}
+              <!-- Single-day event: Show only the start date -->
+              {{ event.date | date: "%a, %b %e, %Y" }} {% endif %} {% else %}
+              <!-- No end date or it's a single-day event -->
+              {{ event.date | date: "%a, %b %e, %Y" }} {% endif %}
             </p>
 
             <!-- Event Description with Show More/Show Less -->
