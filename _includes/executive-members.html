@@ -72,7 +72,7 @@
   <!-- Members for 2023 -->
   <div
     id="members_2023"
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 hidden"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6 hidden"
   >
     {% for member in site.data.members.members_2023 %}
     <div
@@ -82,7 +82,7 @@
         <img
           src="{{ member.image }}"
           alt="{{ member.name }}"
-          class="w-[300px] h-[300px] object-cover mb-4 rounded-md"
+          class="w-[300px] h-[300px] object-cover 2xl:mt-2 mb-4 rounded-md"
         />
       </div>
       <span class="text-start">
