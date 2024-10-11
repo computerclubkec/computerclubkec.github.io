@@ -32,11 +32,31 @@
           <!-- Event Info -->
           <div class="md:w-2/3 w-full md:pl-6">
             <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
+
+            <!-- Event Date Logic -->
             <p class="text-sm text-gray-400 italic font-semibold">
-              {{ event.date | date: "%a, %B %e, %Y" }}
+              <!-- Display event dates -->
+              {% if event.end_date %}
+              <!-- Multi-day event: Show start and end dates -->
+              {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date |
+              date: "%a, %b %e, %Y" }} {% else %}
+              <!-- Single-day event: Show only the start date -->
+              {{ event.date | date: "%a, %b %e, %Y" }} {% endif %}
             </p>
 
             <!-- Event Description with Show More/Show Less -->
+            <p class="text-sm my-2">
+              <!-- Shortened version of the description -->
+              <span class="event-description-short"
+                >{{ event.description | truncate: 120, "..." }}</span
+              >
+              <!-- Full description, hidden initially -->
+              <span class="event-description-full hidden"
+                >{{ event.description }}</span
+              >
+              <!-- Event Description with Show More/Show Less -->
+            </p>
+
             <p class="text-sm my-2">
               <!-- Shortened version of the description -->
               <span class="event-description-short"
