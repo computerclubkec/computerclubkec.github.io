@@ -1,32 +1,34 @@
 <nav
-  class="flex items-center justify-between bg-[{{ site.bg-colors.gray }}]  py-4 sm:px-6 md:px-8 lg:px-16 xl:px-40 sm:h-12 md:h-16 z-10 lg:h-24"
-  active-page-color="{{site.text-colors.darkblue}}"
+  class="flex items-center justify-between bg-[{{ site.data.tailwind-colors.bg-colors.gray}}] lg:py-4 px-4 sm:px-6 md:px-8 lg:px-20 xl:px-40 sm:h-20 md:h-28 z-10 py-2"
+  active-page-color="{{site.data.tailwind-colors.text-colors.base-black}}"
 >
-<div class="flex items-center">
-  <div class="m-4 w-12 h-12 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 relative">
-    <img
-      src="../assets/images/logo.png"
-      alt="logo"
-      class="absolute w-full h-full object-contain"
-    />
+  <div class="flex items-center">
+    <div
+      class="m-4 w-12 h-12 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 relative"
+    >
+      <img
+        src="../assets/images/logo.png"
+        alt="logo"
+        class="absolute w-full h-full object-contain"
+      />
+    </div>
   </div>
-</div>
 
   <div class="hidden md:flex items-center relative">
     <ul
-      class="flex text-base sm:text-sm md:text-base lg:text-lg text-[{{ site.text-colors.gray }}]/80"
+      class="flex font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-[{{ site.data.tailwind-colors.text-colors.gray }}]"
     >
-    <li>
-      <a
-        href="{{ '/' }}"
-        class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
-        >Home</a
-      >
-    </li>
+      <li>
+        <a
+          href="{{ '/' }}"
+          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >Home</a
+        >
+      </li>
       <li>
         <a
           href="{{ '/about/' }}"
-          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047] whitespace-nowrap"
+          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
           >About us</a
         >
       </li>
@@ -36,7 +38,7 @@
         <button
           id="eventsDropdown"
           type="button"
-          class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
+          class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
           aria-expanded="false"
         >
           Events
@@ -57,18 +59,24 @@
         </button>
         <ul
           id="dropdownEvents"
-          class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-base sm:text-sm md:text-base lg:text-lg"
+          class="absolute left-0 hidden m-1 w-[208px] bg-[{{ site.data.tailwind-colors.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
         >
           <li class="rounded-tr-xl">
-            <a href="#" class="block p-2 my-2 hover:text-[#023047]"
+            <a
+              href="#"
+              class="block p-2 my-4 hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
               >Upcoming Events</a
             >
           </li>
-          <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Past Events</a>
+          <li
+            class="hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >
+            <a href="#" class="block p-2 my-4">Past Events</a>
           </li>
-          <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">KEC Lite</a>
+          <li
+            class="rounded-bl-xl rounded-br-xl hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >
+            <a href="#" class="block p-2 my-4">KEC Lite</a>
           </li>
         </ul>
       </li>
@@ -78,7 +86,7 @@
         <button
           id="resourcesDropdown"
           type="button"
-          class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
+          class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
           aria-expanded="false"
         >
           Resources
@@ -99,19 +107,27 @@
         </button>
         <ul
           id="dropdownResources"
-          class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl"
+          class="absolute left-0 hidden mt-1 w-[208px] bg-[{{ site.data.tailwind-colors.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-lg"
         >
-          <li class="rounded-tr-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">BCT Syllabus</a>
+          <li
+            class="rounded-tr-xl hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >
+            <a href="#" class="block p-2 my-4">BCT Syllabus</a>
           </li>
-          <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Roadmaps</a>
+          <li
+            class="hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >
+            <a href="#" class="block p-2 my-4">Roadmaps</a>
           </li>
-          <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Brand Assets</a>
+          <li
+            class="hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >
+            <a href="#" class="block p-2 my-4">Brand Assets</a>
           </li>
-          <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Proposal Format</a>
+          <li
+            class="rounded-bl-xl rounded-br-xl hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+          >
+            <a href="#" class="block p-2 my-4">Proposal Format</a>
           </li>
         </ul>
       </li>
@@ -119,7 +135,7 @@
       <li>
         <a
           href="{{ '/blog/' }}"
-          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
+          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
           id="blog-page"
           >Blog</a
         >
@@ -128,7 +144,7 @@
     <div>
       <a
         href="{{ '/contact/' }}"
-        class="bg-[{{site.bg-colors.darkBlue}}] ml-8 text-white px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 rounded-lg hover:bg-gray-800 text-sm sm:text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300"
+        class="bg-[{{site.data.tailwind-colors.bg-colors.darkBlue}}] text-white p-2 sm:p-3 md:p-4 rounded-lg hover:bg-gray-800 m-2 text-lg sm:text-xl"
         id="contact-page"
         >Contact us</a
       >
@@ -159,17 +175,19 @@
 <!-- responsive navbar for smaller screens -->
 <div id="mobileMenu" class="hidden md:hidden">
   <ul
-    class="flex flex-col font-semibold text-base sm:text-base border border-[{{site.bg-colors.gray}}] text-[{{ site.text-colors.gray }}]"
+    class="flex flex-col font-semibold text-lg sm:text-base border border-[{{site.data.tailwind-colors.bg-colors.gray}}] text-[{{ site.data.tailwind-colors.text-colors.gray }}]"
   >
     <li>
-      <a href="{{ '/' }}" class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+      <a
+        href="{{ '/' }}"
+        class="m-2 p-4 flex items-center hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
         >Home</a
       >
     </li>
     <li>
       <a
         href="{{ '/about/' }}"
-        class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+        class="m-2 p-4 flex items-center hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
         >About us</a
       >
     </li>
@@ -179,7 +197,7 @@
       <button
         id="mobileEventsDropdown"
         type="button"
-        class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
+        class="flex items-center justify-between focus:outline-none p-4 m-2 hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
         aria-expanded="false"
       >
         Events
@@ -200,12 +218,20 @@
       </button>
       <ul id="mobileDropdownEvents" class="hidden pl-6 mt-1 text-base">
         <li class="rounded-tr-xl">
-          <a href="#" class="block p-4 hover:text-[#023047]">Upcoming Events</a>
+          <a
+            href="#"
+            class="block p-4 hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+            >Upcoming Events</a
+          >
         </li>
-        <li class="hover:text-[#023047]">
+        <li
+          class="hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+        >
           <a href="#" class="block p-4">Past Events</a>
         </li>
-        <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+        <li
+          class="rounded-bl-xl rounded-br-xl hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+        >
           <a href="#" class="block p-4">KEC Lite</a>
         </li>
       </ul>
@@ -216,7 +242,7 @@
       <button
         id="mobileResourcesDropdown"
         type="button"
-        class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
+        class="flex items-center justify-between focus:outline-none p-4 m-2 hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
         aria-expanded="false"
       >
         Resources
@@ -235,17 +261,25 @@
           />
         </svg>
       </button>
-      <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-base">
-        <li class="rounded-tr-xl hover:text-[#023047]">
+      <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-sm">
+        <li
+          class="rounded-tr-xl hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+        >
           <a href="#" class="block p-4">BCT Syllabus</a>
         </li>
-        <li class="hover:text-[#023047]">
+        <li
+          class="hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+        >
           <a href="#" class="block p-4">Roadmaps</a>
         </li>
-        <li class="hover:text-[#023047]">
+        <li
+          class="hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+        >
           <a href="#" class="block p-4">Brand Assets</a>
         </li>
-        <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+        <li
+          class="rounded-bl-xl rounded-br-xl hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
+        >
           <a href="#" class="block p-4">Proposal Format</a>
         </li>
       </ul>
@@ -254,14 +288,14 @@
     <li>
       <a
         href="{{ '/blog/' }}"
-        class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+        class="m-2 p-4 flex items-center hover:text-[{{site.data.tailwind-colors.text-colors.darkblue}}]"
         >Blog</a
       >
     </li>
     <li>
       <a
         href="{{ '/contact/' }}"
-        class="mx-6 my-2 px-3 py-2 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
+        class="m-2 p-4 inline-block text-[{{site.data.tailwind-colors.text-colors.white}}] bg-[{{site.data.tailwind-colors.bg-colors.darkBlue}}] rounded-lg"
         >Contact us</a
       >
     </li>

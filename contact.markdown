@@ -5,7 +5,7 @@ permalink: /contact/
 ---
 
 <div class="container py-10 px-2 mx-auto items-center">
-  <h2 class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8">
+  <h2 class="text-5xl font-bold text-[{{site.data.tailwind-colors.text-colors.darkblue}}] text-center mb-8">
     Contact Details
   </h2>
 
@@ -22,21 +22,21 @@ permalink: /contact/
       <form class="flex flex-col items-start gap-4 w-full" onsubmit="handleClick(event)">
         <div class="flex flex-col items-start gap-1 w-full">
           <label class="font-inter font-bold text-lg text-black">Your Full Name</label>
-          <input type="text" id="fullName" class="w-full h-[56px] rounded-md border-none focus:outline-none pl-2" style="background-color: {{ site.bg-colors.lightGray }};" placeholder="" required />
+          <input type="text" id="fullName" class="w-full h-[56px] rounded-md border-none focus:outline-none pl-2" style="background-color: {{ site.data.tailwind-colors.bg-colors.lightGray }};" placeholder="" required />
         </div>
 
         <div class="flex flex-col items-start gap-1 w-full">
           <label class="font-inter font-bold text-lg text-black">Subject</label>
-          <input type="text" id="subject" class="w-full h-[56px] rounded-md border-none focus:outline-none pl-2" style="background-color: {{ site.bg-colors.lightGray }};" placeholder="" required />
+          <input type="text" id="subject" class="w-full h-[56px] rounded-md border-none focus:outline-none pl-2" style="background-color: {{ site.data.tailwind-colors.bg-colors.lightGray }};" placeholder="" required />
         </div>
 
         <div class="flex flex-col items-start gap-1 w-full">
           <label class="font-inter font-bold text-lg text-black">Message</label>
-          <textarea id="message" class="w-full h-[166px] rounded-md border-none focus:outline-none pl-2 pt-2 pr-2 resize-none" style="background-color: {{ site.bg-colors.lightGray }};" placeholder="" required></textarea>
+          <textarea id="message" class="w-full h-[166px] rounded-md border-none focus:outline-none pl-2 pt-2 pr-2 resize-none" style="background-color: {{ site.data.tailwind-colors.bg-colors.lightGray }};" placeholder="" required></textarea>
         </div>
 
         <div class="w-full flex justify-center lg:justify-start">
-          <button type="submit" class="flex flex-row justify-center items-center p-2 rounded-md w-auto transform transition-transform duration-200 active:scale-95 hover:opacity-90" style="background-color: {{ site.bg-colors.orange-button }};">
+          <button type="submit" class="flex flex-row justify-center items-center p-2 rounded-md w-auto transform transition-transform duration-200 active:scale-95 hover:opacity-90" style="background-color: {{ site.data.tailwind-colors.bg-colors.orange-button }};">
             <span class="font-inter font-medium text-lg text-white">Send</span>
           </button>
         </div>
@@ -54,6 +54,7 @@ permalink: /contact/
         </div>
       </div>
     </div>
+
 </div>
 
 <script>
@@ -67,4 +68,3 @@ permalink: /contact/
         console.log("Message:", message);
     }
 </script>
-

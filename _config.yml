@@ -58,30 +58,3 @@ collections:
   events:
     output: true
     permalink: /events/:title
-
-bg-colors:
-  orange-button: "#FB8500"
-  goldenOrange-button: "#FFB703"
-  darkBlue: "#023047"
-  gray: "#E0E5F5"
-  skyBlue: "#219EBC"
-  lightBlue: "#8ECAE6"
-  mustard: "#D4AC0D"
-  lightYellow: "#F7DC6F"
-  softBlue: "#85C1E9"
-  brightBlue: "#2980B9"
-  navyBlue: "#1A5276"
-  tangerine: "#FD9E26"
-  deepBlue: "#022D72"
-  oceanBlue: "#0061AE"
-  baseBlack: "#0A0A0B"
-  lightGray: "#D9D9D9"
-
-text-colors:
-  base-black: "#0A0A0B"
-  gray: "#5A5555"
-  darkblue: "#023047"
-  white: "#FFFFFF"
-  base-white: "#FAFAFA"
-  neutral-200: "#CCCBCB"
-  blue: "#3328BF"
