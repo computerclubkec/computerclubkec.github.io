@@ -1,6 +1,6 @@
 <div class="container py-10 px-2 md:mx-auto">
   <h2
-    class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
+    class="text-5xl font-bold text-[{{site.data.tailwind-colors.text-colors.darkblue}}] text-center mb-8"
   >
     Recent Events
   </h2>
@@ -16,7 +16,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
       {% endif %} {% for event in recent_events %}
       <div
-        class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
+        class="relative bg-[{{site.data.tailwind-colors.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
       >
         <a href="{{ event.url }}" class="absolute inset-0 block"></a>
         <div class="flex flex-col md:flex-row items-start md:items-center">
@@ -90,7 +90,7 @@
   <div class="flex justify-center">
     <a
       href="/past-events"
-      class="text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.bg-colors.orange-button}}] dark:text-[{{site.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.bg-colors.orange-button}}] dark:focus:ring-[{{site.bg-colors.orange-button}}]/80"
+      class="text-[{{site.data.tailwind-colors.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.data.tailwind-colors.bg-colors.orange-button}}] hover:bg-[{{site.data.tailwind-colors.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.data.tailwind-colors.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.data.tailwind-colors.bg-colors.orange-button}}] dark:text-[{{site.data.tailwind-colors.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.data.tailwind-colors.bg-colors.orange-button}}] dark:focus:ring-[{{site.data.tailwind-colors.bg-colors.orange-button}}]/80"
     >
       See More
     </a>

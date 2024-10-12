@@ -1,6 +1,6 @@
 <div class="container py-10 px-2 md:mx-auto">
   <h2
-    class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
+    class="text-5xl font-bold text-[{{site.data.tailwind-colors.text-colors.darkblue}}] text-center mb-8"
   >
     Upcoming Events
   </h2>
@@ -16,7 +16,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
       {% endif %} {% for event in upcoming_events %}
       <div
-        class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
+        class="relative bg-[{{site.data.tailwind-colors.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
       >
         <a href="{{ event.url }}" class="absolute inset-0 block"></a>
         <div class="flex flex-col md:flex-row items-start md:items-center">
@@ -70,7 +70,7 @@
             <a href="{{ event.registration_link }}">
               <div class="relative inset-0">
                 <button
-                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+                  class="inline-block bg-[{{site.data.tailwind-colors.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.data.tailwind-colors.bg-colors.orange-button}}]/80 transition-colors duration-300"
                 >
                   Register Now
                 </button>
