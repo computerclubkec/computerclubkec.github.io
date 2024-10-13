@@ -58,17 +58,17 @@ permalink: /contact/
 </div>
 
 <script>
-    function handleClick(event) {
-        event.preventDefault();  // Prevent the default form submission
+function handleClick(event) {
+    const fullName = document.getElementById('fullName').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
 
-        const fullName = document.getElementById('fullName').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+    const body = `${message}\n\nBest regards,\n${fullName}`;
 
-        const body = `${message}\n\nBest regards,\n${fullName}`;
+    // Gmail link for composing a new email
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=computerclub@kec.edu.np&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-        const mailtoLink = `mailto:computerclub@kec.edu.np?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailtoLink;
-    }
+    // Open in a popup window or the same tab
+    window.open(gmailLink, 'gmailComposeWindow', 'width=800,height=600');
+}
 </script>
