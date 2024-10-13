@@ -18,7 +18,7 @@ completed: true
 tags: ["Exhibit", "Compete", "Networking", "Annual"]
 published: true
 
-manual: true
+custom_layout: true
 ---
 
 <!-- Content -->

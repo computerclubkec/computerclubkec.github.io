@@ -18,7 +18,7 @@ completed: false
 tags: ["AI", "machine learning", "seminar"]
 published: true
 
-manual: false
+custom_layout: false
 ---
 
 <div class="prose max-w-none mx-auto my-8">

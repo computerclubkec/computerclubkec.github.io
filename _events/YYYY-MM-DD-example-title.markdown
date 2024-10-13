@@ -18,7 +18,7 @@ completed: false
 tags: ["competition","competitive", "example-tags"]
 published: false
 
-manual: false # Set to true if you don't want to use the default layout
+custom_layout: false # Set to true if you don't want to use the default layout
 ---
 <!-- Content -->
 ## Event Details

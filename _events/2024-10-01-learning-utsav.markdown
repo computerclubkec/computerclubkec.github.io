@@ -18,7 +18,7 @@ completed: false
 tags: ["challenge", "learning", "skills"]
 published: true
 
-manual: false
+custom_layout: false
 ---
 <!-- Content -->
 
