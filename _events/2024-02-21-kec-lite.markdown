@@ -11,7 +11,7 @@ time: "All day"
 location: "Kantipur Engineering College"
 
 registration_link: "https://linktr.ee/keclite2024"
-participants: "Lots of students from multiple colleges."
+participants: "1,200+ attendees."
 
 completed: true
 
