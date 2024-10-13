@@ -17,6 +17,8 @@ completed: false
 
 tags: ["symposium", "technology", "innovation"]
 published: true
+
+manual: false
 ---
 
 <div class="prose max-w-none mx-auto my-8">

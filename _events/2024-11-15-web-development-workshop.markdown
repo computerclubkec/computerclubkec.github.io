@@ -17,6 +17,8 @@ completed: true
 
 tags: ["workshop", "web development", "frontend"]
 published: true
+
+manual: false
 ---
 
 <div class="prose max-w-none mx-auto my-8">

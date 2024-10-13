@@ -17,6 +17,8 @@ completed: true
 
 tags: ["bootcamp", "coding", "workshop"]
 published: true
+
+manual: false
 ---
 
 <div class="prose max-w-none mx-auto my-8">

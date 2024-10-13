@@ -17,6 +17,8 @@ completed: false
 
 tags: ["workshop", "cybersecurity", "tech"]
 published: true
+
+manual: false
 ---
 
 <div class="prose max-w-none mx-auto my-8">
