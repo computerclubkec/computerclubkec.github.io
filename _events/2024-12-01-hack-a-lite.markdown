@@ -17,6 +17,8 @@ completed: true
 
 tags: ["hackathon", "innovation", "coding"]
 published: true
+
+custom_layout: false
 ---
 
 <!-- Content -->
