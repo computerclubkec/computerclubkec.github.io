@@ -20,6 +20,7 @@ permalink: /contact/
       </p>
 
       <form class="flex flex-col items-start gap-4 w-full" onsubmit="handleClick(event)">
+      
         <div class="flex flex-col items-start gap-1 w-full">
           <label class="font-inter font-bold text-lg text-black">Your Full Name</label>
           <input type="text" id="fullName" class="w-full h-[56px] rounded-md border-none focus:outline-none pl-2" style="background-color: {{ site.bg-colors.lightGray }};" placeholder="" required />
@@ -57,14 +58,17 @@ permalink: /contact/
 </div>
 
 <script>
-    function handleClick(event) { //Lets change this later
-        event.preventDefault(); 
+    function handleClick(event) {
+        event.preventDefault();  // Prevent the default form submission
+
         const fullName = document.getElementById('fullName').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
-        console.log("Full Name:", fullName);
-        console.log("Subject:", subject);
-        console.log("Message:", message);
+
+        const body = `${message}\n\nBest regards,\n${fullName}`;
+
+        const mailtoLink = `mailto:computerclub@kec.edu.np?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
     }
 </script>
-
