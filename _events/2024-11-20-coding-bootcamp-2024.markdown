@@ -6,7 +6,7 @@ description: "Enhance your coding skills in a collaborative environment with our
 banner_image: "/assets/images/logo.png"
 
 date: 2024-11-20
-end_date: 2024-11-22
+end_date:
 time: "9:00 AM - 6:00 PM"
 location: "Kantipur Engineering College Lab"
 

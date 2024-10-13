@@ -3,6 +3,7 @@
   <head>
     {% include header.html %}
   </head>
+
   <body>
     {% include nav.html %}
 
@@ -14,22 +15,21 @@
       >
         {{ page.title }}
       </div>
-      <div
-        class="title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
-      >
-        {{ page.participants }}
-      </div>
 
       <div
         class="title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
       >
         {% if page.end_date %} {{ page.date | date: "%a, %b %e, %Y" }} - {{
         page.end_date | date: "%a, %b %e, %Y" }} {% else %} {{ page.date | date:
-        "%a, %b %e, %Y" }} {% endif %} {% if page.time %} | {{ page.time }} {%
-        endif %}
+        "%a, %b %e, %Y" }} {% endif %}
+      </div>
+      <div
+        class="title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
+      >
+        {{ page.time }}
       </div>
 
-      {% if page.completed == false %}
+      {% if page.completed ==false %}
       <a href="{{ page.registration_link }}">
         <div class="relative inset-0 pb-10">
           <button

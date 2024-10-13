@@ -6,7 +6,7 @@ description: "Dive into the world of AI and Machine Learning with industry exper
 banner_image: "/assets/images/logo.png"
 
 date: 2024-12-05
-end_date: 2024-12-05
+end_date: 
 time: "1:00 PM - 4:00 PM"
 location: "Kantipur Engineering College Auditorium"
 
