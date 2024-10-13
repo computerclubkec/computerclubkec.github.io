@@ -19,7 +19,7 @@ permalink: /contact/
         We're always excited to connect! Whether you have a question, want to collaborate, or are interested in learning more about our activities, feel free to reach out. Expect to hear from us within the next two business days.<br><br> You can send us an email at <b><a href="mailto:computerclub@kec.edu.np" class="underline">computerclub@kec.edu.np</a>.</b><br> Visit us at our club office which is located at <b>Ground Floor, Teachers Block, KEC Marg Mathillo, Dhapakhel 23, Lalitpur, 44700 NP.</b>
       </p>
 
-      <form class="flex flex-col items-start gap-4 w-full" onsubmit="handleClick(event)">
+      <form class="flex flex-col items-start gap-4 w-full">
       
         <div class="flex flex-col items-start gap-1 w-full">
           <label class="font-inter font-bold text-lg text-black">Your Full Name</label>
@@ -37,7 +37,7 @@ permalink: /contact/
         </div>
 
         <div class="w-full flex justify-center lg:justify-start">
-          <button type="submit" class="flex flex-row justify-center items-center p-2 rounded-md w-auto transform transition-transform duration-200 active:scale-95 hover:opacity-90" style="background-color: {{ site.bg-colors.orange-button }};">
+          <button type="button" onclick="handleClick(event)" class="flex flex-row justify-center items-center p-2 rounded-md w-auto transform transition-transform duration-200 active:scale-95 hover:opacity-90" style="background-color: {{ site.bg-colors.orange-button }};">
             <span class="font-inter font-medium text-lg text-white">Send</span>
           </button>
         </div>
