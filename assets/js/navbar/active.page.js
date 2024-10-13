@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add('font-semibold');
         
         // Check if this link is for the current page
-        if (linkPath === currentPath) {
+        if (linkPath === currentPath && link.id !== "contact-page"){
             link.classList.remove('font-semibold');
             link.classList.add('font-bold');
             
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownButtons.forEach(button => {
         const dropdownList = button.nextElementSibling;
         if (dropdownList) {
-            const dropdownLinks = dropdownList.querySelectorAll('a');
+            const dropdownLinks = dropdownList.querySelectorAll('a:not(#dropdown_contact)');
             dropdownLinks.forEach(link => {
-                if (link.getAttribute("href") === currentPath) {
+                if (link.getAttribute("href") === currentPath ) {
                     button.classList.remove('font-semibold');
                     button.classList.add('font-bold');
                     const activeColor = document.querySelector("nav").getAttribute("active-page-color");
