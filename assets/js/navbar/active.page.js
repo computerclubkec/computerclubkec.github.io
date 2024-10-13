@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add('font-semibold');
         
         // Check if this link is for the current page
-        if (linkPath === currentPath && link.id !== "contact-page"){
+        if (linkPath === currentPath && link.id !== "contact-page" && link.id !== "dropdown_contact"){
             link.classList.remove('font-semibold');
             link.classList.add('font-bold');
             
