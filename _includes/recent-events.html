@@ -7,7 +7,7 @@
 
   <!-- Fetch upcoming events -->
   {% assign recent_events = site.events | where: 'completed', true | sort:
-  'date' | limit: 4 %} {% assign event_count = recent_events | size %}
+  'date' | reverse | limit: 4 %} {% assign event_count = recent_events | size %}
 
   <!-- Conditionally set grid based on the number of events -->
   {% if event_count == 1 %}
