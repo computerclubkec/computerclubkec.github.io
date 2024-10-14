@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Past Events
-permalink: /events/past
+permalink: /events/past-events
 
 ---
 

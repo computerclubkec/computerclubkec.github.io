@@ -46,10 +46,11 @@
       <img
         src="{{ page.banner_image }}"
         alt="{{ page.title }}"
-        class="h-[50vh] w-full mb-10 rounded-[20px]"
+        class="max-w-[80vw] max-h-[50vh] w-auto h-auto mb-10 rounded-[20px] object-contain"
       />
-
-      {{content}}
+      <div class="container py-2 px-2 mx-auto items-center">
+        {{content}}
+      </div>
     </div>
     {% else %}
       {{content}}
