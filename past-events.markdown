@@ -8,7 +8,7 @@ permalink: /events/past
 <div class="container pb-10 px-2 md:mx-auto">
 
    <!-- Fetch upcoming events -->
-  {% assign past_events = site.events | where: 'completed', true | sort: 'date' %}
+  {% assign past_events = site.events | where: 'completed', true | sort: 'date' | reverse %}
   {% assign event_count = past_events | size %}
 
   <!-- Conditionally set grid based on the number of events -->
