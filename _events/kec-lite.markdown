@@ -16,7 +16,7 @@ participants: "1,200+ attendees."
 completed: true
 
 tags: ["Exhibit", "Compete", "Networking", "Annual"]
-published: true
+published: true 
 
 custom_layout: true
 ---
