@@ -35,7 +35,7 @@ permalink: /events/past
       </div>
 
       <!-- Event Info Below Image -->
-      <div class="text-center">
+      <div class="text-justify">
         <h3 class="text-xl font-semibold text-white">{{ event.title }}</h3>
         <p class="text-sm text-gray-300 italic font-semibold">
           {% if event.end_date %}
