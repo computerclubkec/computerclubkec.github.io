@@ -3,7 +3,8 @@ layout: event
 
 title: "Example Event"
 description: "This is just a sample event."
-banner_image: "assets/images/banner.png"
+thumbnail: "assets/images/thumbnail.png" # This will be shown in home page card
+banner_image: "assets/images/banner.png" # This will be shown in event's page
 
 date: 2024-10-06
 end_date: 2024-10-06
