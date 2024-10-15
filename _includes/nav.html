@@ -4,11 +4,13 @@
 >
 <div class="flex items-center">
   <div class="m-4 w-12 h-12 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 relative">
-    <img
-      src="../assets/images/logo.png"
-      alt="logo"
-      class="absolute w-full h-full object-contain"
-    />
+    <a href="{{ '/' }}">
+      <img
+        src="../assets/images/logo.png"
+        alt="logo"
+        class="absolute w-full h-full object-contain"
+      />
+    </a>
   </div>
 </div>
 
@@ -60,15 +62,15 @@
           class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-base sm:text-sm md:text-base lg:text-lg"
         >
           <li class="rounded-tr-xl">
-            <a href="#" class="block p-2 my-2 hover:text-[#023047]"
+            <a href="/events/upcoming" class="block p-2 my-2 hover:text-[#023047]"
               >Upcoming Events</a
             >
           </li>
           <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Past Events</a>
+            <a href="/events/past" class="block p-2 my-2">Past Events</a>
           </li>
           <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">KEC Lite</a>
+            <a href="/events/kec-lite" class="block p-2 my-2">KEC Lite</a>
           </li>
         </ul>
       </li>
@@ -206,7 +208,7 @@
           <a href="#" class="block p-4">Past Events</a>
         </li>
         <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-          <a href="#" class="block p-4">KEC Lite</a>
+          <a href="/events/kec-lite-2024" class="block p-4">KEC Lite</a>
         </li>
       </ul>
     </li>
@@ -261,6 +263,7 @@
     <li>
       <a
         href="{{ '/contact/' }}"
+        id="dropdown_contact"
         class="mx-6 my-2 px-3 py-2 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
         >Contact us</a
       >

@@ -54,10 +54,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+future: true
 collections:
   events:
     output: true
-    permalink: /events/:title
+    permalink: /events/:path
 
 bg-colors:
   orange-button: "#FB8500"

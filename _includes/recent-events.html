@@ -7,14 +7,14 @@
 
   <!-- Fetch upcoming events -->
   {% assign recent_events = site.events | where: 'completed', true | sort:
-  'date' | limit: 4 %} {% assign event_count = recent_events | size %}
+  'date' | reverse %} {% assign event_count = recent_events | size %}
 
   <!-- Conditionally set grid based on the number of events -->
   {% if event_count == 1 %}
   <div class="grid grid-cols-1 place-items-center gap-4 md:gap-8">
     {% else %}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
-      {% endif %} {% for event in recent_events %}
+      {% endif %} {% for event in recent_events limit: 4 %}
       <div
         class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
       >
@@ -45,18 +45,6 @@
             </p>
 
             <!-- Event Description with Show More/Show Less -->
-            <p class="text-sm my-2">
-              <!-- Shortened version of the description -->
-              <span class="event-description-short"
-                >{{ event.description | truncate: 120, "..." }}</span
-              >
-              <!-- Full description, hidden initially -->
-              <span class="event-description-full hidden"
-                >{{ event.description }}</span
-              >
-              <!-- Event Description with Show More/Show Less -->
-            </p>
-
             <p class="text-sm my-2">
               <!-- Shortened version of the description -->
               <span class="event-description-short"

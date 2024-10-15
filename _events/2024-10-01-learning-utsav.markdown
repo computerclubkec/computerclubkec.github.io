@@ -17,22 +17,28 @@ completed: false
 
 tags: ["challenge", "learning", "skills"]
 published: true
+
+custom_layout: false
 ---
 <!-- Content -->
-## Event Details
 
-Join us for **Learning Utsav**, a 30-day challenge focused on skilling up, collaborating, and sharing progress. Whether you're a student, professional, or enthusiast, this event is designed to help you improve your skills through hands-on experience, projects, and engaging discussions.
 
-### Event Highlights
-- **Collaborative Learning**: Work with peers to build projects, solve challenges, and exchange ideas.
-- **Workshops**: Attend expert-led workshops tailored to improving key skill sets.
-- **Community Discussions**: Engage with others to share progress, offer support, and celebrate achievements.
+<div class="prose lg:prose-xl mx-auto">
+    <p>Join us for <strong>Learning Utsav</strong>, a 30-day challenge focused on skilling up, collaborating, and sharing progress. Whether you're a student, professional, or enthusiast, this event is designed to help you improve your skills through hands-on experience, projects, and engaging discussions.</p>
 
-### How to Register
-To participate in the Learning Utsav challenge, please register using the following link:  
-[**{{ button_text }}**]({{ registration_link }})
+    <h3 class="text-2xl font-semibold mt-8">Event Highlights</h3>
+    <ul class="list-disc list-inside mt-4">
+        <li><strong>Collaborative Learning</strong>: Work with peers to build projects, solve challenges, and exchange ideas.</li>
+        <li><strong>Workshops</strong>: Attend expert-led workshops tailored to improving key skill sets.</li>
+        <li><strong>Community Discussions</strong>: Engage with others to share progress, offer support, and celebrate achievements.</li>
+    </ul>
 
-### Contact
-For any queries, feel free to reach out to us at [contact@computerclubkec.com](mailto:contact@computerclubkec.com).
+    <h3 class="text-2xl font-semibold mt-8">How to Register</h3>
+    <p class="mt-4">To participate in the Learning Utsav challenge, please register using the following link:</p>
+    <a href="{{ page.registration_link }}" class="text-blue-500 underline">{{ page.title }}</a>
 
-We look forward to your active participation!
+    <h3 class="text-2xl font-semibold mt-8">Contact</h3>
+    <p class="mt-4">For any queries, feel free to reach out to us at <a href="mailto:contact@computerclubkec.com" class="text-blue-500 underline">contact@computerclubkec.com</a>.</p>
+
+    <p class="mt-8">We look forward to your active participation!</p>
+</div>

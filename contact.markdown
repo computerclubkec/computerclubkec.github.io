@@ -19,7 +19,8 @@ permalink: /contact/
         We're always excited to connect! Whether you have a question, want to collaborate, or are interested in learning more about our activities, feel free to reach out. Expect to hear from us within the next two business days.<br><br> You can send us an email at <b><a href="mailto:computerclub@kec.edu.np" class="underline">computerclub@kec.edu.np</a>.</b><br> Visit us at our club office which is located at <b>Ground Floor, Teachers Block, KEC Marg Mathillo, Dhapakhel 23, Lalitpur, 44700 NP.</b>
       </p>
 
-      <form class="flex flex-col items-start gap-4 w-full" onsubmit="handleClick(event)">
+      <form class="flex flex-col items-start gap-4 w-full">
+      
         <div class="flex flex-col items-start gap-1 w-full">
           <label class="font-inter font-bold text-lg text-black">Your Full Name</label>
           <input type="text" id="fullName" class="w-full h-[56px] rounded-md border-none focus:outline-none pl-2" style="background-color: {{ site.bg-colors.lightGray }};" placeholder="" required />
@@ -36,7 +37,7 @@ permalink: /contact/
         </div>
 
         <div class="w-full flex justify-center lg:justify-start">
-          <button type="submit" class="flex flex-row justify-center items-center p-2 rounded-md w-auto transform transition-transform duration-200 active:scale-95 hover:opacity-90" style="background-color: {{ site.bg-colors.orange-button }};">
+          <button type="button" onclick="handleClick(event)" class="flex flex-row justify-center items-center p-2 rounded-md w-auto transform transition-transform duration-200 active:scale-95 hover:opacity-90" style="background-color: {{ site.bg-colors.orange-button }};">
             <span class="font-inter font-medium text-lg text-white">Send</span>
           </button>
         </div>
@@ -57,14 +58,17 @@ permalink: /contact/
 </div>
 
 <script>
-    function handleClick(event) { //Lets change this later
-        event.preventDefault(); 
-        const fullName = document.getElementById('fullName').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        console.log("Full Name:", fullName);
-        console.log("Subject:", subject);
-        console.log("Message:", message);
-    }
-</script>
+function handleClick(event) {
+    const fullName = document.getElementById('fullName').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
 
+    const body = `${message}\n\nBest regards,\n${fullName}`;
+
+    // Gmail link for composing a new email
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=computerclub@kec.edu.np&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open in a popup window or the same tab
+    window.open(gmailLink, 'gmailComposeWindow', 'width=800,height=600');
+}
+</script>

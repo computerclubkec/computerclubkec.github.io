@@ -1,0 +1,108 @@
+<div class="py-8 px-10 2xl:px-72 xl:px-44 lg:px-16 md:px-28 sm:px-6">
+  <h2
+    class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
+  >
+    Open-Source Contributors
+  </h2>
+
+  <!-- Contributors -->
+  <div
+    id="contributors_list"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6"
+  >
+    <!-- Contributors cards for 2024 -->
+    {% for contributors in site.data.contributors.contributors_list %}
+    <div
+      class="contributors-card relative bg-[{{site.bg-colors.darkBlue}}] p-6 rounded-2xl transition duration-300 ease-in-out"
+    >
+      <div class="w-full flex justify-center">
+        <img
+          src="{{ contributors.image }}"
+          alt="{{ contributors.name }}"
+          class="w-[300px] h-[300px] object-cover mb-4 2xl:mt-2 rounded-md"
+        />
+      </div>
+      <span class="text-start">
+        <h3 class="text-xl font-semibold text-center text-white">
+          {{ contributors.name }}
+        </h3>
+        <p class="text-sm text-center text-gray-300">{{ contributors.title }}</p>
+      </span>
+
+      <div
+        class="description absolute inset-0 bg-[{{site.bg-colors.orange-button}}] cursor-pointer flex flex-col justify-between items-center text-white p-4 text-center rounded-lg opacity-0 transition-opacity duration-300 ease-in-out"
+      >
+        <div class="flex-grow flex items-center justify-center">
+          <p>{{ contributors.description }}</p>
+        </div>
+        <div class="social-icons flex justify-end w-full space-x-4 px-4 pb-4">
+          <a
+            href="https://www.linkedin.com/{{ contributors.linkedin }}"
+            class="text-white"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/{{ contributors.twitter }}" class="text-white">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .contributors-card {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .contributors-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .contributors-card:hover .description {
+    opacity: 1;
+  }
+
+  .description {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Responsive Breakpoints for Image and Card Sizes */
+  @media (max-width: 1024px) {
+    .contributors-card {
+      width: 300px;
+    }
+    .contributors-card img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contributors-card {
+      width: 300px;
+    }
+    .contributors-card img {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contributors-card {
+      width: 300px;
+    }
+    .contributors-card img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+</style>
