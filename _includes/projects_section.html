@@ -1,72 +1,107 @@
-<section id="project-section" class="flex justify-center items-center">
-  <div
-    class="px-9 py-5 bg-[#e0e5f5] rounded-2xl border-4 border-[#85c1e9] flex flex-col justify-start items-center gap-7"
+<div
+  class=" flex flex-col justify-center gap-3 py-12 mt-4"
+>
+  <h2
+    class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
   >
-    <div class="flex flex-col justify-start items-start gap-2">
-      <div class="flex flex-row justify-between py-2 w-full">
-        <div class="text-[#0a0a0b] text-2xl font-bold leading-8">
-          Club Website
-        </div>
-        <div class="flex flex-row gap-2">
-          <span
-            class="px-3 py-2 bg-[#388e3c]/20 rounded-full text-[#28652b] text-sm font-bold"
-          >
-            Active/In Progress
-          </span>
-          <span
-            class="px-3 py-2 bg-[#fb8500]/20 rounded-full text-[#f68d07] text-sm font-bold"
-          >
-            Open for Contributions
-          </span>
-          <span
-            class="px-3 py-2 bg-[#d32f2f]/20 rounded-full text-[#d32f2f] text-sm font-bold"
-          >
-            Completed
-          </span>
-        </div>
-      </div>
-      <div class="flex gap-1 mb-2">
-        <span
-          class="px-3 py-2 bg-[#2980b9]/25 rounded-full text-[#2980b9] text-sm font-bold"
-          >jkyll</span
-        >
-        <span
-          class="px-3 py-2 bg-[#2980b9]/25 rounded-full text-[#2980b9] text-sm font-bold"
-          >open-source</span
-        >
-        <span
-          class="px-3 py-2 bg-[#2980b9]/25 rounded-full text-[#2980b9] text-sm font-bold"
-          >hacktoberfest</span
-        >
-        <span
-          class="px-3 py-2 bg-[#2980b9]/25 rounded-full text-[#2980b9] text-sm font-bold"
-          >kantipur engineering college</span
-        >
-      </div>
-      <div class="flex items-start gap-2 mb-2">
-        <div class="text-black text-base font-normal">Technologies used:</div>
-        <div class="flex gap-1">
-          <div class="bg-gray-300 p-4 rounded-lg"></div>
-          <div class="bg-gray-300 p-4 rounded-lg"></div>
-          <div class="bg-gray-300 p-4 rounded-lg"></div>
-        </div>
-      </div>
-      <div class="text-[#0a0a0b] text-base font-normal mb-2">
-        We’re building a modern, user-friendly website for the Computer Club to
-        showcase our events, projects, and community activities.
-      </div>
-      <div class="flex items-center gap-3">
-        <div class="p-3 bg-[#24292e] rounded-lg flex items-center gap-1">
+    Projects
+  </h2>
+
+  <div
+    class="w-[80vw] mx-auto bg-[{{ site.bg-colors.gray }}] p-6 rounded-2xl border border-[{{ site.bg-colors.skyBlue }}] space-y-6"
+  >
+    <!-- Header Section -->
+    <div
+      class="flex flex-col md:flex-row justify-start md:justify-between items-start"
+    >
+      <!-- Left Section: Icon and Title -->
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 flex justify-center items-center">
           <img
-            class="w-7 h-7"
-            src="https://via.placeholder.com/28x28"
-            alt="GitHub Icon"
+            src="../assets/images/icons/world-wide-web.png"
+            alt="project"
+            class="w-8 h-8"
           />
-          <div class="text-neutral-50 text-base font-medium">
-            View on GitHub
-          </div>
+          <!-- Placeholder for the web icon -->
         </div>
+        <h2 class="text-2xl font-bold text-[{{ site.text-colors.base-black }}]">
+          Club Website
+        </h2>
+      </div>
+
+      <!-- Right Section: Status Tags (hidden on small screens, visible on md and up) -->
+      <div class="md:flex space-x-2 mt-3 md:mt-0">
+        <span
+          class="bg-green-200 text-green-700 px-4 py-2 rounded-full text-sm font-bold"
+          >Active/In Progress</span
+        >
+        <span
+          class="bg-orange-200 text-orange-700 px-4 py-2 rounded-full text-sm font-bold"
+          >Open For Contributions</span
+        >
       </div>
     </div>
+
+    <!-- Tags Section -->
+    <div class="flex flex-wrap gap-2">
+      <span
+        class="bg-[{{ site.bg-colors.softBlue }}] text-[{{ site.text-colors.blue }}] px-3 py-1 rounded-full text-sm font-bold"
+        >Jekyll</span
+      >
+      <span
+        class="bg-[{{ site.bg-colors.softBlue }}] text-[{{ site.text-colors.blue }}] px-3 py-1 rounded-full text-sm font-bold"
+        >Open-Source</span
+      >
+      <span
+        class="bg-[{{ site.bg-colors.softBlue }}] text-[{{ site.text-colors.blue }}] px-3 py-1 rounded-full text-sm font-bold"
+        >Hacktoberfest</span
+      >
+      <span
+        class="bg-[{{ site.bg-colors.softBlue }}] text-[{{ site.text-colors.blue }}] px-3 py-1 rounded-full text-sm font-bold"
+        >Kantipur Engineering College</span
+      >
+    </div>
+
+    <!-- Description Section -->
+    <p class="text-[{{ site.text-colors.base-black }}] text-sm">
+      We’re building a modern, user-friendly website for the Computer Club to
+      showcase our events, projects, and community activities.
+    </p>
+    <div
+      class="flex flex-col md:flex-row justify-start md:justify-between items-start"
+    >
+      <!-- Icons Section (HTML, CSS, JS) -->
+      <div class="flex space-x-4 mb-4 md:mb-0">
+        <img
+          src="../assets/images/icons/social icons/html5.svg"
+          alt="HTML5"
+          class="w-8 h-8"
+        />
+        <img
+          src="../assets/images/icons/social icons/css3.svg"
+          alt="CSS"
+          class="w-8 h-8"
+        />
+        <img
+          src="../assets/images/icons/social icons/javascript.svg"
+          alt="JavaScript"
+          class="w-8 h-8"
+        />
+      </div>
+
+      <!-- GitHub Button -->
+      <a
+        href="#"
+        class="flex items-center space-x-2 bg-[{{ site.bg-colors.baseBlack }}] text-[{{ site.text-colors.white }}] px-4 py-2 rounded-lg hover:bg-gray-800"
+      >
+        <img
+          src="../assets/images/icons/social icons/github.svg"
+          alt="GitHub Icon"
+          class="w-8 h-8"
+        />
+        <span>View on GitHub</span>
+      </a>
+    </div>
   </div>
-</section>
+</div>
+</div>
