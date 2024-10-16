@@ -56,12 +56,14 @@ permalink: /events/upcoming
 
         <!-- Register Button -->
         <a href="{{ event.registration_link }}">
-          <button
-            class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
-          >
-            Register Now
-          </button>
-        </a>
+              <div class="relative inset-0">
+                <button
+                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+                >
+                  Register Now
+                </button>
+              </div>
+            </a>
       </div>
     </div>
   {% endfor %}
