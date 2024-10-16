@@ -14,7 +14,8 @@
         </div>
 
         <div class="blog-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {% for post in site.posts %}
+          {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+          {% for post in sorted_posts %}
           <div class="blog-card w-full m-2 p-4 border border-gray-300 rounded-lg shadow-lg bg-white">
             <img src="{{ post.image | default: '/assets/images/default-image.jpg' }}" 
                  alt="{{ post.title }}" 
