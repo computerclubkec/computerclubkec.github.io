@@ -1,0 +1,7 @@
+---
+title: "Activities Improve Mind"
+date: 2024-12-13
+image: ../assets/images/blog/blog1.png
+reading_time: 5
+excerpt: "This comprehensive suite of payment products offers a fully integrated solution for handling various payment needs."
+---
