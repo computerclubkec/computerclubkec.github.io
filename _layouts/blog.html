@@ -2,6 +2,51 @@
 <html lang="en">
   <head>
     {% include header.html %}
+    <style>
+      /* Blog card styling */
+      .blog-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 450px; /* consistent height */
+        max-height: 500px; 
+        transition: box-shadow 0.3s ease;
+      }
+      .blog-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      /* Blog image styling */
+      .blog-card img {
+        height: 200px; /* Consistent image height */
+        object-fit: cover; /* Ensures image is not distorted */
+      }
+      .blog-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* blog container style for smaller screens */
+      @media (max-width: 640px) {
+        .blog-card {
+          min-height: 400px; /* Adjust height*/
+        }
+        .blog-card img {
+          height: 180px; /* Smaller image size*/
+        }
+      }
+
+      /* Ensure consistent size on larger screens */
+      @media (min-width: 1024px) {
+        .blog-card {
+          min-height: 480px; 
+        }
+        .blog-card img {
+          height: 220px; 
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -17,17 +62,20 @@
           {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
           {% for post in sorted_posts %}
           <a href="{{ post.url }}" class="block blog-card-link">
-            <div class="blog-card w-full m-2 p-4 border border-gray-300 rounded-lg shadow-lg bg-white cursor-pointer hover:shadow-xl transition-shadow">
+            <div class="blog-card w-full m-2 p-4 border border-gray-300 rounded-lg shadow-lg bg-white cursor-pointer">
               <img src="{{ post.image | default: '/assets/images/default-image.jpg' }}" 
                    alt="{{ post.title }}" 
-                   class="w-full h-48 object-cover rounded-lg mb-4">
+                   class="w-full object-cover rounded-lg mb-4">
               <div class="blog-content">
                 <p class="text-sm text-gray-500">{{ post.reading_time }} min read</p>
                 <p class="text-sm text-gray-500">{{ post.date | date: "%d %B, %Y" }}</p>
                 <h2 class="text-xl font-semibold my-2">{{ post.title }}</h2>
-                <p class="text-base text-gray-700 mb-3">{{ post.excerpt }}</p>
-                <span class="text-blue-500 font-bold hover:underline">Read More →</span>
+                <!-- Truncate the excerpt to the first 10 words so cards can maintain uniform size-->
+                <p class="text-base text-gray-700 mb-3">
+                  {{ post.excerpt | truncatewords: 10 }}
+                </p>
               </div>
+              <span class="text-blue-500 font-bold hover:underline">Read More →</span>
             </div>
           </a>
           {% endfor %}
