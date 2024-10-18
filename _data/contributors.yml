@@ -1,19 +1,19 @@
 contributors_list:
   - name: Aayush Shrestha
     title: Contributor
-    image: /assets/images/contributors/rakeshpandey.png
+    image: /assets/images/contributors/samratkumaradhikari.png
     linkedin: 
     twitter:
     description: Aayush description here.
-  - name: Samrat Adhikari
+  - name: Samrat Kumar Adhikari
     title: Contributor
     image: /assets/images/contributors/samratkumaradhikari.png
     linkedin:
     twitter:
-    description: Samrat description here.
+    description: Tech-savvy student passionate about Python and JavaScript. Working on personal projects and skin cancer detection research. Enjoys history, music, sports and trekking. 
   - name: Rakesh Pandey
     title: Contributor
     image: /assets/images/contributors/rakeshpandey.png
     linkedin:
     twitter:
-    description: Rakesh description here.
+    description: A computer engineering student with Python, C++, and JavaScript skills, specializing in web development and data science. If you ever find yourself stuck on a problem, feel free to reach out! If I can’t crack it, I know a guy who knows a guy who knows some other guy..…
