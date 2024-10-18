@@ -1,19 +1,55 @@
 members_2024:
   - name: Gaurav Giri
     title: Coordinator
-    image: /assets/images/banner.png
+    image: /assets/images/members/prajwalkhatiwada.png
     linkedin: gaurovgiri
     twitter:
     description: Gaurav is the coordinator.
   - name: Prajwal Khatiwada
     title: Executive Member
-    image: /assets/images/banner.png
+    image: /assets/images/members/prajwalkhatiwada.png
     linkedin:
     twitter:
     description: Prajwal description here.
+  - name: Bishal Tiwari
+    title: Executive Member
+    image: /assets/images/members/bishaltiwari.png
+    linkedin:
+    twitter:
+    description: Roshan description here.
   - name: Roshan Pandey
     title: Executive Member
-    image: /assets/images/banner.png
+    image: /assets/images/members/roshanpandey.png
+    linkedin: gaurovgiri
+    twitter:
+    description: Gaurav is the coordinator.
+  - name: Aakash Rana
+    title: Executive Member
+    image: /assets/images/members/aakashrana.png
+    linkedin:
+    twitter:
+    description: Prajwal description here.
+  - name: Aryan Bhattarai
+    title: Executive Member
+    image: /assets/images/members/aryanbhattarai.png
+    linkedin:
+    twitter:
+    description: Roshan description here.
+  - name: Prabhav Pokharel
+    title: Executive Member
+    image: /assets/images/members/prabhavpokharel.png
+    linkedin: gaurovgiri
+    twitter:
+    description: Gaurav is the coordinator.
+  - name: Richa Bhatta
+    title: Executive Member
+    image: /assets/images/members/richabhatta.png
+    linkedin:
+    twitter:
+    description: Prajwal description here.
+  - name: Sweta Jha
+    title: Executive Member
+    image: /assets/images/members/swetajha.png
     linkedin:
     twitter:
     description: Roshan description here.
