@@ -1,7 +1,7 @@
 members_2024:
   - name: Gaurav Giri
     title: Coordinator
-    image: /assets/images/members/prajwalkhatiwada.png
+    image: /assets/images/displaypicture.png
     linkedin: gaurovgiri
     twitter:
     description: Gaurav is the coordinator.
@@ -55,21 +55,57 @@ members_2024:
     description: Involved in web development and digital marketing projects. Loves exploring various hobbies, including Mithila painting, cooking, and coding.
 
 members_2023:
-  - name: Gaurav Giri
+  - name: Bikash Subedi
     title: Coordinator
-    image: /assets/images/banner.png
-    linkedin:
+    image: /assets/images/members/bikashsubedi.png
+    linkedin: 
+    twitter:
+    description: 
+  - name: Rinky Maharjan
+    title: Executive Member
+    image: /assets/images/members/rinkymaharjan.png
+    linkedin: 
+    twitter:
+    description: 
+  - name: Bikash Dahal
+    title: Executive Member
+    image: /assets/images/members/bikashdahal.png
+    linkedin: 
+    twitter: 
+    description: 
+  - name: Gaurav Giri
+    title: Executive Member
+    image: /assets/images/members/prajwalkhatiwada.png
+    linkedin: gaurovgiri
     twitter:
     description: Gaurav is the coordinator.
+  - name: Prajwal Khatiwada
+    title: Executive Member
+    image: /assets/images/members/prajwalkhatiwada.png
+    linkedin: prajwal-khatiwada-9481991b6/
+    twitter:
+    description: He loves data science and is committed to Python. Not so human in the age of artificial intelligence!
+  - name: Bishal Tiwari
+    title: Executive Member
+    image: /assets/images/members/bishaltiwari.png
+    linkedin: bishaltwr/
+    twitter: bishaltwr
+    description: Lifelong learner fueled by curiosity and countless all-nighters, always eager to explore new topics and absorb knowledge.
   - name: Roshan Pandey
     title: Executive Member
-    image: /assets/images/banner.png
-    linkedin:
-    twitter:
-    description: Roshan description here.
+    image: /assets/images/members/roshanpandey.png
+    linkedin: rpandox/
+    twitter: pandox159
+    description: Passionate about programming in Python (AI/ML, Data Science), HTML, CSS, and JavaScript (MERN Stack). Once I dive into tech, I can’t stop until I’ve explored everything!
   - name: Aakash Rana
     title: Executive Member
-    image: /assets/images/banner.png
-    linkedin:
+    image: /assets/images/members/aakashrana.png
+    linkedin: aakashrana7
+    twitter: AquariusAakash
+    description: Passionate about technology, programming, and sports, with expertise in Python, AI, SQL, JavaScript, C++, and more. Actively involved in Nepal's tech communities, former e-sports player, and constantly evolving coding approach.
+  - name: Aryan Bhattarai
+    title: Executive Member
+    image: /assets/images/members/aryanbhattarai.png
+    linkedin: aryan-bhattarai-16123b280/
     twitter:
-    description: Aakash description here.
+    description: A student interested in computing and technology, actively learning and applying skills through projects. Enjoys working with various technologies and coding languages, contributing to tech communities, and storytelling through coding.
