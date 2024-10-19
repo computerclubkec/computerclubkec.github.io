@@ -3,6 +3,7 @@ layout: event
 
 title: "Tech Symposium 2024"
 description: "Join us for a day of inspiration and innovation at Tech Symposium 2024, where industry experts share insights on the latest trends in technology."
+thumbnail: "/assets/images/events/learning-utsav.jpg"
 banner_image: "/assets/images/events/learning-utsav.jpg"
 
 date: 2024-11-10

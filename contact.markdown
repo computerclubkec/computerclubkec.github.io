@@ -1,14 +1,10 @@
 ---
 layout: default
-title: Contact
+title: Contact Us
 permalink: /contact/
 ---
 
 <div class="container py-10 px-2 mx-auto items-center">
-  <h2 class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8">
-    Contact Details
-  </h2>
-
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
     <div class="w-full h-full rounded-3xl overflow-hidden">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d883.6445680647219!2d85.33266066340637!3d27.637575154479304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb176abdf8b1e3%3A0xbe5844d7f7a9c46b!2sKantipur%20Engineering%20College!5e0!3m2!1sen!2snp!4v1728487755903!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="auto" referrerpolicy="no-referrer-when-downgrade"></iframe>

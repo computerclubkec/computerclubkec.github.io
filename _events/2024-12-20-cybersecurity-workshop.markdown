@@ -3,6 +3,7 @@ layout: event
 
 title: "Cybersecurity Workshop"
 description: "Learn the essentials of cybersecurity in our hands-on workshop designed for tech enthusiasts."
+thumbnail: "/assets/images/events/learning-utsav.jpg"
 banner_image: "/assets/images/events/learning-utsav.jpg"
 
 date: 2024-12-20

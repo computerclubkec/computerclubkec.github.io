@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Past Events
-permalink: /events/past
+permalink: /events/past-events
 
 ---
 
@@ -26,17 +26,17 @@ permalink: /events/past
     >
     <a href="{{ event.url }}" class="absolute inset-0 block"></a>
       <!-- Event Image on Top -->
-      <div class="w-full flex justify-center">
-        <img
-          src="{{ event.banner_image }}"
-          alt="{{ event.title }}"
-          class="w-full h-auto rounded-md mb-4"
-        />
-      </div>
+    <div class="w-full flex justify-center items-center mb-4 aspect-square">
+      <img
+        src="{{ event.banner_image }}"
+        alt="{{ event.title }}"
+        class="h-full w-full object-contain rounded-md"
+      />
+    </div>
 
       <!-- Event Info Below Image -->
       <div class="text-justify">
-        <h3 class="text-xl font-semibold text-white">{{ event.title }}</h3>
+        <h3 class="text-xl font-semibold text-white truncate">{{ event.title }}</h3>
         <p class="text-sm text-gray-300 italic font-semibold">
           {% if event.end_date %}
             {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}

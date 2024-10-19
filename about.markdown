@@ -1,13 +1,10 @@
 ---
 layout: default
-title: About
+title: About Us
 permalink: /about/
 ---
 
 <div class="container py-10 px-2 mx-auto items-center">
-  <h2 class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8">
-    About us
-  </h2>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
     <div class="w-full h-full rounded-3xl overflow-hidden">
