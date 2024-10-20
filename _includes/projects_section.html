@@ -4,11 +4,10 @@
   >
     Projects
   </h2>
-
+  {% for project in site.projects limit: 3 %}
   <div
     class="w-[80vw] mx-auto bg-[{{ site.bg-colors.gray }}] p-6 rounded-2xl border border-[{{ site.bg-colors.skyBlue }}] space-y-3"
   >
-    {% for project in site.projects limit: 3 %}
     <!-- Project Card -->
     <div
       class="flex flex-col md:flex-row justify-start md:justify-between items-start space-y-6 md:space-y-0"
@@ -25,12 +24,22 @@
 
       <!-- Right Section: Status Tags -->
       <div class="flex flex-wrap gap-2">
-        {% for status in project.status %}
+        {% for status in project.status %} {% if status == "active" %}
         <span
           class="bg-green-200 text-green-700 px-4 py-2 rounded-full text-sm font-bold"
-          >{{ status }}</span
+          >Active/In Progress</span
         >
-        {% endfor %}
+        {% elsif status == "open" %}
+        <span
+          class="bg-orange-200 text-orange-700 px-4 py-2 rounded-full text-sm font-bold"
+          >Open for Contribution</span
+        >
+        {% elsif status == "planning" %}
+        <span
+          class="bg-yellow-200 text-yellow-700 px-4 py-2 rounded-full text-sm font-bold"
+          >Planning</span
+        >
+        {% endif %} {% endfor %}
       </div>
     </div>
 
@@ -54,8 +63,9 @@
     >
       <!-- Technology Icons Section -->
       <div class="flex space-x-4 mb-4 md:mb-0">
-        {% for tech in project.tech %}
-        <iconify-icon icon="devicon:{{ tech }}" class="text-3xl"></iconify-icon>
+        {% for tech in project.tech %} {% assign logo =
+        site.data['tech-logo'][tech] %}
+        <iconify-icon icon="{{ logo }}" class="text-3xl"></iconify-icon>
         {% endfor %}
       </div>
 
@@ -70,11 +80,10 @@
         <span>View on GitHub</span>
       </a>
     </div>
-    {% endfor %}
   </div>
-
+  {% endfor %}
   <!-- See More Button -->
-  <div class="flex justify-center">
+  <div class="flex justify-center mt-6">
     <a
       href="../404.html"
       class="text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.bg-colors.orange-button}}] dark:text-[{{site.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.bg-colors.orange-button}}] dark:focus:ring-[{{site.bg-colors.orange-button}}]/80"
