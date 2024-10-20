@@ -8,8 +8,7 @@
   <div
     class="w-[80vw] mx-auto bg-[{{ site.bg-colors.gray }}] p-6 rounded-2xl border border-[{{ site.bg-colors.skyBlue }}] space-y-6"
   >
-    {% for project in site.projects %}
-    <!-- {% for project in site.projects limit: 3 %} -->
+    {% for project in site.projects limit: 3 %}
     <!-- Project Card -->
     <div
       class="flex flex-col md:flex-row justify-start md:justify-between items-start space-y-6 md:space-y-0"
@@ -17,7 +16,7 @@
       <!-- Left Section: Icon and Title -->
       <div class="flex items-center space-x-3">
         <div class="w-12 h-12 flex justify-center items-center">
-          <iconify-icon icon="mdi:web" class="w-8 h-8"></iconify-icon>
+          <iconify-icon icon="mdi:web" class="text-3xl"></iconify-icon>
         </div>
         <h2 class="text-2xl font-bold text-[{{ site.text-colors.base-black }}]">
           {{ project.title }}
@@ -25,7 +24,7 @@
       </div>
 
       <!-- Right Section: Status Tags -->
-      <div class="md:flex space-x-2 mt-3 md:mt-0">
+      <div class="flex flex-wrap gap-2">
         {% for status in project.status %}
         <span
           class="bg-green-200 text-green-700 px-4 py-2 rounded-full text-sm font-bold"
@@ -55,8 +54,8 @@
     >
       <!-- Technology Icons Section -->
       <div class="flex space-x-4 mb-4 md:mb-0">
-        {% for tech in project.technology_used %}
-        <iconify-icon icon="logos:{{ tech }}" class="w-8 h-8"></iconify-icon>
+        {% for tech in project.tech %}
+        <iconify-icon icon="devicon:{{ tech }}" class="text-3xl"></iconify-icon>
         {% endfor %}
       </div>
 
@@ -64,8 +63,10 @@
       <a
         href="{{ project.github_url }}"
         class="flex items-center space-x-2 bg-[{{ site.bg-colors.baseBlack }}] text-[{{ site.text-colors.white }}] px-4 py-2 rounded-lg hover:bg-gray-800"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <iconify-icon icon="mdi:github" class="w-8 h-8"></iconify-icon>
+        <iconify-icon icon="mdi:github" class="text-2xl"></iconify-icon>
         <span>View on GitHub</span>
       </a>
     </div>
@@ -75,7 +76,7 @@
   <!-- See More Button -->
   <div class="flex justify-center">
     <a
-      href="/projects"
+      href="../404.html"
       class="text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.bg-colors.orange-button}}] dark:text-[{{site.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.bg-colors.orange-button}}] dark:focus:ring-[{{site.bg-colors.orange-button}}]/80"
     >
       See More

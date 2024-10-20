@@ -9,8 +9,9 @@ short_description:
   "We’re building a modern, user-friendly website for the Computer Club to
   showcase our events, projects, and community activities."
 
-technology_used: ["html5", "css", javascript]
-completed: false
+tech: ["html5", "css3", javascript]
+
+github_url: "https://github.com/computerclubkec/computerclubkec.github.io"
 
 published: true
 

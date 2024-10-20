@@ -60,6 +60,10 @@ collections:
     output: true
     permalink: /events/:path
 
+  projects:
+    output: true
+    permalink: /projects/:path
+
 bg-colors:
   orange-button: "#FB8500"
   goldenOrange-button: "#FFB703"
