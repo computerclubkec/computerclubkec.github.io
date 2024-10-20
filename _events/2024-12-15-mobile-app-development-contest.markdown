@@ -3,7 +3,7 @@ layout: event
 
 title: "Mobile App Development Contest"
 description: "Show off your mobile app development skills in our contest and stand a chance to win amazing prizes!"
-thumbnail: "/assets/images/logo.png"
+thumbnail: "/assets/images/displaypicture.png"
 banner_image: "/assets/images/banner.png"
 
 date: 2024-12-15

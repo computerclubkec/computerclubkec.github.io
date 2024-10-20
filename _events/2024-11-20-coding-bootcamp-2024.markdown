@@ -3,7 +3,7 @@ layout: event
 
 title: "Coding Bootcamp 2024"
 description: "Enhance your coding skills in a collaborative environment with our immersive Coding Bootcamp."
-thumbnail: "/assets/images/logo.png"
+thumbnail: "/assets/images/displaypicture.png"
 banner_image: "/assets/images/logo.png"
 
 date: 2024-11-20
