@@ -6,7 +6,7 @@
   </h2>
 
   <div
-    class="w-[80vw] mx-auto bg-[{{ site.bg-colors.gray }}] p-6 rounded-2xl border border-[{{ site.bg-colors.skyBlue }}] space-y-6"
+    class="w-[80vw] mx-auto bg-[{{ site.bg-colors.gray }}] p-6 rounded-2xl border border-[{{ site.bg-colors.skyBlue }}] space-y-3"
   >
     {% for project in site.projects limit: 3 %}
     <!-- Project Card -->
@@ -14,7 +14,7 @@
       class="flex flex-col md:flex-row justify-start md:justify-between items-start space-y-6 md:space-y-0"
     >
       <!-- Left Section: Icon and Title -->
-      <div class="flex items-center space-x-3">
+      <div class="flex items-center">
         <div class="w-12 h-12 flex justify-center items-center">
           <iconify-icon icon="mdi:web" class="text-3xl"></iconify-icon>
         </div>
