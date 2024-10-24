@@ -5,7 +5,7 @@ permalink: /events/upcoming
 
 ---
 
-<div class="container pb-10 px-2 md:mx-auto">
+<div class="container pb-10 px-2 md:mx-auto" data-aos="fade-up">
     
    <!-- Fetch upcoming events -->
   {% assign upcoming_events = site.events | where: 'completed', false | sort: 'date' %}
