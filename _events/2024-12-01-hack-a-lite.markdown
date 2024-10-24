@@ -3,6 +3,7 @@ layout: event
 
 title: "Hack-a-LITE 2024"
 description: "Get ready for an exciting 36-hour hackathon where participants will tackle real-world problems, innovate solutions, and compete for prizes. The event fosters collaboration, creativity, and intense problem-solving, making it a must-attend event for anyone passionate about coding and tech innovation."
+thumbnail: "/assets/images/events/hack-a-lite.jpg"
 banner_image: "/assets/images/events/hack-a-lite.jpg"
 
 date: 2024-12-01

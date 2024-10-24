@@ -3,6 +3,7 @@ layout: event
 
 title: "AI & Machine Learning Seminar"
 description: "Dive into the world of AI and Machine Learning with industry experts sharing their knowledge and experiences."
+thumbnail: "/assets/images/displaypicture.png"
 banner_image: "/assets/images/logo.png"
 
 date: 2024-12-05

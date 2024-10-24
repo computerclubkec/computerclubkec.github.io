@@ -3,6 +3,7 @@ layout: event
 
 title: "Learning Utsav"
 description: "A 30-day challenge to skill up, share progress, and celebrate. This challenge is a great way to engage with others and learn new skills. Participants can collaborate on projects, join discussions, and attend workshops tailored to improving their skills. The event focuses on collaborative learning, hands-on experience, and enhancing skill sets in a supportive environment."
+thumbnail: "/assets/images/events/learning-utsav.jpg"
 banner_image: "/assets/images/events/learning-utsav.jpg"
 
 date: 2024-10-01

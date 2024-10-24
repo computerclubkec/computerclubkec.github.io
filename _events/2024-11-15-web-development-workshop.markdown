@@ -3,7 +3,8 @@ layout: event
 
 title: "Web Development Workshop"
 description: "Join our interactive workshop to learn web development from the ground up!"
-banner_image: "/assets/images/banner.png"
+thumbnail: "/assets/images/events/kec-lite-2024-logo.jpg"
+banner_image: "/assets/images/events/kec-lite-2024.png"
 
 date: 2024-11-15
 end_date: 2024-11-15
