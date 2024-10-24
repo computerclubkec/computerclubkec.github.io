@@ -58,7 +58,7 @@
           Our Latest Blogs
         </div>
 
-        <div class="blog-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="blog-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-aos="fade-up">
           {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
           {% for post in sorted_posts %}
           <a href="{{ post.url }}" class="block blog-card-link">
