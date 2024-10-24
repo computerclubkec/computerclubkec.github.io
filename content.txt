@@ -1,0 +1,136 @@
+./
+├── 404.html
+├── about.markdown
+├── assets
+│   ├── css
+│   │   └── main.css
+│   ├── images
+│   │   ├── banner.png
+│   │   ├── brands
+│   │   │   ├── bok.png
+│   │   │   ├── digital_gurkha.png
+│   │   │   ├── khalti.png
+│   │   │   ├── leapfrog.png
+│   │   │   ├── techaxis.png
+│   │   │   ├── technoriyo.png
+│   │   │   └── veda.png
+│   │   ├── events
+│   │   │   ├── hack-a-lite.jpg
+│   │   │   ├── kec-lite-2024-logo.jpg
+│   │   │   ├── kec-lite-2024.png
+│   │   │   └── learning-utsav.jpg
+│   │   └── logo.png
+│   └── js
+│       ├── main.js
+│       └── navbar
+│           ├── active.page.js
+│           ├── dropdown.js
+│           └── responsive.js
+├── blog.markdown
+├── _config.yml
+├── contact.markdown
+├── content.txt
+├── CONTRIBUTING.md
+├── _data
+│   ├── contributors.yml
+│   └── members.yml
+├── docker-compose.yml
+├── Dockerfile
+├── event.markdown
+├── _events
+│   ├── 2024-10-01-learning-utsav.markdown
+│   ├── 2024-11-10-tech-symposium-2024.markdown
+│   ├── 2024-11-15-web-development-workshop.markdown
+│   ├── 2024-11-20-coding-bootcamp-2024.markdown
+│   ├── 2024-12-01-hack-a-lite.markdown
+│   ├── 2024-12-05-ai-machine-learning-seminar.markdown
+│   ├── 2024-12-15-mobile-app-development-contest.markdown
+│   ├── 2024-12-20-cybersecurity-workshop.markdown
+│   ├── kec-lite.markdown
+│   └── YYYY-MM-DD-example-title.markdown
+├── Gemfile
+├── Gemfile.lock
+├── _includes
+│   ├── brands_colab.html
+│   ├── executive-members.html
+│   ├── footer.html
+│   ├── header.html
+│   ├── nav.html
+│   ├── open-source-contributors.html
+│   ├── recent-events.html
+│   └── upcoming-events.html
+├── index.markdown
+├── _layouts
+│   ├── default.html
+│   ├── event.html
+│   └── home.html
+├── NAMING-CONVENTION.md
+├── past-events.markdown
+├── _posts
+│   └── 2024-10-01-welcome-to-jekyll.markdown
+├── README.md
+├── resources.markdown
+├── _site
+│   ├── 404.html
+│   ├── about
+│   │   └── index.html
+│   ├── assets
+│   │   ├── css
+│   │   │   └── main.css
+│   │   ├── images
+│   │   │   ├── banner.png
+│   │   │   ├── brands
+│   │   │   │   ├── bok.png
+│   │   │   │   ├── digital_gurkha.png
+│   │   │   │   ├── khalti.png
+│   │   │   │   ├── leapfrog.png
+│   │   │   │   ├── techaxis.png
+│   │   │   │   ├── technoriyo.png
+│   │   │   │   └── veda.png
+│   │   │   ├── events
+│   │   │   │   ├── hack-a-lite.jpg
+│   │   │   │   ├── kec-lite-2024-logo.jpg
+│   │   │   │   ├── kec-lite-2024.png
+│   │   │   │   └── learning-utsav.jpg
+│   │   │   └── logo.png
+│   │   └── js
+│   │       ├── main.js
+│   │       └── navbar
+│   │           ├── active.page.js
+│   │           ├── dropdown.js
+│   │           └── responsive.js
+│   ├── blog
+│   │   └── index.html
+│   ├── contact
+│   │   └── index.html
+│   ├── CONTRIBUTING.md
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   ├── events
+│   │   ├── 2024-10-01-learning-utsav.html
+│   │   ├── 2024-11-10-tech-symposium-2024.html
+│   │   ├── 2024-11-15-web-development-workshop.html
+│   │   ├── 2024-11-20-coding-bootcamp-2024.html
+│   │   ├── 2024-12-01-hack-a-lite.html
+│   │   ├── 2024-12-05-ai-machine-learning-seminar.html
+│   │   ├── 2024-12-15-mobile-app-development-contest.html
+│   │   ├── 2024-12-20-cybersecurity-workshop.html
+│   │   ├── index.html
+│   │   ├── kec-lite.html
+│   │   ├── past-events.html
+│   │   └── upcoming.html
+│   ├── feed.xml
+│   ├── index.html
+│   ├── jekyll
+│   │   └── update
+│   │       └── 2024
+│   │           └── 10
+│   │               └── 01
+│   │                   └── welcome-to-jekyll.html
+│   ├── NAMING-CONVENTION.md
+│   ├── README.md
+│   └── resources
+│       └── index.html
+└── upcoming-events.markdown
+
+30 directories, 103 files
