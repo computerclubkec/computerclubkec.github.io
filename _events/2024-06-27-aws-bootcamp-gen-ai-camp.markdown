@@ -3,8 +3,8 @@ layout: event
 
 title: "AWS Bootcamp and Gen AI CAMP"
 description: "Join our interactive workshop to learn web development from the ground up!"
-thumbnail: "/assets/images/events/aws-genai-camp-2024/thumbnail.jpg"
-banner_image: "/assets/images/events/aws-genai-camp-2024/banner.png"
+thumbnail: "/assets/images/events/aws-bootcamp-genai-camp-2024/thumbnail.jpg"
+banner_image: "/assets/images/events/aws-bootcamp-genai-camp-2024/banner.png"
 
 date: 2024-06-27
 end_date: 2024-06-29
