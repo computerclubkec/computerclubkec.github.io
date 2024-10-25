@@ -33,7 +33,7 @@ permalink: /events/past-events
       <!-- Event Image on Top -->
     <div class="w-full flex justify-center items-center mb-4 aspect-square">
       <img loading="lazy"
-        src="{{ event.banner_image }}"
+        src="{{ event.thumbnail }}"
         alt="{{ event.title }}"
         class="h-full w-full object-contain rounded-md"
       />
