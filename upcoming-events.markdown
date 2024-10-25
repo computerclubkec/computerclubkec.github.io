@@ -27,7 +27,7 @@ permalink: /events/upcoming
     <a href="{{ event.url }}" class="absolute inset-0 block"></a>
       <!-- Event Image on Top -->
       <div class="w-full flex justify-center">
-        <img
+        <img loading="lazy"
           src="{{ event.banner_image }}"
           alt="{{ event.title }}"
           class="w-full h-auto rounded-md mb-4"

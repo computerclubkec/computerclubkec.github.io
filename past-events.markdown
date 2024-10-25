@@ -27,7 +27,7 @@ permalink: /events/past-events
     <a href="{{ event.url }}" class="absolute inset-0 block"></a>
       <!-- Event Image on Top -->
     <div class="w-full flex justify-center items-center mb-4 aspect-square">
-      <img
+      <img loading="lazy"
         src="{{ event.banner_image }}"
         alt="{{ event.title }}"
         class="h-full w-full object-contain rounded-md"
