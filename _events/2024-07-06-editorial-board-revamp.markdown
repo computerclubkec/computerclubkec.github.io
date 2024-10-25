@@ -3,8 +3,8 @@ layout: event
 
 title: "Editorial Board Revamp"
 description: "Enhance your coding skills in a collaborative environment with our immersive Coding Bootcamp."
-thumbnail: "/assets/images/events/editorial-board-revamp-2024-thumbnail.jpg"
-banner_image: "/assets/images/events/editorial-board-revamp-2024-banner.png"
+thumbnail: "/assets/images/events/editorial-board-revamp-2024/thumbnail.jpg"
+banner_image: "/assets/images/events/editorial-board-revamp-2024/banner.png"
 
 date: 2024-07-06
 end_date:

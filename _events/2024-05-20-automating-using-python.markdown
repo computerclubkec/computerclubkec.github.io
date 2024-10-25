@@ -3,8 +3,8 @@ layout: event
 
 title: "Workshop on Automation using Python"
 description: "Join us for a day of inspiration and innovation at Tech Symposium 2024, where industry experts share insights on the latest trends in technology."
-thumbnail: "/assets/images/events/automation-using-python-2024-thumbnail.png"
-banner_image: "/assets/images/events/automation-using-python-2024-banner.png"
+thumbnail: "/assets/images/events/automation-using-python-2024/thumbnail.png"
+banner_image: "/assets/images/events/automation-using-python-2024/banner.png"
 
 date: 2024-05-20
 end_date: 2024-05-23

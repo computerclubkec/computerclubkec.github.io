@@ -3,8 +3,8 @@ layout: event
 
 title: "Bhoos Office Visit"
 description: "Dive into the world of AI and Machine Learning with industry experts sharing their knowledge and experiences."
-thumbnail: "/assets/images/events/bhoos-office-visit-2024-thumbnail.png"
-banner_image: "/assets/images/events/bhoos-office-visit-2024-banner.png"
+thumbnail: "/assets/images/events/bhoos-office-visit-2024/thumbnail.png"
+banner_image: "/assets/images/events/bhoos-office-visit-2024/banner.png"
 
 date: 2024-07-23
 end_date: 
