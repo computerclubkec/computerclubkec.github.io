@@ -82,3 +82,37 @@ document.addEventListener("DOMContentLoaded", function () {
   // Attach the function to the global window object so it can be called from HTML
   window.showYear = showYear;
 });
+
+// carousel for metric banner
+
+let currentIndex = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+  let currentIndex = 0;
+
+  window.moveSlide = function (direction) {
+    const items = document.querySelectorAll(".carousel-item");
+    const totalItems = items.length;
+
+    // Update the current index
+    currentIndex += direction;
+
+    // Loop back to the start or end
+    if (currentIndex < 0) {
+      currentIndex = totalItems - 1;
+    } else if (currentIndex >= totalItems) {
+      currentIndex = 0;
+    }
+
+    // Calculate the translateX value
+    const offset = -currentIndex * 100; // Adjust the offset based on the current index
+    document.querySelector(
+      ".carousel-wrapper"
+    ).style.transform = `translateX(${offset}%)`;
+  };
+
+  // Optional: Auto-slide every 3 seconds
+  setInterval(() => {
+    moveSlide(1);
+  }, 5000);
+});
