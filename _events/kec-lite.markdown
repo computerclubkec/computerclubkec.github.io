@@ -3,8 +3,8 @@ layout: event
 
 title: "KEC Lite 2024"
 description: "KEC LITE (Learning and Innovating Technology for Enhancement) is an annual two-day inter-college technical exhibition organized by Kantipur Engineering College. The event is a platform for showcasing the talents and abilities of engineering and science students from different colleges and universities."
-thumbnail: "/assets/images/events/kec-lite-2024-logo.jpg"
-banner_image: "/assets/images/events/kec-lite-2024.jpg"
+thumbnail: "/assets/images/events/kec-lite-2024/kec-lite-2024-logo.jpg"
+banner_image: "/assets/images/events/kec-lite-2024/kec-lite-2024.jpg"
 
 date: 2024-02-21
 end_date: 2024-02-22

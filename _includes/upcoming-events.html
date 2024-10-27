@@ -1,85 +1,78 @@
-<div class="container py-10 px-2 md:mx-auto">
-  <h2
-    class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
-  >
+<div class="container py-10 px-2 md:mx-auto" data-aos="fade-up">
+  <h2 class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8">
     Upcoming Events
   </h2>
 
   <!-- Fetch upcoming events -->
-  {% assign upcoming_events = site.events | where: 'completed', false | sort:
-  'date' %} {% assign event_count = upcoming_events | size %}
+  {% assign upcoming_events = site.events | where: 'completed', false | sort: 'date' %}
+  {% assign event_count = upcoming_events | size %}
 
-  <!-- Conditionally set grid based on the number of events -->
-  {% if event_count == 1 %}
+  {% if event_count == 0 %}
+  <div class="text-center text-gray-500 text-xl mt-16">
+    No upcoming events at the moment. Please check back later.
+  </div>
+
+  {% elsif event_count == 1 %}
   <div class="grid grid-cols-1 place-items-center gap-4 md:gap-8">
-    {% else %}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
-      {% endif %} {% for event in upcoming_events limit: 4 %}
-      <div
-        class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
-      >
-        <a href="{{ event.url }}" class="absolute inset-0 block"></a>
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <!-- Event Image -->
-          <div class="md:w-1/3 w-full mb-4 md:mb-0">
-            <img
-              src="{{ event.thumbnail }}"
-              alt="{{ event.title }}"
-              class="w-full h-auto md:h-60 md:w-60 rounded-lg"
-            />
-          </div>
+  {% else %}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
+  {% endif %}
 
-          <!-- Event Info -->
-          <div class="md:w-2/3 w-full md:pl-6">
-            <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
-            <p class="text-sm text-gray-400 italic font-semibold">
-              <!-- Display event dates -->
-              {% if event.end_date %}
-              <!-- Multi-day event: Show start and end dates -->
-              {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date |
-              date: "%a, %b %e, %Y" }} {% else %}
-              <!-- Single-day event: Show only the start date -->
-              {{ event.date | date: "%a, %b %e, %Y" }} {% endif %}
-            </p>
-
-            <!-- Event Description with Show More/Show Less -->
-            <p class="text-sm my-2">
-              <!-- Shortened version of the description -->
-              <span class="event-description-short"
-                >{{ event.description | truncate: 120, "..." }}</span
-              >
-              <!-- Full description, hidden initially -->
-              <span class="event-description-full hidden"
-                >{{ event.description }}</span
-              >
-
-              <!-- Read More / Read Less buttons -->
-              <button class="text-blue-400 read-more relative z-10">
-                Read More
-              </button>
-              <button class="text-blue-400 read-less hidden relative z-10">
-                Show Less
-              </button>
-            </p>
-
-            <p class="text-sm mb-1 text-gray-400 font-bold">
-              {{ event.participants }}
-            </p>
-
-            <!-- Register Button -->
-            <a href="{{ event.registration_link }}">
-              <div class="relative inset-0">
-                <button
-                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
-                >
-                  Register Now
-                </button>
-              </div>
-            </a>
-          </div>
-        </div>
+  {% for event in upcoming_events limit: 4 %}
+  <div
+    class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
+  >
+    <a href="{{ event.url }}" class="absolute inset-0 block"></a>
+    <div class="flex flex-col md:flex-row items-start md:items-center">
+      <!-- Event Image -->
+      <div class="md:w-1/3 w-full mb-4 md:mb-0">
+        <img loading="lazy" src="{{ event.thumbnail }}" alt="{{ event.title }}" class="w-full h-auto md:h-60 md:w-60 rounded-lg" />
       </div>
-      {% endfor %}
+
+      <!-- Event Info -->
+      <div class="md:w-2/3 w-full md:pl-6">
+        <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
+        <p class="text-sm text-gray-400 italic font-semibold">
+          {% if event.end_date %}
+          {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
+          {% else %}
+          {{ event.date | date: "%a, %b %e, %Y" }}
+          {% endif %}
+        </p>
+
+        <!-- Event Description with Show More/Show Less -->
+        <p class="text-sm my-2">
+          <span class="event-description-short">{{ event.description | truncate: 120, "..." }}</span>
+          <span class="event-description-full hidden">{{ event.description }}</span>
+          <button class="text-blue-400 read-more relative z-10">Read More</button>
+          <button class="text-blue-400 read-less hidden relative z-10">Show Less</button>
+        </p>
+
+        <p class="text-sm mb-1 text-gray-400 font-bold">{{ event.participants }}</p>
+
+        <!-- Register Button -->
+        <a href="{{ event.registration_link }}">
+          <div class="relative inset-0">
+            <button
+              class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+            >
+              Register Now
+            </button>
+          </div>
+        </a>
+
+        <!-- Calendar Button Component -->
+        {% assign uid = event.url %}
+        {% assign start_date = event.date | date: '%Y%m%dT%H%M%S' %}
+        {% assign end_date = event.end_date | date: '%Y%m%dT%H%M%S' %}
+        {% assign title = event.title %}
+        {% assign description = event.description %}
+        {% assign location = event.location %}
+        
+        {% include add-to-calendar-button.html uid=uid start_date=start_date end_date=end_date title=title description=description location=location %}
+      </div>
     </div>
+  </div>
+  {% endfor %}
   </div>
 </div>

@@ -58,12 +58,12 @@
           Our Latest Blogs
         </div>
 
-        <div class="blog-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="blog-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-aos="fade-up">
           {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
           {% for post in sorted_posts %}
           <a href="{{ post.url }}" class="block blog-card-link">
             <div class="blog-card w-full m-2 p-4 border border-gray-300 rounded-lg shadow-lg bg-white cursor-pointer">
-              <img src="{{ post.image | default: '/assets/images/default-image.jpg' }}" 
+              <img loading="lazy" src="{{ post.image | default: '/assets/images/default-image.jpg' }}" 
                    alt="{{ post.title }}" 
                    class="w-full object-cover rounded-lg mb-4">
               <div class="blog-content">

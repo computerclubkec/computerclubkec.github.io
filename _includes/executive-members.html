@@ -1,4 +1,4 @@
-<div class="py-8 px-10 2xl:px-72 xl:px-44 lg:px-16 md:px-28 sm:px-6">
+<div class="py-8 px-10 2xl:px-72 xl:px-44 lg:px-16 md:px-28 sm:px-6" data-aos="fade-up">
   <h2
     class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
   >
@@ -6,7 +6,7 @@
   </h2>
 
   <!-- Toggle for Years -->
-  <div class="flex justify-center">
+  <div class="flex justify-center" data-aos="fade-up">
     <button
       id="btn-2024"
       class="toggle-btn font-bold border-4 border-[{{site.bg-colors.orange-button}}] bg-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}]/90 text-white py-2 px-4 rounded-full mr-2"
@@ -31,10 +31,10 @@
     <!-- Member cards for 2024 -->
     {% for member in site.data.members.members_2024 %}
     <div
-      class="member-card relative bg-[{{site.bg-colors.darkBlue}}] p-6 rounded-2xl transition duration-300 ease-in-out"
+      class="member-card relative bg-[{{site.bg-colors.darkBlue}}] p-6 rounded-2xl transition duration-300 ease-in-out" data-aos="fade-up"
     >
       <div class="w-full flex justify-center">
-        <img
+        <img loading="lazy"
           src="{{ member.image }}"
           alt="{{ member.name }}"
           class="w-[300px] h-[300px] object-cover mb-4 2xl:mt-2 rounded-md"
@@ -79,7 +79,7 @@
       class="member-card relative bg-[{{site.bg-colors.darkBlue}}] p-6 rounded-2xl transition duration-300 ease-in-out"
     >
       <div class="w-full flex justify-center">
-        <img
+        <img loading="lazy"
           src="{{ member.image }}"
           alt="{{ member.name }}"
           class="w-[300px] h-[300px] object-cover 2xl:mt-2 mb-4 rounded-md"

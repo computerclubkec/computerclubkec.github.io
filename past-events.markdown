@@ -5,14 +5,19 @@ permalink: /events/past-events
 
 ---
 
-<div class="container pb-10 px-2 md:mx-auto">
+<div class="container pb-10 px-2 md:mx-auto" data-aos="fade-up">
 
    <!-- Fetch upcoming events -->
   {% assign past_events = site.events | where: 'completed', true | sort: 'date' | reverse %}
   {% assign event_count = past_events | size %}
 
+  {% if event_count == 0 %}
+  <div class="text-center text-gray-500 text-xl mt-16">
+  No recent events at the moment. Please check back later.
+  </div>
+
   <!-- Conditionally set grid based on the number of events -->
-  {% if event_count == 1 %}
+  {% elsif event_count == 1 %}
     <div class="grid grid-cols-1 place-items-center gap-4 md:gap-8">
   {% elsif event_count == 2 %}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
@@ -27,8 +32,8 @@ permalink: /events/past-events
     <a href="{{ event.url }}" class="absolute inset-0 block"></a>
       <!-- Event Image on Top -->
     <div class="w-full flex justify-center items-center mb-4 aspect-square">
-      <img
-        src="{{ event.banner_image }}"
+      <img loading="lazy"
+        src="{{ event.thumbnail }}"
         alt="{{ event.title }}"
         class="h-full w-full object-contain rounded-md"
       />
