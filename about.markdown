@@ -45,7 +45,7 @@ permalink: /about/
   </div>
 </div>
 
-{% include executive-members.html %}
+{% include executive-members-list.html %}
 
 {% include open-source-contributors.html %}
 
