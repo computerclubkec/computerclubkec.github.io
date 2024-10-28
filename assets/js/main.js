@@ -87,15 +87,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let currentIndex = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-  let currentIndex = 0;
+// document.addEventListener("DOMContentLoaded", () => {
+//   let currentIndex = 0;
 
-  window.moveSlide = function (direction) {
-    const items = document.querySelectorAll(".carousel-item");
+//   window.moveSlide = function (direction) {
+//     const items = document.querySelectorAll(".carousel-item");
+//     const totalItems = items.length;
+
+//     // Update the current index
+//     currentIndex += direction;
+
+//     // Loop back to the start or end
+//     if (currentIndex < 0) {
+//       currentIndex = totalItems - 1;
+//     } else if (currentIndex >= totalItems) {
+//       currentIndex = 0;
+//     }
+
+//     // Calculate the translateX value
+//     const offset = -currentIndex * 100; // Adjust the offset based on the current index
+//     document.querySelector(
+//       ".carousel-wrapper"
+//     ).style.transform = `translateX(${offset}%)`;
+//   };
+
+//   // Optional: Auto-slide every 3 seconds
+//   setInterval(() => {
+//     moveSlide(1);
+//   }, 3000);
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Function to move carousel slides for a specific carousel
+  window.moveSlide = function (direction, carouselId) {
+    const carouselWrapper = document.querySelector(
+      `#${carouselId} .carousel-wrapper`
+    );
+    const items = carouselWrapper.querySelectorAll(".carousel-item");
     const totalItems = items.length;
 
-    // Update the current index
-    currentIndex += direction;
+    // Get the current index for each carousel separately
+    let currentIndex = carouselWrapper.getAttribute("data-current-index") || 0;
+    currentIndex = parseInt(currentIndex) + direction;
 
     // Loop back to the start or end
     if (currentIndex < 0) {
@@ -104,15 +137,19 @@ document.addEventListener("DOMContentLoaded", () => {
       currentIndex = 0;
     }
 
-    // Calculate the translateX value
-    const offset = -currentIndex * 100; // Adjust the offset based on the current index
-    document.querySelector(
-      ".carousel-wrapper"
-    ).style.transform = `translateX(${offset}%)`;
+    // Calculate the translateX value based on the current index
+    const offset = -currentIndex * 100;
+    carouselWrapper.style.transform = `translateX(${offset}%)`;
+
+    // Update the current index attribute
+    carouselWrapper.setAttribute("data-current-index", currentIndex);
   };
 
-  // Optional: Auto-slide every 3 seconds
   setInterval(() => {
-    moveSlide(1);
+    moveSlide(1, "metrics-carousel"); // Metrics Banner carousel
   }, 3000);
+
+  setInterval(() => {
+    moveSlide(1, "recent-events-carousel"); // Recent Events carousel
+  }, 5000);
 });
