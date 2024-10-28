@@ -5,25 +5,7 @@
     Executive Members
   </h2>
 
-  <!-- Toggle for Years -->
-  <div class="flex justify-center" data-aos="fade-up">
-    <button
-      id="btn-2024"
-      class="toggle-btn font-bold border-4 border-[{{site.bg-colors.orange-button}}] bg-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}]/90 text-white py-2 px-4 rounded-full mr-2"
-      onclick="showYear('members_2024', this)"
-    >
-      2024/25
-    </button>
-    <button
-      id="btn-2023"
-      class="toggle-btn font-bold border-4 border-[{{site.bg-colors.orange-button}}] text-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}]/90 hover:text-white py-2 px-4 rounded-full"
-      onclick="showYear('members_2023', this)"
-    >
-      2023/24
-    </button>
-  </div>
-
-  <!-- Members for 2024 -->
+  <!-- Members for 2024/25 -->
   <div
     id="members_2024"
     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6"
@@ -47,50 +29,6 @@
         <p class="text-sm text-center text-gray-300">{{ member.title }}</p>
       </span>
 
-      <div
-        class="description absolute inset-0 bg-[{{site.bg-colors.orange-button}}] cursor-pointer flex flex-col justify-between items-center text-white p-4 text-center rounded-lg opacity-0 transition-opacity duration-300 ease-in-out"
-      >
-        <div class="flex-grow flex items-center justify-center">
-          <p>{{ member.description }}</p>
-        </div>
-        <div class="social-icons flex justify-end w-full space-x-4 px-4 pb-4">
-          <a
-            href="https://www.linkedin.com/in/{{ member.linkedin }}"
-            class="text-white"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://twitter.com/{{ member.twitter }}" class="text-white">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <!-- Members for 2023 -->
-  <div
-    id="members_2023"
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-6 hidden"
-  >
-    {% for member in site.data.members.members_2023 %}
-    <div
-      class="member-card relative bg-[{{site.bg-colors.darkBlue}}] p-6 rounded-2xl transition duration-300 ease-in-out"
-    >
-      <div class="w-full flex justify-center">
-        <img loading="lazy"
-          src="{{ member.image }}"
-          alt="{{ member.name }}"
-          class="w-[300px] h-[300px] object-cover 2xl:mt-2 mb-4 rounded-md"
-        />
-      </div>
-      <span class="text-start">
-        <h3 class="text-xl font-semibold text-center text-white">
-          {{ member.name }}
-        </h3>
-        <p class="text-sm text-center text-gray-300">{{ member.title }}</p>
-      </span>
       <div
         class="description absolute inset-0 bg-[{{site.bg-colors.orange-button}}] cursor-pointer flex flex-col justify-between items-center text-white p-4 text-center rounded-lg opacity-0 transition-opacity duration-300 ease-in-out"
       >
