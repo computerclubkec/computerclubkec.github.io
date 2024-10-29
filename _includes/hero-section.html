@@ -1,0 +1,86 @@
+<section id="hero" class="relative pt-4 md:pt-8">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 -z-10">
+        <ul id="slider">
+            <li class="h-screen relative">
+                <img src="/assets/images/banner1.png" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+            <li class="h-screen relative hidden">
+                <img src="/assets/images/banner2.jpg" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+            <li class="h-screen relative hidden">
+                <img src="/assets/images/banner3.jpg" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+            <li class="h-screen relative hidden">
+                <img src="/assets/images/banner4.jpg" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+            <li class="h-screen relative hidden">
+                <img src="/assets/images/banner5.jpg" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+            <li class="h-screen relative hidden">
+                <img src="/assets/images/banner6.jpg" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+            <li class="h-screen relative hidden">
+                <img src="/assets/images/banner7.jpg" alt="Background" class="w-full h-full object-cover"
+                    loading="lazy" />
+            </li>
+        </ul>
+        <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+
+    <div class="absolute px-5 flex h-full w-full top-0 left-0]">
+        <div class="my-auto w-full flex justify-between">
+            <button onclick="prev()" class="p-3"><i
+                    class="fa-solid fa-chevron-left text-white/40 text-3xl"></i></button>
+            <button onclick="next()" class="p-3"><i
+                    class="fa-solid fa-chevron-right text-white/40 text-3xl"></i></button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative container mx-auto px-4 py-2 md:py-8 flex flex-col justify-center items-center">
+        <!-- Title Section -->
+        <div class="text-center mb-8 max-w-5xl">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
+                {{page.banner-title-1}}
+            </h1>
+            <h1
+                class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight leading-tight">
+                {{page.banner-title-2}}
+            </h1>
+            <p class="text-lg sm:text-xl md:text-3xl text-blue-300 font-semibold mb-4">
+                {{page.banner-tagline}}
+            </p>
+            <p class="text-sm md:text-lg text-gray-300 mb-2 max-w-4xl mx-auto">
+                {{page.banner-description}}
+            </p>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <a href="https://forms.gle/ySK2ux6zbZ5dC7qX8" target="_blank"
+                class="px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[{{site.bg-colors.orange-button}}] text-white hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300 flex items-center justify-center gap-2 group">
+                <i class="fas fa-user-plus text-lg group-hover:scale-110 transition-transform"></i>
+                Join the Club
+            </a>
+            <a href="/projects"
+                class="px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold rounded-lg border-2 border-[{{site.bg-colors.orange-button}}] text-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 group">
+                <i class="fas fa-code text-lg group-hover:scale-110 transition-transform"></i>
+                View Projects
+            </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="animate-bounce">
+            <i class="fa-solid fa-angles-down text-white/80 text-2xl"></i>
+        </div>
+    </div>
+</section>
+
+<script src="../assets/js/main.js"></script>

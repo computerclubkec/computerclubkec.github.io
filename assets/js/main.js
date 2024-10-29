@@ -116,3 +116,52 @@ document.addEventListener("DOMContentLoaded", () => {
     moveSlide(1);
   }, 3000);
 });
+
+
+// Carousel of Hero Section
+
+// Get the slider element
+const slider = document.getElementById('slider');
+
+// Get all the slide elements
+const slides = slider.getElementsByTagName('li');
+
+// Set the initial index
+currentIndex = 0;
+
+// Function to show the current slide
+function showSlide(index) {
+  // Hide all the slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.add('hidden');
+  }
+
+  // Show the current slide
+  slides[index].classList.remove('hidden');
+}
+
+// Function to go to the previous slide
+function prev() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+}
+
+// Function to go to the next slide
+function next() {
+  currentIndex++;
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+// Call the showSlide function with the initial index
+showSlide(currentIndex);
+
+// Set the interval to change the slide every 5 seconds
+setInterval(() => {
+  next();
+}, 3000);
