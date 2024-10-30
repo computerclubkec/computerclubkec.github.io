@@ -1,50 +1,72 @@
 <section id="hero" class="relative pt-4 md:pt-8">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 -z-10">
-        <ul id="slider">
-            <li class="h-screen relative">
-                <img src="/assets/images/banner1.png" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-            <li class="h-screen relative hidden">
-                <img src="/assets/images/banner2.jpg" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-            <li class="h-screen relative hidden">
-                <img src="/assets/images/banner3.jpg" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-            <li class="h-screen relative hidden">
-                <img src="/assets/images/banner4.jpg" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-            <li class="h-screen relative hidden">
-                <img src="/assets/images/banner5.jpg" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-            <li class="h-screen relative hidden">
-                <img src="/assets/images/banner6.jpg" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-            <li class="h-screen relative hidden">
-                <img src="/assets/images/banner7.jpg" alt="Background" class="w-full h-full object-cover"
-                    loading="lazy" />
-            </li>
-        </ul>
-        <div class="absolute inset-0 bg-black/70"></div>
-    </div>
-
-    <div class="absolute px-5 flex h-full w-full top-0 left-0]">
-        <div class="my-auto w-full flex justify-between">
-            <button onclick="prev()" class="p-3"><i
-                    class="fa-solid fa-chevron-left text-white/40 text-3xl"></i></button>
-            <button onclick="next()" class="p-3"><i
-                    class="fa-solid fa-chevron-right text-white/40 text-3xl"></i></button>
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-screen overflow-hidden">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner1.png"
+                            class="absolute w-full h-full object-cover" alt="Computer Club Team at Kitini College">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner2.jpg"
+                            class="absolute w-full h-full object-cover" alt="Web Development Session">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner3.jpg"
+                            class="absolute w-full h-full object-cover" alt="Hack-a-Lite 2024">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner4.jpg"
+                            class="absolute w-full h-full object-cover" alt="Hack-a-Lite 2020">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner5.jpg"
+                            class="absolute w-full h-full object-cover" alt="Automation using Python Workshop Organizing Team">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner6.jpg"
+                            class="absolute w-full h-full object-cover" alt="Aakrit Subedi leading the Git Session">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img src="/assets/images/banner7.jpg"
+                            class="absolute w-full h-full object-cover" alt="Mahabir Pun at KEC LITE">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="relative container mx-auto px-4 py-2 md:py-8 flex flex-col justify-center items-center">
+    <div class="mx-auto px-4 py-2 md:py-8 flex flex-col justify-center items-center">
+
         <!-- Title Section -->
         <div class="text-center mb-8 max-w-5xl">
             <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
@@ -76,6 +98,15 @@
             </a>
         </div>
 
+        <!-- <div class="absolute flex h-full w-full top-0 left-0]">
+            <div class="my-auto w-full flex justify-between">
+                <button onclick="prev()" class="p-3"><i
+                        class="fa-solid fa-chevron-left text-white/40 text-3xl"></i></button>
+                <button onclick="next()" class="p-3"><i
+                        class="fa-solid fa-chevron-right text-white/40 text-3xl"></i></button>
+            </div>
+        </div> -->
+
         <!-- Scroll Indicator -->
         <div class="animate-bounce">
             <i class="fa-solid fa-angles-down text-white/80 text-2xl"></i>
@@ -83,4 +114,4 @@
     </div>
 </section>
 
-<script src="../assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
