@@ -1,7 +1,7 @@
 ---
 layout: home 
 title: Events
-permalink: /events/
+permalink: /events
 ---
 
 This is a event page.
