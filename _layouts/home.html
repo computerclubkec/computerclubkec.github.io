@@ -10,40 +10,15 @@
     {% include hero-section.html %}
 
     <!-- Metrics Banner Starts Here -->
-    <!-- <section id="metrics-banner">
-      <div
-        class="w-full p-12 bg-[{{site.bg-colors.darkBlue}}] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 md:gap-40"
-      >
-        <div class="text-center text-[{{site.text-colors.white}}]">
-          <div class="text-6xl font-bold font-montserrat mb-2">50+</div>
-          <div class="text-2xl font-bold font-inter">Events Organized</div>
-        </div>
-
-        <div class="text-center text-[{{site.text-colors.white}}]">
-          <div class="text-6xl font-bold font-montserrat mb-2">500+</div>
-          <div class="text-2xl font-bold font-inter">Students Impacted</div>
-        </div>
-
-        <div class="text-center text-[{{site.text-colors.white}}]">
-          <div class="text-6xl font-bold font-montserrat mb-2">10+</div>
-          <div class="text-2xl font-bold font-inter">
-            Industry Collaborations
-          </div>
-        </div>
-
-        <div class="text-center text-[{{site.text-colors.white}}]">
-          <div class="text-6xl font-bold font-montserrat mb-2">100+</div>
-          <div class="text-2xl font-bold font-inter">Members & Alumni</div>
-        </div>
-      </div>
-    </section> -->
-
     <section
       id="metrics-banner"
       class="relative w-full bg-[{{site.bg-colors.darkBlue}}]"
     >
       <!-- Carousel for mobile view -->
-      <div class="flex items-center lg:hidden overflow-hidden p-6">
+      <div
+        id="metrics-carousel"
+        class="flex items-center lg:hidden overflow-hidden p-6"
+      >
         <div
           class="carousel-wrapper flex transition-transform duration-500 ease-in-out w-full"
         >

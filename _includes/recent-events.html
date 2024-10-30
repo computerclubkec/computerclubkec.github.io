@@ -9,81 +9,170 @@
   {% assign recent_events = site.events | where: 'completed', true | sort:
   'date' | reverse %} {% assign event_count = recent_events | size %}
 
-  {% if event_count == 0 %}
-  <div class="text-center text-gray-500 text-xl mt-16">
-    No recent events at the moment. Please check back later.
-  </div>
-
-  <!-- Conditionally set grid based on the number of events -->
-  {% elsif event_count == 1 %}
-  <div class="grid grid-cols-1 place-items-center gap-4 md:gap-8">
+  <!-- Carousel for mobile view -->
+  <div
+    class="lg:hidden overflow-hidden relative w-full"
+    id="recent-events-carousel"
+  >
+    {% if event_count == 0 %}
+    <div class="text-center text-gray-500 text-xl mt-16">
+      No recent events at the moment. Please check back later.
+    </div>
     {% else %}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
-      {% endif %} {% for event in recent_events limit: 4 %}
-      <div
-        class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer {% if event_count == 1 %}md:w-[810px] w-full{% endif %}"
-      >
-        <a href="{{ event.url }}" class="absolute inset-0 block"></a>
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <!-- Event Image -->
-          <div class="md:w-1/3 w-full mb-4 md:mb-0">
-            <img loading="lazy"
-              src="{{ event.thumbnail }}"
-              alt="{{ event.title }}"
-              class="w-full h-auto md:h-60 md:w-60 rounded-lg"
-            />
-          </div>
-
-          <!-- Event Info -->
-          <div class="md:w-2/3 w-full md:pl-6">
-            <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
-
-            <!-- Event Date Logic -->
-            <p class="text-sm text-gray-400 italic font-semibold">
-              <!-- Display event dates -->
-              {% if event.end_date %}
-              <!-- Multi-day event: Show start and end dates -->
-              {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date |
-              date: "%a, %b %e, %Y" }} {% else %}
-              <!-- Single-day event: Show only the start date -->
-              {{ event.date | date: "%a, %b %e, %Y" }} {% endif %}
-            </p>
-
-            <!-- Event Description with Show More/Show Less -->
-            <p class="text-sm my-2">
-              <!-- Shortened version of the description -->
-              <span class="event-description-short"
-                >{{ event.description | truncate: 120, "..." }}</span
-              >
-              <!-- Full description, hidden initially -->
-              <span class="event-description-full hidden"
-                >{{ event.description }}</span
-              >
-
-              <!-- Read More / Read Less buttons -->
-              <button class="text-blue-400 read-more relative z-10">
-                Read More
-              </button>
-              <button class="text-blue-400 read-less hidden relative z-10">
-                Show Less
-              </button>
-            </p>
-
-            <p class="text-sm mb-1 text-gray-400 font-bold">
-              {{ event.participants }}
-            </p>
+    <div
+      class="carousel-wrapper flex transition-transform duration-500 ease-in-out"
+      data-current-index="0"
+    >
+      {% for event in recent_events limit: 4 %}
+      <div class="carousel-item min-w-full p-4">
+        <div
+          class="relative bg-[{{site.bg-colors.darkBlue}}] text-white p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+        >
+          <a href="{{ event.url }}" class="absolute inset-0 block"></a>
+          <div class="flex flex-col md:flex-row items-start md:items-center">
+            <!-- Event Image -->
+            <div class="md:w-1/3 w-full mb-4 md:mb-0">
+              <img
+                loading="lazy"
+                src="{{ event.thumbnail }}"
+                alt="{{ event.title }}"
+                class="w-full h-auto md:h-60 md:w-60 rounded-lg"
+              />
+            </div>
+            <!-- Event Info -->
+            <div class="md:w-2/3 w-full md:pl-6">
+              <h3 class="text-xl font-bold">{{ event.title }}</h3>
+              <p class="text-sm text-gray-400 italic font-semibold">
+                {% if event.end_date %} {{ event.date | date: "%a, %b %e, %Y" }}
+                - {{ event.end_date | date: "%a, %b %e, %Y" }} {% else %} {{
+                event.date | date: "%a, %b %e, %Y" }} {% endif %}
+              </p>
+              <p class="text-sm my-2">
+                {{ event.description | truncate: 120, "..." }}
+              </p>
+              <p class="text-sm mb-1 text-gray-400 font-bold">
+                {{ event.participants }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
+
+    <!-- Carousel buttons -->
+    <!-- <button
+      onclick="moveSlide(-1, 'recent-events-carousel')"
+      class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl"
+    >
+      &#10094;
+    </button>
+    <button
+      onclick="moveSlide(1, 'recent-events-carousel')"
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl"
+    >
+      &#10095;
+    </button> -->
+    {% endif %}
   </div>
 
+  <!-- Grid for desktop view -->
+  {% if event_count == 0 %}
+  <div class="text-center text-gray-500 text-xl mt-16">
+    No recent events at the moment. Please check back later.
+  </div>
+  {% elsif event_count == 1 %}
+  <div
+    class="hidden lg:grid grid grid-cols-1 place-items-center gap-4 md:gap-8"
+  >
+    {% for event in recent_events limit: 4 %}
+    <div
+      class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer md:w-[810px] w-full"
+    >
+      <a href="{{ event.url }}" class="absolute inset-0 block"></a>
+      <div class="flex flex-col md:flex-row items-start md:items-center">
+        <!-- Event Image -->
+        <div class="md:w-1/3 w-full mb-4 md:mb-0">
+          <img
+            loading="lazy"
+            src="{{ event.thumbnail }}"
+            alt="{{ event.title }}"
+            class="w-full h-auto md:h-60 md:w-60 rounded-lg"
+          />
+        </div>
+
+        <!-- Event Info -->
+        <div class="md:w-2/3 w-full md:pl-6">
+          <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
+
+          <!-- Event Date Logic -->
+          <p class="text-sm text-gray-400 italic font-semibold">
+            {% if event.end_date %} {{ event.date | date: "%a, %b %e, %Y" }} -
+            {{ event.end_date | date: "%a, %b %e, %Y" }} {% else %} {{
+            event.date | date: "%a, %b %e, %Y" }} {% endif %}
+          </p>
+
+          <p class="text-sm my-2">
+            {{ event.description | truncate: 120, "..." }}
+          </p>
+          <p class="text-sm mb-1 text-gray-400 font-bold">
+            {{ event.participants }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div
+    class="hidden lg:grid w-full grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8"
+  >
+    {% for event in recent_events limit: 4 %}
+    <div
+      class="relative bg-[{{site.bg-colors.darkBlue}}] text-white md:p-6 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+    >
+      <a href="{{ event.url }}" class="absolute inset-0 block"></a>
+      <div class="flex flex-col md:flex-row items-start md:items-center">
+        <!-- Event Image -->
+        <div class="md:w-1/3 w-full mb-4 md:mb-0">
+          <img
+            loading="lazy"
+            src="{{ event.thumbnail }}"
+            alt="{{ event.title }}"
+            class="w-full h-auto md:h-60 md:w-60 rounded-lg"
+          />
+        </div>
+
+        <!-- Event Info -->
+        <div class="md:w-2/3 w-full md:pl-6">
+          <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
+
+          <!-- Event Date Logic -->
+          <p class="text-sm text-gray-400 italic font-semibold">
+            {% if event.end_date %} {{ event.date | date: "%a, %b %e, %Y" }} -
+            {{ event.end_date | date: "%a, %b %e, %Y" }} {% else %} {{
+            event.date | date: "%a, %b %e, %Y" }} {% endif %}
+          </p>
+
+          <p class="text-sm my-2">
+            {{ event.description | truncate: 120, "..." }}
+          </p>
+          <p class="text-sm mb-1 text-gray-400 font-bold">
+            {{ event.participants }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <!-- See More Button -->
-  <div class="flex justify-center">
+  <div class="flex justify-center mt-8">
     <a
       href="/events/past-events"
-      class="text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.bg-colors.orange-button}}] dark:text-[{{site.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.bg-colors.orange-button}}] dark:focus:ring-[{{site.bg-colors.orange-button}}]/80" data-aos="fade-up"
+      class="text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] font-medium rounded-lg text-base px-4 py-2"
+      data-aos="fade-up"
     >
       See More
     </a>
