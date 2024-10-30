@@ -1,6 +1,11 @@
-html: devicon:html5
+# Arrange in alphabetical order
+
 css: devicon:css3
-javascript: devicon:javascript
+docker: devicon:docker
 flutter: devicon:flutter
-react: devicon:react
+html: devicon:html5
+javascript: devicon:javascript
 nodejs: devicon:nodejs
+react: devicon:react
+tailwindcss: devicon:tailwindcss
+
