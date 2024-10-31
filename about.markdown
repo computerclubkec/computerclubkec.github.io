@@ -1,14 +1,14 @@
 ---
 layout: default
 title: About Us
-permalink: /about/
+permalink: /about
 ---
 
 <div class="container py-10 px-2 mx-auto items-center">
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
     <div class="w-full h-full rounded-3xl overflow-hidden">
-      <img loading="lazy" src="/assets/images/banner.png" alt="event-photo" class="w-full h-full object-cover">
+      <img loading="lazy" src="/assets/images/banner/1.png" alt="event-photo" class="w-full h-full object-cover">
     </div>
 
     <div class="flex flex-col items-start gap-4 w-full">
@@ -18,7 +18,7 @@ permalink: /about/
         The club provides a strong platform for engineering students to practically implement their innovative ideas for different applications. The Club offers indispensable guidance, workshops, and organizes various events for students to explore their full potential.
       </p>
 
-      <h2 class="text-xl font-bold mb-0 text-center lg:text-left">Our Objectives</h2>
+      <h2 class="text-xl text-[{{site.text-colors.darkblue}}] font-montserrat font-bold mb-0 text-center lg:text-left">Our Objectives</h2>
 
       <ul class="font-inter font-normal text-base leading-6 text-justify text-black list-disc pl-5 mt-0">
         <li>To provide computer and computerized device knowledge and mentored training.</li>
@@ -32,20 +32,20 @@ permalink: /about/
       </ul>
 
       <div class="text-left w-full mt-4">
-        <h3 class="text-lg font-bold mb-2 text-center lg:text-left">Follow us on</h3>
+        <h3 class="font-montserrat text-lg text-[{{site.text-colors.darkblue}}] font-bold mb-2 text-center lg:text-left">Follow us on</h3>
         <div class="flex justify-center lg:justify-start space-x-4 flex-wrap">
-          <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/{{ site.linkedin_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
-          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/{{ site.linkedin_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-{% include executive-members.html %}
+{% include executive-members-list.html %}
 
 {% include open-source-contributors.html %}
 

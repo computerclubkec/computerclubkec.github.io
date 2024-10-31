@@ -1,280 +1,331 @@
 <nav
-  class="flex items-center justify-between bg-[{{ site.bg-colors.gray }}] sm:px-6 md:px-8 lg:px-16 xl:px-40 sm:h-16 md:h-20 z-10 lg:h-24"
-  active-page-color="{{site.text-colors.darkblue}}"
+    class="sticky top-0 flex items-center justify-between bg-[{{ site.bg-colors.gray }}] sm:px-6 md:px-8 lg:px-16 xl:px-40 sm:h-16 md:h-20 z-10 lg:h-24"
+    active-page-color="{{site.text-colors.darkblue}}"
 >
-<div class="flex items-center">
-  <div class="m-4 w-12 h-12 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 relative">
-    <a href="{{ '/' }}">
-      <img loading="lazy"
-        src="{{ site.baseurl }}/assets/images/logo.png"
-        alt="logo"
-        class="absolute w-full h-full object-contain"
-      />
-    </a>
-  </div>
-</div>
-
-  <div class="hidden md:flex items-center relative">
-    <ul
-      class="flex text-base sm:text-sm md:text-base lg:text-lg text-[{{ site.text-colors.gray }}]/80"
-    >
-    <li>
-      <a
-        href="{{ '/' }}"
-        class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
-        >Home</a
-      >
-    </li>
-      <li>
-        <a
-          href="{{ '/about/' }}"
-          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047] whitespace-nowrap"
-          >About us</a
+    <div class="flex items-center">
+        <div
+            class="m-4 w-12 h-12 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 relative"
         >
-      </li>
-
-      <!-- Events Dropdown -->
-      <li class="relative">
-        <button
-          id="eventsDropdown"
-          type="button"
-          class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
-          aria-expanded="false"
-        >
-          Events
-          <svg
-            class="w-4 h-4 ml-2"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 20 20"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 8l4 4 4-4"
-            />
-          </svg>
-        </button>
-        <ul
-          id="dropdownEvents"
-          class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-base sm:text-sm md:text-base lg:text-lg"
-        >
-          <li class="rounded-tr-xl">
-            <a href="/events/upcoming" class="block p-2 my-2 hover:text-[#023047]"
-              >Upcoming Events</a
-            >
-          </li>
-          <li class="hover:text-[#023047]">
-            <a href="/events/past-events" class="block p-2 my-2">Past Events</a>
-          </li>
-          <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="/events/kec-lite" class="block p-2 my-2">KEC LITE</a>
-          </li>
-          <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="https://forms.gle/VaYzcRtnyiPqw26w9" target="_blank" class="block p-2 my-2">Request an Event</a>
-          </li>
-        </ul>
-      </li>
-
-      <!-- Resources Dropdown -->
-      <li class="relative">
-        <button
-          id="resourcesDropdown"
-          type="button"
-          class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
-          aria-expanded="false"
-        >
-          Resources
-          <svg
-            class="w-4 h-4 ml-2"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 20 20"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 8l4 4 4-4"
-            />
-          </svg>
-        </button>
-        <ul
-          id="dropdownResources"
-          class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl"
-        >
-          <li class="rounded-tr-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">BCT Syllabus</a>
-          </li>
-          <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Roadmaps</a>
-          </li>
-          <li class="hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Brand Assets</a>
-          </li>
-          <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-            <a href="#" class="block p-2 my-2">Proposal Format</a>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a
-          href="{{ '/blog/' }}"
-          class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
-          id="blog-page"
-          >Blog</a
-        >
-      </li>
-    </ul>
-    <div>
-      <a
-        href="{{ '/contact/' }}"
-        class="bg-[{{site.bg-colors.darkBlue}}] ml-8 text-white px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 rounded-lg hover:bg-gray-800 text-sm sm:text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300"
-        id="contact-page"
-        >Contact us</a
-      >
+            <a href="{{ '/' }}">
+                <img
+                    loading="lazy"
+                    src="{{ site.baseurl }}/assets/images/logo.png"
+                    alt="logo"
+                    class="absolute w-full h-full object-contain"
+                />
+            </a>
+        </div>
     </div>
-  </div>
 
-  <!-- Mobile Menu Button -->
-  <div class="md:hidden flex items-center">
-    <button id="mobileMenuButton" class="p-2 m-4">
-      <svg
-        class="w-6 h-6"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16m-7 6h7"
-        />
-      </svg>
-    </button>
-  </div>
+    <div class="hidden md:flex items-center relative">
+        <ul
+            class="flex font-inter text-base sm:text-sm md:text-base lg:text-lg text-[{{ site.text-colors.gray }}]/80"
+        >
+            <li>
+                <a
+                    href="{{ '/' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
+                    >Home</a
+                >
+            </li>
+            <li>
+                <a
+                    href="{{ '/about' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047] whitespace-nowrap"
+                    >About us</a
+                >
+            </li>
+
+            <!-- Events Dropdown -->
+            <li class="relative">
+                <button
+                    id="eventsDropdown"
+                    type="button"
+                    class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
+                    aria-expanded="false"
+                >
+                    Events
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 8l4 4 4-4"
+                        />
+                    </svg>
+                </button>
+                <ul
+                    id="dropdownEvents"
+                    class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl text-base sm:text-sm md:text-base lg:text-lg"
+                >
+                    <li class="rounded-tr-xl">
+                        <a
+                            href="/events/upcoming"
+                            class="block p-2 my-2 hover:text-[#023047]"
+                            >Upcoming Events</a
+                        >
+                    </li>
+                    <li class="hover:text-[#023047]">
+                        <a href="/events/past-events" class="block p-2 my-2"
+                            >Past Events</a
+                        >
+                    </li>
+                    <li
+                        class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
+                    >
+                        <a href="/events/kec-lite" class="block p-2 my-2"
+                            >KEC LITE</a
+                        >
+                    </li>
+                    <li
+                        class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
+                    >
+                        <a
+                            href="https://forms.gle/VaYzcRtnyiPqw26w9"
+                            target="_blank"
+                            class="block p-2 my-2"
+                            >Request an Event</a
+                        >
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a
+                    href="{{ '/projects' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
+                    id="projects-page"
+                    >Projects</a
+                >
+            </li>
+
+            <!-- Resources Dropdown -->
+            <li class="relative">
+                <button
+                    id="resourcesDropdown"
+                    type="button"
+                    class="flex items-center justify-between focus:outline-none md:m-2 lg:m-4 sm:p-4 hover:text-[#023047]"
+                    aria-expanded="false"
+                >
+                    Resources
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 8l4 4 4-4"
+                        />
+                    </svg>
+                </button>
+                <ul
+                    id="dropdownResources"
+                    class="absolute pl-4 left-0 hidden m-0.5 w-[208px] bg-[{{ site.bg-colors.gray }}] border border-gray-300 z-10 rounded-bl-xl rounded-br-xl rounded-tr-xl"
+                >
+                    <li class="rounded-tr-xl hover:text-[#023047]">
+                        <a href="#" class="block p-2 my-2">BCT Syllabus</a>
+                    </li>
+                    <li class="hover:text-[#023047]">
+                        <a target="_blank" href="https://roadmap.sh/" class="block p-2 my-2">Roadmaps</a>
+                    </li>
+                    <li class="hover:text-[#023047]">
+                        <a target="_blank" href="https://drive.google.com/drive/folders/1F4_6yk1_TqR7HP1i3lA1Pp4z5zhLkFH5?usp=drive_link" class="block p-2 my-2">Brand Assets</a>
+                    </li>
+                    <li
+                        class="rounded-bl-xl rounded-br-xl hover:text-[#023047]"
+                    >
+                        <a target="_blank" href="https://drive.google.com/drive/folders/1pEiUTdj-1NFxfrQUkytxAzdM81sxyHjd?usp=drive_link" class="block p-2 my-2">Proposal Format</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a
+                    href="{{ '/blog' }}"
+                    class="md:m-2 lg:m-4 sm:p-4 flex items-center hover:text-[#023047]"
+                    id="blog-page"
+                    >Blog</a
+                >
+            </li>
+        </ul>
+        <div>
+            <a
+                href="{{ '/contact' }}"
+                class="bg-[{{site.bg-colors.darkBlue}}] ml-8 font-inter text-white px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 rounded-lg hover:bg-gray-800 text-sm sm:text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300"
+                
+                id="contact-page"
+                >Contact us</a
+            >
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+        <button id="mobileMenuButton" class="p-2 m-4">
+            <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                />
+            </svg>
+        </button>
+    </div>
 </nav>
 
 <!-- responsive navbar for smaller screens -->
-<div id="mobileMenu" class="hidden md:hidden">
-  <ul
-    class="flex flex-col font-semibold text-base sm:text-base border border-[{{site.bg-colors.gray}}] text-[{{ site.text-colors.gray }}]"
-  >
-    <li>
-      <a href="{{ '/' }}" class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
-        >Home</a
-      >
-    </li>
-    <li>
-      <a
-        href="{{ '/about/' }}"
-        class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
-        >About us</a
-      >
-    </li>
+<div id="mobileMenu" class="hidden fixed top-16 w-full md:hidden z-20">
+    <ul
+        class="flex flex-col font-inter font-semibold text-base sm:text-base border border-[{{site.bg-colors.gray}}] text-[{{ site.text-colors.gray }}] bg-[{{ site.bg-colors.gray }}]"
+    >
+        <li>
+            <a
+                href="{{ '/' }}"
+                class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+                >Home</a
+            >
+        </li>
+        <li>
+            <a
+                href="{{ '/about' }}"
+                class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+                >About us</a
+            >
+        </li>
 
-    <!-- events dropdown for smaller screens -->
-    <li class="relative">
-      <button
-        id="mobileEventsDropdown"
-        type="button"
-        class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
-        aria-expanded="false"
-      >
-        Events
-        <svg
-          class="w-4 h-4 ml-2"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 20 20"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 8l4 4 4-4"
-          />
-        </svg>
-      </button>
-      <ul id="mobileDropdownEvents" class="hidden pl-6 mt-1 text-base">
-        <li class="rounded-tr-xl">
-          <a href="#" class="block p-4 hover:text-[#023047]">Upcoming Events</a>
+        <!-- events dropdown for smaller screens -->
+        <li class="relative">
+            <button
+                id="mobileEventsDropdown"
+                type="button"
+                class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
+                aria-expanded="false"
+            >
+                Events
+                <svg
+                    class="w-4 h-4 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 8l4 4 4-4"
+                    />
+                </svg>
+            </button>
+            <ul id="mobileDropdownEvents" class="hidden pl-6 mt-1 text-base">
+                <li class="rounded-tr-xl">
+                    <a href="#" class="block p-4 hover:text-[#023047]"
+                        >Upcoming Events</a
+                    >
+                </li>
+                <li class="hover:text-[#023047]">
+                    <a href="/events/past-events" class="block p-4"
+                        >Past Events</a
+                    >
+                </li>
+                <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+                    <a href="/events/kec-lite-2024" class="block p-4"
+                        >KEC LITE</a
+                    >
+                </li>
+                <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+                    <a
+                        href="https://forms.gle/nC99GipJvYFSXWP77"
+                        target="_blank"
+                        class="block p-4"
+                        >Request an Event</a
+                    >
+                </li>
+            </ul>
         </li>
-        <li class="hover:text-[#023047]">
-          <a href="/events/past-events" class="block p-4">Past Events</a>
-        </li>
-        <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-          <a href="/events/kec-lite-2024" class="block p-4">KEC LITE</a>
-        </li>
-        <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-          <a href="https://forms.gle/nC99GipJvYFSXWP77" target="_blank" class="block p-4">Request an Event</a>
-        </li>
-      </ul>
-    </li>
 
-    <!-- resources dropdown for smaller screens -->
-    <li class="relative">
-      <button
-        id="mobileResourcesDropdown"
-        type="button"
-        class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
-        aria-expanded="false"
-      >
-        Resources
-        <svg
-          class="w-4 h-4 ml-2"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 20 20"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 8l4 4 4-4"
-          />
-        </svg>
-      </button>
-      <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-base">
-        <li class="rounded-tr-xl hover:text-[#023047]">
-          <a href="#" class="block p-4">BCT Syllabus</a>
+        <li>
+            <a
+                href="{{ '/projects' }}"
+                class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+                >Projects</a
+            >
         </li>
-        <li class="hover:text-[#023047]">
-          <a href="#" class="block p-4">Roadmaps</a>
-        </li>
-        <li class="hover:text-[#023047]">
-          <a href="#" class="block p-4">Brand Assets</a>
-        </li>
-        <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
-          <a href="#" class="block p-4">Proposal Format</a>
-        </li>
-      </ul>
-    </li>
 
-    <li>
-      <a
-        href="{{ '/blog/' }}"
-        class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
-        >Blog</a
-      >
-    </li>
-    <li>
-      <a
-        href="{{ '/contact/' }}"
-        id="dropdown_contact"
-        class="mx-6 my-2 px-3 py-2 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
-        >Contact us</a
-      >
-    </li>
-  </ul>
+        <!-- resources dropdown for smaller screens -->
+        <li class="relative">
+            <button
+                id="mobileResourcesDropdown"
+                type="button"
+                class="flex items-center justify-between focus:outline-none px-4 py-1 m-2 hover:text-[#023047]"
+                aria-expanded="false"
+            >
+                Resources
+                <svg
+                    class="w-4 h-4 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 8l4 4 4-4"
+                    />
+                </svg>
+            </button>
+            <ul id="mobileDropdownResources" class="hidden pl-6 mt-1 text-base">
+                <li class="rounded-tr-xl hover:text-[#023047]">
+                    <a href="#" class="block p-4">BCT Syllabus</a>
+                </li>
+                <li class="hover:text-[#023047]">
+                    <a target="_blank" href="https://roadmap.sh/" class="block p-4">Roadmaps</a>
+                </li>
+                <li class="hover:text-[#023047]">
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1F4_6yk1_TqR7HP1i3lA1Pp4z5zhLkFH5?usp=drive_link" class="block p-4">Brand Assets</a>
+                </li>
+                <li class="rounded-bl-xl rounded-br-xl hover:text-[#023047]">
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1pEiUTdj-1NFxfrQUkytxAzdM81sxyHjd?usp=drive_link" class="block p-4">Proposal Format</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a
+                href="{{ '/blog' }}"
+                class="m-2 px-4 py-1 flex items-center hover:text-[#023047]"
+                >Blog</a
+            >
+        </li>
+        <li>
+            <a
+                href="{{ '/contact' }}"
+                id="dropdown_contact"
+                class="mx-6 my-2 px-3 py-2 inline-block text-[{{site.text-colors.white}}] bg-[{{site.bg-colors.darkBlue}}] rounded-lg"
+                >Contact us</a
+            >
+        </li>
+    </ul>
 </div>
 
 <script src="../assets/js/navbar/dropdown.js" defer></script>

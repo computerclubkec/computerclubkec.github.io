@@ -1,0 +1,108 @@
+<section id="hero" class="relative pt-4 md:pt-8">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 -z-10">
+        <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-full overflow-hidden">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/1.png"
+                            class="absolute w-full h-full object-cover" alt="Computer Club Team at Kitini College">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/2.jpg"
+                            class="absolute w-full h-full object-cover" alt="Web Development Session">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/3.jpg"
+                            class="absolute w-full h-full object-cover" alt="Hack-a-Lite 2024">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/4.jpg"
+                            class="absolute w-full h-full object-cover" alt="Hack-a-Lite 2020">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/5.jpg"
+                            class="absolute w-full h-full object-cover" alt="Automation using Python Workshop Organizing Team">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/6.jpg"
+                            class="absolute w-full h-full object-cover" alt="Aakrit Subedi leading the Git Session">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                    <div class="relative w-full h-full">
+                        <img loading="lazy" src="/assets/images/banner/7.jpg"
+                            class="absolute w-full h-full object-cover" alt="Mahabir Pun at KEC LITE">
+                        <div class="absolute inset-0 bg-black/70"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="mx-auto px-4 py-2 md:py-8 sm:py-8 flex flex-col justify-center items-center">
+
+        <!-- Title Section -->
+        <div class="text-center mb-8 max-w-6xl">
+            <h1 class="font-montserrat text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
+                {{page.banner-title-1}}
+            </h1>
+            <h1
+                class="font-montserrat text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight leading-tight">
+                {{page.banner-title-2}}
+            </h1>
+            <p class="font-inter text-lg sm:text-xl md:text-3xl text-blue-300 font-semibold mb-4">
+                {{page.banner-tagline}}
+            </p>
+            <p class="font-inter text-sm md:text-lg text-gray-300 mb-2 max-w-4xl mx-auto">
+                {{page.banner-description}}
+            </p>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="font-inter flex flex-col sm:flex-row gap-4 mb-8">
+            <a href="https://forms.gle/ySK2ux6zbZ5dC7qX8" target="_blank"
+                class="px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold rounded-lg bg-[{{site.bg-colors.orange-button}}] text-white hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300 flex items-center justify-center gap-2 group">
+                <i class="fas fa-user-plus text-lg group-hover:scale-110 transition-transform"></i>
+                Join the Club
+            </a>
+            <a href="/projects"
+                class="px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold rounded-lg border-2 border-[{{site.bg-colors.orange-button}}] text-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 group">
+                <i class="fas fa-code text-lg group-hover:scale-110 transition-transform"></i>
+                View Projects
+            </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="animate-bounce">
+            <i class="fa-solid fa-angles-down text-white/80 text-2xl"></i>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>

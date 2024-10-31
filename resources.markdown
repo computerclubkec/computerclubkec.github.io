@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Resources
-permalink: /resources/
+permalink: /resources
 ---
 
 This is a Resources page.

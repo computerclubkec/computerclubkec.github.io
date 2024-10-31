@@ -1,10 +1,11 @@
-<div class="flex flex-col justify-center gap-3 py-12 mt-4" data-aos="fade-up">
-  <h2
-    class="text-5xl font-montserrat font-bold text-[{{ site.text-colors.darkblue }}] text-center mb-8"
-  >
-    Projects
-  </h2>
-  {% for project in site.projects limit: 3 %}
+---
+layout: default
+title: Projects
+permalink: /projects
+
+---
+<div class="flex flex-col justify-center gap-3 pt-1 pb-12" data-aos="fade-up">
+  {% for project in site.projects %}
   <div
     class="w-[80vw] mx-auto bg-[{{ site.bg-colors.gray }}] p-6 rounded-2xl border-2 border-[{{ site.bg-colors.skyBlue }}] space-y-3" data-aos="fade-up"
   >
@@ -20,20 +21,20 @@
       </div>
 
       <!-- Right Section: Status Tags -->
-      <div class="flex flex-wrap gap-2">
+      <div class="font-inter flex flex-wrap gap-2">
         {% for status in project.status %} {% if status == "active" %}
         <span
-          class="bg-green-200 text-green-700 px-4 py-2 rounded-full text-sm font-inter font-bold"
+          class="bg-green-200 text-green-700 px-4 py-2 rounded-full text-sm font-bold"
           >Active/In Progress</span
         >
         {% elsif status == "open" %}
         <span
-          class="bg-orange-200 text-orange-700 px-4 py-2 rounded-full text-sm font-inter font-bold"
+          class="bg-orange-200 text-orange-700 px-4 py-2 rounded-full text-sm font-bold"
           >Open for Contribution</span
         >
         {% elsif status == "planning" %}
         <span
-          class="bg-yellow-200 text-yellow-700 px-4 py-2 rounded-full text-sm font-inter font-bold"
+          class="bg-yellow-200 text-yellow-700 px-4 py-2 rounded-full text-sm font-bold"
           >Planning</span
         >
         {% endif %} {% endfor %}
@@ -69,7 +70,7 @@
       <!-- GitHub Button -->
       <a
         href="{{ project.github_url }}"
-        class="font-inter flex items-center space-x-2 bg-[{{ site.bg-colors.baseBlack }}] text-[{{ site.text-colors.white }}] px-4 py-2 rounded-lg hover:bg-gray-800"
+        class="flex items-center space-x-2 bg-[{{ site.bg-colors.baseBlack }}] text-[{{ site.text-colors.white }}] font-inter px-4 py-2 rounded-lg hover:bg-gray-800"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -79,13 +80,4 @@
     </div>
   </div>
   {% endfor %}
-  <!-- See More Button -->
-  <div class="flex justify-center mt-6">
-    <a
-      href="/projects"
-      class="font-inter text-[{{site.bg-colors.orange-button}}] hover:text-white border-2 border-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}] focus:ring-4 focus:outline-none focus:ring-[{{site.bg-colors.orange-button}}]/50 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 text-center mb-2 dark:border-[{{site.bg-colors.orange-button}}] dark:text-[{{site.bg-colors.orange-button}}] dark:hover:text-white dark:hover:bg-[{{site.bg-colors.orange-button}}] dark:focus:ring-[{{site.bg-colors.orange-button}}]/80" data-aos="fade-up"
-    >
-      See More
-    </a>
-  </div>
 </div>

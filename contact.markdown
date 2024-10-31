@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact Us
-permalink: /contact/
+permalink: /contact
 ---
 
 <div class="container py-10 px-2 mx-auto items-center" data-aos="fade-up">
@@ -39,16 +39,16 @@ permalink: /contact/
         </div>
       </form>
 
-        <div class="text-left w-full">
-            <h3 class="text-lg font-bold mb-2 text-center lg:text-left">Follow Us On</h3>
-            <div class="flex justify-center lg:justify-start space-x-4 flex-wrap">
-                <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/{{ site.linkedin_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/{{ site.github_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-            </div>
+        <div class="text-left w-full mt-4">
+        <h3 class="font-montserrat text-lg text-[{{site.text-colors.darkblue}}] font-bold mb-2 text-center lg:text-left">Follow us on</h3>
+        <div class="flex justify-center lg:justify-start space-x-4 flex-wrap">
+          <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/{{ site.linkedin_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
         </div>
+      </div>
       </div>
     </div>
 </div>

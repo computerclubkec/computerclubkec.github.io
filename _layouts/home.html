@@ -7,47 +7,10 @@
   <body>
     {% include nav.html %}
 
-    <!-- Club Banner Starts Here -->
-    <section id="club-banner">
-      <div class="relative text-center">
-        <img loading="lazy"
-          src="/assets/images/banner.png"
-          alt="KEC Computer Club Banner"
-          class="w-full h-[45vh] sm:h-[50vh] object-cover"
-        />
-        <div class="absolute inset-0 bg-black opacity-55"></div>
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-20"
-          style="color: {{site.text-colors.base-white}}"
-        >
-          <h2
-            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-[0_0px_3.5px_rgba(250,250,250,0.6)]"
-          >
-            Kantipur Engineering College
-          </h2>
-          <h2
-            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-[0_0px_3.5px_rgba(250,250,250,0.6)]"
-          >
-            Computer Club
-          </h2>
-          <p
-            class="mt-4 sm:mt-6 text-[10px] sm:text-base md:text-lg lg:text-xl"
-          >
-            {{page.banner-description}}
-          </p>
-          <a
-            href="/about"
-            class="mt-4 sm:mt-6 focus:outline-none text-white bg-[{{site.bg-colors.orange-button}}] hover:bg-[{{site.bg-colors.orange-button}}]/80 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 dark:focus:ring-yellow-900"
-          >
-            Find out more
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Club Banner Ends Here -->
+    {% include hero-section.html %}
 
     <!-- Metrics Banner Starts Here -->
-    <section id="metrics-banner">
+    <!-- <section id="metrics-banner">
       <div
         class="w-full p-12 bg-[{{site.bg-colors.darkBlue}}] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 md:gap-40"
       >
@@ -73,7 +36,83 @@
           <div class="text-2xl font-bold font-inter">Members & Alumni</div>
         </div>
       </div>
+    </section> -->
+
+    <section
+      id="metrics-banner"
+      class="relative w-full bg-[{{site.bg-colors.darkBlue}}]"
+    >
+      <!-- Carousel for mobile view -->
+      <div class="flex items-center lg:hidden overflow-hidden p-6">
+        <div
+          class="carousel-wrapper flex transition-transform duration-500 ease-in-out w-full"
+        >
+          <div
+            class="carousel-item text-center text-white min-w-full flex-shrink-0"
+          >
+            <div class="text-6xl font-bold font-montserrat mb-2">50+</div>
+            <div class="text-2xl font-bold font-inter">Events Organized</div>
+          </div>
+          <div
+            class="carousel-item text-center text-white min-w-full flex-shrink-0"
+          >
+            <div class="text-6xl font-bold font-montserrat mb-2">500+</div>
+            <div class="text-2xl font-bold font-inter">Students Impacted</div>
+          </div>
+          <div
+            class="carousel-item text-center text-white min-w-full flex-shrink-0"
+          >
+            <div class="text-6xl font-bold font-montserrat mb-2">10+</div>
+            <div class="text-2xl font-bold font-inter">
+              Industry Collaborations
+            </div>
+          </div>
+          <div
+            class="carousel-item text-center text-white min-w-full flex-shrink-0"
+          >
+            <div class="text-6xl font-bold font-montserrat mb-2">100+</div>
+            <div class="text-2xl font-bold font-inter">Members & Alumni</div>
+          </div>
+        </div>
+        <!-- <button
+          class="carousel-button prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-transparent text-white text-3xl"
+          onclick="moveSlide(-1)"
+        >
+          &#10094;
+        </button>
+        <button
+          class="carousel-button next absolute right-4 top-1/2 transform -translate-y-1/2 bg-transparent text-white text-3xl"
+          onclick="moveSlide(1)"
+        >
+          &#10095;
+        </button> -->
+      </div>
+
+      <!-- Grid for desktop view -->
+      <div
+        class="hidden lg:grid w-full p-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 md:gap-40"
+      >
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">50+</div>
+          <div class="text-2xl font-bold font-inter">Events Organized</div>
+        </div>
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">500+</div>
+          <div class="text-2xl font-bold font-inter">Students Impacted</div>
+        </div>
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">10+</div>
+          <div class="text-2xl font-bold font-inter">
+            Industry Collaborations
+          </div>
+        </div>
+        <div class="text-center text-[{{site.text-colors.white}}]">
+          <div class="text-6xl font-bold font-montserrat mb-2">100+</div>
+          <div class="text-2xl font-bold font-inter">Members & Alumni</div>
+        </div>
+      </div>
     </section>
+
     <!-- Metrics Banner Ends Here -->
 
     <!-- Upcoming Events section starts Here -->

@@ -11,7 +11,7 @@ permalink: /events/upcoming
   {% assign event_count = upcoming_events | size %}
 
   {% if event_count == 0 %}
-  <div class="text-center text-gray-500 text-xl mt-16">
+  <div class="font-inter text-center text-gray-500 text-xl mt-16">
   No upcoming events at the moment. Please check back later.
 </div>
 
@@ -40,8 +40,8 @@ permalink: /events/upcoming
 
       <!-- Event Info Below Image -->
       <div class="text-justify">
-        <h3 class="text-xl font-semibold text-white">{{ event.title }}</h3>
-        <p class="text-sm text-gray-300 italic font-semibold">
+        <h3 class="text-xl font-montserrat font-semibold text-white">{{ event.title }}</h3>
+        <p class="text-sm text-gray-300 italic font-inter font-semibold">
           {% if event.end_date %}
             {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
           {% else %}
@@ -50,7 +50,7 @@ permalink: /events/upcoming
         </p>
 
         <!-- Event Description with Show More/Show Less -->
-        <p class="text-sm my-2 text-white">
+        <p class="font-inter text-sm my-2 text-white">
           <span class="event-description-short">{{ event.description | truncate: 120, "..." }}</span>
           <span class="event-description-full hidden">{{ event.description }}</span>
 
@@ -62,7 +62,7 @@ permalink: /events/upcoming
         <div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-2 lg:space-y-0 mt-2 relative z-20">
           <!-- Register Now Button -->
           <a href="{{ event.registration_link }}">
-            <button class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300">
+            <button class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-inter font-semibold px-4 py-2 rounded-lg hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300">
               Register Now
             </button>
           </a>
