@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact Us
-permalink: /contact/
+permalink: /contact
 ---
 
 <div class="container py-10 px-2 mx-auto items-center" data-aos="fade-up">
