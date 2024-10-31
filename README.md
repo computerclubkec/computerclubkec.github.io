@@ -1,89 +1,172 @@
+<div align="center">
+<a href="https://kec.edu.np/">
+    <img alt="KEC Computer Club" src="assets/images/horizontaldisplaypicture.png" width="350">
+</a>
+
 # KEC Computer Club Website
 
-Welcome to the official repository for the **KEC Computer Club** website! This website is built using **Jekyll** and containerized with **Docker** to streamline development and deployment.
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fcomputerclubkec.github.io)](https://computerclubkec.github.io)
+[![GitHub contributors](https://img.shields.io/github/contributors/computerclubkec/computerclubkec.github.io)](https://github.com/computerclubkec/computerclubkec.github.io/graphs/contributors)
+[![Discord](https://img.shields.io/discord/1120343702657847340?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/neMkXj7GC3)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+</div>
+
+<div align="center">
+    <a href="https://computerclubkec.github.io/">Home</a> |
+    <a href="https://computerclubkec.github.io/about/">About Us</a> |
+    <a href="https://computerclubkec.github.io/blog/">Blog</a> |
+    <a href="https://computerclubkec.github.io/projects/">Projects</a> |
+    <a href="https://linktr.ee/computerclubkec">Linktree</a>
+</div>
+
+<div align="center">
+<strong>The official website repository for the KEC Computer Club.</strong><br>
+Our website provides updates on club events, resources, projects, and technical content for students of Kantipur Engineering College and beyond.
+</div>
+
+## 📋 Table of Contents
+- [About](#about-kec-computer-club)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Community](#community)
+- [Development Sessions](#development-sessions)
+- [Contact](#contact)
 
 ## About KEC Computer Club
 
-The **Computer Club of Kantipur Engineering College (KEC)** was founded in 2013 to provide students with a platform to explore technology, develop new skills, and collaborate on innovative projects. Our website serves as a hub for club activities, events, and resources.
+Founded in 2013 at **Kantipur Engineering College (KEC)**, the Computer Club is a student-driven organization that promotes tech learning, collaboration, and project development. Our mission is to foster a vibrant tech community where students can learn, innovate, and grow together.
+
+## Features
+
+- 🎯 Event updates and registration
+- 📚 Technical resources and tutorials
+- 💻 Project showcase
+- 📝 Technical blog
+- 📱 Responsive design
+- 🌐 Cross-browser compatibility
 
 ## Project Structure
 
-- `_config.yml`: Jekyll configuration file.
-- `index.html`: The main homepage of the website.
-- `_layouts/`: Jekyll layout templates.
-- `_includes/`: Reusable components (e.g., headers, footers).
-- `assets/`: Contains images, stylesheets, and JavaScript files.
-  - `css/`: Custom stylesheets.
-  - `js/`: JavaScript files.
-  - `images/`: Logos and visuals used on the website.
+```
+computerclubkec.github.io/
+├── _config.yml              # Jekyll configuration
+├── _layouts/                # Page layouts
+│   ├── default.html
+│   ├── post.html
+│   └── project.html
+├── _includes/              # Reusable components
+│   ├── header.html
+│   ├── footer.html
+│   └── navigation.html
+├── _posts/                 # Blog posts
+├── _projects/             # Project documentation
+├── assets/                # Static resources
+│   ├── js/               # JavaScript files
+│   └── images/           # Media files
+├── pages/                # Static pages
+└── docker-compose.yml    # Docker configuration
+```
 
 ## Getting Started
 
-### Website Prototype
-On the basis of [this Figma design](https://www.figma.com/design/dWPncZwMB3Im5qntztKgpe/Computer-Club-Website?node-id=0-1&t=snFpqhd7gHsoBQL7-1), the club website is planned to be developed.
-
 ### Prerequisites
 
-To work on this project, ensure you have the following installed:
+- [Docker](https://www.docker.com/) (recommended)
+- [Jekyll](https://jekyllrb.com/) v4.2+
+- [Ruby](https://www.ruby-lang.org/) v2.7+
+- [Node.js](https://nodejs.org/) v14+
+- [Git](https://git-scm.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-- [Docker](https://www.docker.com/) (for running the site locally in a container)
-- [Jekyll](https://jekyllrb.com/) (for building and serving the site)
-- [Git](https://git-scm.com/) (for version control)
-- [Tailwind CSS](https://tailwindcss.com/) (for utility-first CSS framework)
+### Design Prototype
 
-### Running the Project Locally with Docker
+The website is being developed based on [this Figma design](https://www.figma.com/design/dWPncZwMB3Im5qntztKgpe/Computer-Club-Website?node-id=0-1&t=snFpqhd7gHsoBQL7-1).
 
-1. Clone the repository:
+## Development
+
+### Using Docker (Recommended)
+
 ```bash
+# Clone the repository
 git clone https://github.com/computerclubkec/computerclubkec.github.io.git
+
+# Navigate to project directory
+cd computerclubkec.github.io
+
+# Start the development server
+docker-compose up
+
+# Access the site at http://localhost:4000
 ```
-   
-2. Navigate to the project directory:
+
+### Without Docker
+
 ```bash
-cd path_to_your_folder
+# Install dependencies
+bundle install
+npm install
+
+# Start the development server
+bundle exec jekyll serve
+
+# In a separate terminal, watch for Tailwind CSS changes
+npm run watch:css
 ```
 
-3. Build and run the Docker container:
-```bash
-docker compose up
-```
+## Contributing
 
-4. Access the website by navigating to _http://localhost:4000_ in your browser.
+We welcome contributions from everyone! Please follow these steps:
 
-### Running Locally Without Docker
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-If you prefer not to use Docker, you can run Jekyll directly:
+For detailed guidelines, please read our [CONTRIBUTING.md](CONTRIBUTING.md) and [NAMING-CONVENTION.md](NAMING-CONVENTION.md) files.
 
-1. Install Jekyll and dependencies by following the official [Jekyll installation guide](https://jekyllrb.com/docs/installation/).
+## Community
 
-2. Serve the website locally:
-```bash
-jekyll serve
-```
+### Development Sessions
 
-3. Visit the website at _http://localhost:4000_.
+We host regular development sessions to:
+- Review pull requests
+- Discuss new features
+- Debug issues
+- Share knowledge
+- Plan future improvements
 
-### Contributing
-Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed instructions on how to contribute to this project. It outlines the workflow for making changes, submitting pull requests, and reviewing contributions.
+Join our [Discord Server](https://discord.gg/neMkXj7GC3) to participate in these sessions!
 
-### File Conventions
-To maintain code consistency and best practices, we follow specific conventions for structuring files and code. Please refer to the [NAMING-CONVENTION.md](NAMING-CONVENTION.md) document for more information.
+### Contributors
 
-### Contributors 
-Thanks goes to these wonderful people who have contributed for the project:
+Thanks to our dedicated contributors who continue to build and improve the KEC Computer Club's online presence:
 
-[![Contributors](https://contrib.rocks/image?repo=computerclubkec/computerclubkec.github.io)](https://github.com/computerclubkec/computerclubkec.github.io/graphs/contributors)
+<a href="https://github.com/computerclubkec/computerclubkec.github.io/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=computerclubkec/computerclubkec.github.io&max=400&columns=20" />
+</a>
 
+### Code of Conduct
 
-### Contact
-For more information or to collaborate, feel free to reach out to us:
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand our community standards and expectations.
 
-**Email:** _computerclub@kec.edu.np_
+## Contact
 
-**Linktree:** [linktr.ee/computerclubkec](https://linktr.ee/computerclubkec)
+- **Email:** [computerclub@kec.edu.np](mailto:computerclub@kec.edu.np)
+- **Discord:** [Join our server](https://discord.gg/YOUR_INVITE_LINK)
+- **Location:** Dhapakhel, Lalitpur, Nepal
+- **Linktree:** [linktr.ee/computerclubkec](https://linktr.ee/computerclubkec)
+- **Website:** [computerclubkec.github.io](https://computerclubkec.github.io)
 
-**Location:** Dhapakhel, Lalitpur
+## License
 
-Thank you for contributing to the KEC Computer Club's website!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**KEC Computer Club**
+---
+
+<div align="center">
+Made with ❤️ by KEC Computer Club
+</div>
