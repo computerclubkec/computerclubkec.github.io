@@ -1,14 +1,14 @@
 ---
 layout: default
 title: About Us
-permalink: /about/
+permalink: /about
 ---
 
 <div class="container py-10 px-2 mx-auto items-center">
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
     <div class="w-full h-full rounded-3xl overflow-hidden">
-      <img loading="lazy" src="/assets/images/banner.png" alt="event-photo" class="w-full h-full object-cover">
+      <img loading="lazy" src="/assets/images/banner/1.png" alt="event-photo" class="w-full h-full object-cover">
     </div>
 
     <div class="flex flex-col items-start gap-4 w-full">
