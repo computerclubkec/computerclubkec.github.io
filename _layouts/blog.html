@@ -54,7 +54,7 @@
 
     <div class="container py-10 px-2 md:mx-auto">
       <div class="blog-hero flex flex-col items-center justify-center">
-        <div class="title text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pb-5 text-center text-[{{site.text-colors.darkblue}}]">
+        <div class="font-montserrat title text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pb-5 text-center text-[{{site.text-colors.darkblue}}]">
           Our Latest Blogs
         </div>
 
@@ -67,15 +67,15 @@
                    alt="{{ post.title }}" 
                    class="w-full object-cover rounded-lg mb-4">
               <div class="blog-content">
-                <p class="text-sm text-gray-500">{{ post.reading_time }} min read</p>
-                <p class="text-sm text-gray-500">{{ post.date | date: "%d %B, %Y" }}</p>
-                <h2 class="text-xl font-semibold my-2">{{ post.title }}</h2>
+                <p class="font-inter text-sm text-gray-500">{{ post.reading_time }} min read</p>
+                <p class="font-inter text-sm text-gray-500">{{ post.date | date: "%d %B, %Y" }}</p>
+                <h2 class="font-montserrat text-xl font-semibold my-2">{{ post.title }}</h2>
                 <!-- Truncate the excerpt to the first 10 words so cards can maintain uniform size-->
-                <p class="text-base text-gray-700 mb-3">
+                <p class="font-inter text-base text-gray-700 mb-3">
                   {{ post.excerpt | truncatewords: 10 }}
                 </p>
               </div>
-              <span class="text-blue-500 font-bold hover:underline">Read More →</span>
+              <span class="font-inter text-blue-500 font-bold hover:underline">Read More →</span>
             </div>
           </a>
           {% endfor %}

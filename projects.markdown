@@ -15,13 +15,13 @@ permalink: /projects
     >
       <!-- Left Section: Title -->
       <div class="flex items-center">
-        <h2 class="text-2xl font-bold text-[{{ site.text-colors.base-black }}]">
+        <h2 class="text-2xl font-montserrat font-bold text-[{{ site.text-colors.base-black }}]">
           {{ project.title }}
         </h2>
       </div>
 
       <!-- Right Section: Status Tags -->
-      <div class="flex flex-wrap gap-2">
+      <div class="font-inter flex flex-wrap gap-2">
         {% for status in project.status %} {% if status == "active" %}
         <span
           class="bg-green-200 text-green-700 px-4 py-2 rounded-full text-sm font-bold"
@@ -45,14 +45,14 @@ permalink: /projects
     <div class="flex flex-wrap gap-2">
       {% for tag in project.tags %}
       <span
-        class="bg-blue-200 text-blue-700 px-3 py-1 rounded-full text-sm font-bold"
+        class="bg-blue-200 text-blue-700 px-3 py-1 rounded-full text-sm font-inter font-bold"
         >{{ tag }}</span
       >
       {% endfor %}
     </div>
 
     <!-- Description Section -->
-    <p class="text-[{{ site.text-colors.base-black }}] text-sm">
+    <p class="font-inter text-[{{ site.text-colors.base-black }}] text-sm">
       {{ project.short_description }}
     </p>
 
@@ -70,7 +70,7 @@ permalink: /projects
       <!-- GitHub Button -->
       <a
         href="{{ project.github_url }}"
-        class="flex items-center space-x-2 bg-[{{ site.bg-colors.baseBlack }}] text-[{{ site.text-colors.white }}] px-4 py-2 rounded-lg hover:bg-gray-800"
+        class="flex items-center space-x-2 bg-[{{ site.bg-colors.baseBlack }}] text-[{{ site.text-colors.white }}] font-inter px-4 py-2 rounded-lg hover:bg-gray-800"
         target="_blank"
         rel="noopener noreferrer"
       >

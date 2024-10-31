@@ -11,20 +11,20 @@
       class="event-hero flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-0 max-w-[900px] mx-auto"
     >
       <div
-        class="title text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pt-10 pb-3"
+        class="font-montserrat title text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pt-10 pb-3"
       >
         {{ page.title }}
       </div>
 
       <div
-        class="title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
+        class="font-inter title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
       >
         {% if page.end_date %} {{ page.date | date: "%a, %b %e, %Y" }} - {{
         page.end_date | date: "%a, %b %e, %Y" }} {% else %} {{ page.date | date:
         "%a, %b %e, %Y" }} {% endif %}
       </div>
       <div
-        class="title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
+        class="font-inter title text-20px lg:text-xl md:text-xl sm:text-[20px] text-gray-500"
       >
         {{ page.time }}
       </div>
@@ -33,7 +33,7 @@
       <a href="{{ page.registration_link }}">
         <div class="relative inset-0 pb-10">
           <button
-            class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+            class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-inter font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
           >
             Register Now
           </button>
@@ -48,7 +48,7 @@
         alt="{{ page.title }}"
         class="max-w-[900px] w-full h-auto aspect-ratio-[5/3] rounded-lg object-cover"
       />
-      <div class="container py-2 items-center">
+      <div class="font-inter container py-2 items-center">
         {{content}}
       </div>
     </div>
