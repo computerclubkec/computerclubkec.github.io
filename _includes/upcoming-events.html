@@ -1,6 +1,6 @@
 <div class="container py-10 px-2 md:mx-auto" data-aos="fade-up">
   <h2
-    class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
+    class="font-montserrat text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8"
   >
     Upcoming Events
   </h2>
@@ -10,7 +10,7 @@
   'date' %} {% assign event_count = upcoming_events | size %}
 
   {% if event_count == 0 %}
-<div class="text-center text-gray-500 text-xl mt-16">
+<div class="font-inter text-center text-gray-500 text-xl mt-16">
   No upcoming events at the moment. Please check back later.
 </div>
 
@@ -36,8 +36,8 @@
 
           <!-- Event Info -->
           <div class="md:w-2/3 w-full md:pl-6">
-            <h3 class="md:text-2xl text-base font-bold">{{ event.title }}</h3>
-            <p class="text-sm text-gray-400 italic font-semibold">
+            <h3 class="font-montserrat md:text-2xl text-base font-bold">{{ event.title }}</h3>
+            <p class="font-inter text-sm text-gray-400 italic font-semibold">
               <!-- Display event dates -->
               {% if event.end_date %}
               <!-- Multi-day event: Show start and end dates -->
@@ -48,7 +48,7 @@
             </p>
 
             <!-- Event Description with Show More/Show Less -->
-            <p class="text-sm my-2">
+            <p class="font-inter text-sm my-2">
               <!-- Shortened version of the description -->
               <span class="event-description-short"
                 >{{ event.description | truncate: 120, "..." }}</span
@@ -67,7 +67,7 @@
               </button>
             </p>
 
-            <p class="text-sm mb-1 text-gray-400 font-bold">
+            <p class="font-inter text-sm mb-1 text-gray-400 font-bold">
               {{ event.participants }}
             </p>
 
@@ -75,7 +75,7 @@
             <a href="{{ event.registration_link }}">
               <div class="relative inset-0">
                 <button
-                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
+                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-inter font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
                 >
                   Register Now
                 </button>

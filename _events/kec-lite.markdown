@@ -24,22 +24,22 @@ custom_layout: true
 
 <!-- Content -->
 <div class="container py-10 px-2 mx-auto items-center">
-  <h2 class="text-5xl font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8">
+  <h2 class="text-5xl font-montserrat font-bold text-[{{site.text-colors.darkblue}}] text-center mb-8">
     KEC LITE: A Premier Technical Exhibition
   </h2>
     
   <!-- Image Needs to be changed later-->
-  <div class="w-full h-[518.54px] bg-cover bg-center rounded-[24px] mx-auto" style="background-image: url('../assets/images/events/kec-lite-2024.png'); background-size: contain; background-repeat: no-repeat;">
+  <div class="w-full h-[518.54px] bg-cover bg-center rounded-[24px] mx-auto" style="background-image: url('../assets/images/events/kec-lite-2024/banner.jpg'); background-size: contain; background-repeat: no-repeat;">
   </div>
 
 
   <!-- Description -->
-  <p class="text-[16px] leading-[120%] font-normal text-black mx-auto mt-4">
+  <p class="text-[16px] leading-[120%] font-inter font-normal text-black mx-auto mt-4">
     KEC LITE (Learning and Innovating Technology for Enhancement) is an annual two-day inter-college technical exhibition organized by Kantipur Engineering College. The event is a platform for showcasing the talents and abilities of engineering and science students from different colleges and universities.
   </p>
 
   <!-- Overview -->
-  <div class="mx-auto mt-4">
+  <div class="font-inter mx-auto mt-4">
     <h3 class="text-[24px] font-bold text-black">Overview of KEC LITE</h3>
     <p class="text-[16px] leading-[120%] font-normal text-black">
       <b>Date:</b> Annually in February<br>
@@ -51,7 +51,7 @@ custom_layout: true
   </div>
 
   <!-- Events -->
-  <div class="mx-auto mt-4">
+  <div class="font-inter mx-auto mt-4">
     <h3 class="text-[24px] font-bold text-black">Major Events under KEC Computer Club</h3>
     <p class="text-[16px] leading-[120%] font-normal text-black">
       The Computer Club at KEC plays a crucial role in KEC LITE by hosting events that focus on software and programming-related activities. Major events include:
@@ -66,7 +66,7 @@ custom_layout: true
   </div>
 
   <!-- Objectives-->
-  <div class="mx-auto mt-4">
+  <div class="font-inter mx-auto mt-4">
     <h3 class="text-[24px] font-bold text-black">Objectives of KEC LITE</h3>
     <ol class="list-decimal list-inside">
         <li>To provide students with a platform to develop practical knowledge and sharpen their technical skills.</li>
@@ -77,7 +77,7 @@ custom_layout: true
   </div>
 
   <!-- Contributing -->
-  <div class="mx-auto mt-4">
+  <div class="font-inter mx-auto mt-4">
     <h3 class="text-[24px] font-bold text-black">Contribution Opportunities</h3>
     <p class="text-[16px] leading-[120%] font-normal text-black">
       KEC LITE thrives on student participation and collaboration. If you're a student or tech enthusiast, join the Computer Club to get involved in organizing or competing in KEC LITE. Whether you're interested in hackathons, software development, or simply learning from industry experts, this is the place to build your skills and network.<br>Stay connected with the Computer Club for updates on upcoming events and opportunities to participate in KEC LITE and other exciting activities!

@@ -12,7 +12,7 @@ permalink: /events/past-events
   {% assign event_count = past_events | size %}
 
   {% if event_count == 0 %}
-  <div class="text-center text-gray-500 text-xl mt-16">
+  <div class="font-inter text-center text-gray-500 text-xl mt-16">
   No recent events at the moment. Please check back later.
   </div>
 
@@ -41,8 +41,8 @@ permalink: /events/past-events
 
       <!-- Event Info Below Image -->
       <div class="text-justify">
-        <h3 class="text-xl font-semibold text-white truncate">{{ event.title }}</h3>
-        <p class="text-sm text-gray-300 italic font-semibold">
+        <h3 class="font-montserrat text-xl font-semibold text-white truncate">{{ event.title }}</h3>
+        <p class="font-inter text-sm text-gray-300 italic font-semibold">
           {% if event.end_date %}
             {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
           {% else %}
@@ -51,7 +51,7 @@ permalink: /events/past-events
         </p>
 
         <!-- Event Description with Show More/Show Less -->
-        <p class="text-sm my-2 text-white">
+        <p class="font-inter text-sm my-2 text-white">
           <span class="event-description-short">{{ event.description | truncate: 120, "..." }}</span>
           <span class="event-description-full hidden">{{ event.description }}</span>
 
