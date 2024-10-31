@@ -2,7 +2,6 @@
 layout: default
 title: Upcoming Events
 permalink: /events/upcoming
-
 ---
 
 <div class="container pb-10 px-2 md:mx-auto" data-aos="fade-up">
@@ -22,14 +21,14 @@ permalink: /events/upcoming
   {% elsif event_count == 2 %}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
   {% else %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 items-start"> <!-- Added items-start -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 items-start">
   {% endif %}
 
   {% for event in upcoming_events %}
     <div
       class="event-card relative bg-[{{site.bg-colors.darkBlue}}] p-6 rounded-2xl shadow-lg transition duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
     >
-    <a href="{{ event.url }}" class="absolute inset-0 block"></a>
+      <a href="{{ event.url }}" class="absolute inset-0 block"></a>
       <!-- Event Image on Top -->
       <div class="w-full flex justify-center">
         <img loading="lazy"
@@ -59,16 +58,25 @@ permalink: /events/upcoming
           <button class="text-blue-400 read-less hidden relative z-10">Show Less</button>
         </p>
 
-        <!-- Register Button -->
-        <a href="{{ event.registration_link }}">
-              <div class="relative inset-0">
-                <button
-                  class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-inter font-semibold px-4 py-2 rounded-lg mt-2 hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300"
-                >
-                  Register Now
-                </button>
-              </div>
-            </a>
+         <!-- Button Container -->
+        <div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-2 lg:space-y-0 mt-2 relative z-20">
+          <!-- Register Now Button -->
+          <a href="{{ event.registration_link }}">
+            <button class="inline-block bg-[{{site.bg-colors.orange-button}}] text-white font-inter font-semibold px-4 py-2 rounded-lg hover:bg-[{{site.bg-colors.orange-button}}]/80 transition-colors duration-300">
+              Register Now
+            </button>
+          </a>
+
+          <!-- Calendar Button Component -->
+          {% assign uid = event.url %}
+          {% assign start_date = event.date | date: '%Y%m%dT%H%M%S' %}
+          {% assign end_date = event.end_date | date: '%Y%m%dT%H%M%S' %}
+          {% assign title = event.title %}
+          {% assign description = event.description %}
+          {% assign location = event.location %}
+          
+          {% include add-to-calendar-button.html uid=uid start_date=start_date end_date=end_date title=title description=description location=location %}
+        </div>
       </div>
     </div>
   {% endfor %}

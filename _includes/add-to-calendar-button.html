@@ -1,0 +1,21 @@
+<a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//YourSite//EventCalendar//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:{{ uid }}
+DTSTART:{{ start_date }}
+{% if end_date %}
+DTEND:{{ end_date }}
+{% endif %}
+SUMMARY:{{ title }}
+DESCRIPTION:{{ description }}
+LOCATION:{{ location }}
+URL:{{ url }}
+END:VEVENT
+END:VCALENDAR" download="{{ title | slugify }}.ics">
+  <button
+    class="inline-block border-2 border-orange-500 text-orange-500 font-semibold px-1.5 py-1.5 rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300">
+    Add to Calendar
+  </button>
+</a>

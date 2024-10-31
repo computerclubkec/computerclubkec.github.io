@@ -71,7 +71,9 @@
               {{ event.participants }}
             </p>
 
-            <!-- Register Button -->
+            <!-- Button Container -->
+          <div class="flex flex-col lg:flex-row items-center lg:space-x-4 space-y-2 lg:space-y-0 mt-2 relative z-20">
+            <!-- Register Now Button -->
             <a href="{{ event.registration_link }}">
               <div class="relative inset-0">
                 <button
@@ -81,6 +83,18 @@
                 </button>
               </div>
             </a>
+  
+            <!-- Calendar Button Component -->
+            {% assign uid = event.url %}
+            {% assign start_date = event.date | date: '%Y%m%dT%H%M%S' %}
+            {% assign end_date = event.end_date | date: '%Y%m%dT%H%M%S' %}
+            {% assign title = event.title %}
+            {% assign description = event.description %}
+            {% assign location = event.location %}
+            
+            {% include add-to-calendar-button.html uid=uid start_date=start_date end_date=end_date title=title description=description location=location  %}
+  
+          </div>
           </div>
         </div>
       </div>
