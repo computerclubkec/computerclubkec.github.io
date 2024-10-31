@@ -74,12 +74,10 @@ computerclubkec.github.io/
 
 ### Prerequisites
 
-- [Docker](https://www.docker.com/) (recommended)
-- [Jekyll](https://jekyllrb.com/) v4.2+
-- [Ruby](https://www.ruby-lang.org/) v2.7+
-- [Node.js](https://nodejs.org/) v14+
-- [Git](https://git-scm.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Docker](https://www.docker.com/) (recommended): For containerizing and deploying applications, making development and deployment more consistent and portable.
+- [Jekyll](https://jekyllrb.com/): Static site generator that converts markdown and other formats into static HTML websites, simplifying web development.
+- [Git](https://git-scm.com/):  Distributed version control system for tracking changes in source code during development.
+- [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework that allows rapid custom design by composing utility classes directly in HTML.
 
 ### Design Prototype
 
