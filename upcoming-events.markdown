@@ -32,7 +32,7 @@ permalink: /events/upcoming
       <!-- Event Image on Top -->
       <div class="w-full flex justify-center">
         <img loading="lazy"
-          src="{{ event.banner_image }}"
+          src="{{ event.thumbnail }}"
           alt="{{ event.title }}"
           class="w-full h-auto rounded-md mb-4"
         />
@@ -40,15 +40,23 @@ permalink: /events/upcoming
 
       <!-- Event Info Below Image -->
       <div class="text-justify">
-        <h3 class="text-xl font-montserrat font-semibold text-white">{{ event.title }}</h3>
-        <p class="text-sm text-gray-300 italic font-inter font-semibold">
+        
+        <!-- Date Badge -->
+        <div
+          class="inline-flex items-center gap-2 mb-2 text-sm font-inter font-regular text-[{{site.text-colors.white}}]">
+          <i class="fa-solid fa-calendar-days"></i>
+          <!-- Event Date Logic -->
           {% if event.end_date %}
-            {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
+          <!-- Multi-day event: Show start and end dates -->
+          {{ event.date | date: "%a, %b %e" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
           {% else %}
-            {{ event.date | date: "%a, %b %e, %Y" }}
+          <!-- Single-day event: Show only the start date -->
+          {{ event.date | date: "%a, %B %e, %Y" }}
           {% endif %}
-        </p>
+        </div>
 
+        <h3 class="text-xl font-montserrat font-semibold text-white">{{ event.title }}</h3>
+        
         <!-- Event Description with Show More/Show Less -->
         <p class="font-inter text-sm my-2 text-white">
           <span class="event-description-short">{{ event.description | truncate: 120, "..." }}</span>
