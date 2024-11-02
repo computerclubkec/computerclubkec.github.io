@@ -2,21 +2,21 @@
 layout: event
 
 title: "Learning Utsav"
-description: "A 30-day challenge to skill up, share progress, and celebrate. This challenge is a great way to engage with others and learn new skills. Participants can collaborate on projects, join discussions, and attend workshops tailored to improving their skills. The event focuses on collaborative learning, hands-on experience, and enhancing skill sets in a supportive environment."
+description: "A 30-day self-learning challenge running from Ghatasthapana to Bhaitika, where students, tech enthusiasts, and professionals commit to daily learning and share their progress online. This initiative, led by Kantipur Engineering College's Electronics Club with the support of the KEC Computer Club and student clubs all across Nepal, offers participants the chance to grow in fields like electronics, coding, AI, cybersecurity, and cloud tech."
 thumbnail: "/assets/images/events/learning-utsav-2024/thumbnail.png"
 banner_image: "/assets/images/events/learning-utsav-2024/banner.png"
 
 date: 2024-10-03
 end_date: 2024-11-03
 time: "All day"
-location: "Online & Kantipur Engineering College"
+location: "Online"
 
-registration_link: "#"
-participants: "720+ people registered"
+registration_link: "https://linktr.ee/learningutsav/"
+participants: "720+ Registrations"
 
 completed: false
 
-tags: ["challenge", "learning", "skills"]
+tags: ["challenge", "self-learning", "skills"]
 published: true
 
 custom_layout: false
