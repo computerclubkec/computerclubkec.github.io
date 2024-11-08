@@ -34,11 +34,27 @@ permalink: /about
       <div class="text-left w-full mt-4">
         <h3 class="font-montserrat text-lg text-[{{site.text-colors.darkblue}}] font-bold mb-2 text-center lg:text-left">Follow us on</h3>
         <div class="flex justify-center lg:justify-start space-x-4 flex-wrap">
-          <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/{{ site.linkedin_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-github"></i></a>
-          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="text-2xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@{{ site.tiktok_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://discord.gg/{{ site.discord_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/{{ site.linkedin_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="text-2xl hover:text-gray-400">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
       </div>
     </div>
