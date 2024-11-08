@@ -1,18 +1,18 @@
 ---
 layout: event
 
-title: "Community Outreach Session on Practical Skills in Prompt Engineering"
+title: "Community Outreach: Practical Skills in Prompt Engineering"
 description: "Get ready for an exciting 36-hour hackathon where participants will tackle real-world problems, innovate solutions, and compete for prizes. The event fosters collaboration, creativity, and intense problem-solving, making it a must-attend event for anyone passionate about coding and tech innovation."
 thumbnail: "/assets/images/events/practical-skills-in-prompt-engineering-2024/thumbnail.JPG"
 banner_image: "/assets/images/events/practical-skills-in-prompt-engineering-2024/banner.png"
 
 date: 2024-07-12
 end_date: 
-time: "9:00 AM - 10:00 PM"
-location: "Kantipur Engineering College"
+time: "9:00 AM - 11:00 AM"
+location: "Kitini Higher Secondary School, Godawari, Lalitpur"
 
 registration_link: "#"
-participants: "150+ people registered"
+participants: "20 Active Participants"
 
 completed: true
 

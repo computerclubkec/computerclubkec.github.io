@@ -68,6 +68,7 @@ collections:
 
 bg-colors:
   orange-button: "#FB8500"
+  orange-button-hover: "#D97C00"
   goldenOrange-button: "#FFB703"
   darkBlue: "#023047"
   gray: "#E0E5F5"
@@ -85,6 +86,7 @@ bg-colors:
   lightGray: "#D9D9D9"
 
 text-colors:
+  orange: "#FB8500"
   base-black: "#0A0A0B"
   gray: "#5A5555"
   darkblue: "#023047"

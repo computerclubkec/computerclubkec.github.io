@@ -2,21 +2,21 @@
 layout: event
 
 title: "AWS Bootcamp and Gen AI CAMP"
-description: "Join our interactive workshop to learn web development from the ground up!"
+description: "In collaboration with KEC Electronics Club and AWS Cloud Club - TU Nepal, we explored AWS fundamentals and Generative AI using AWS Bedrock. Led by AWS experts Akrur Neupane and Upendra Prasad Neupane, the camp featured hands-on sessions with AWS S3, EC2, and GenAI insights."
 thumbnail: "/assets/images/events/aws-bootcamp-genai-camp-2024/thumbnail.jpg"
 banner_image: "/assets/images/events/aws-bootcamp-genai-camp-2024/banner.png"
 
 date: 2024-06-27
 end_date: 2024-06-29
-time: "10:00 AM - 4:00 PM"
-location: "Kantipur Engineering College Computer Lab"
+time: "1:00 PM - 4:00 PM"
+location: "Kantipur Engineering College, Dhapakhel, Lalitpur"
 
 registration_link: "#"
-participants: "50+ people registered"
+participants: "100+ Active Participants"
 
 completed: true
 
-tags: ["workshop", "web development", "frontend"]
+tags: ["aws", "bootcamp", "genai"]
 published: true
 
 custom_layout: false

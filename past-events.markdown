@@ -41,17 +41,24 @@ permalink: /events/past-events
 
       <!-- Event Info Below Image -->
       <div class="text-justify">
-        <h3 class="font-montserrat text-xl font-semibold text-white truncate">{{ event.title }}</h3>
-        <p class="font-inter text-sm text-gray-300 italic font-semibold">
+        <!-- Date Badge -->
+        <div
+          class="inline-flex items-center gap-2 mb-2 text-sm font-inter font-regular text-[{{site.text-colors.white}}]">
+          <i class="fa-solid fa-calendar-days"></i>
+          <!-- Event Date Logic -->
           {% if event.end_date %}
-            {{ event.date | date: "%a, %b %e, %Y" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
+          <!-- Multi-day event: Show start and end dates -->
+          {{ event.date | date: "%a, %b %e" }} - {{ event.end_date | date: "%a, %b %e, %Y" }}
           {% else %}
-            {{ event.date | date: "%a, %b %e, %Y" }}
+          <!-- Single-day event: Show only the start date -->
+          {{ event.date | date: "%a, %B %e, %Y" }}
           {% endif %}
-        </p>
+        </div>
+
+        <h3 class="font-montserrat text-xl font-semibold text-white truncate">{{ event.title }}</h3>
 
         <!-- Event Description with Show More/Show Less -->
-        <p class="font-inter text-sm my-2 text-white">
+        <p class="font-inter text-sm my-1 text-white">
           <span class="event-description-short">{{ event.description | truncate: 120, "..." }}</span>
           <span class="event-description-full hidden">{{ event.description }}</span>
 

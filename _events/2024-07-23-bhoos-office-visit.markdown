@@ -2,21 +2,21 @@
 layout: event
 
 title: "Bhoos Office Visit"
-description: "Dive into the world of AI and Machine Learning with industry experts sharing their knowledge and experiences."
+description: "KEC Computer Club visited Bhoos Games, Nepal's top game development company. We explored their organizational structure, leadership techniques, and innovative marketing strategies."
 thumbnail: "/assets/images/events/bhoos-office-visit-2024/thumbnail.png"
 banner_image: "/assets/images/events/bhoos-office-visit-2024/banner.png"
 
 date: 2024-07-23
 end_date: 
-time: "1:00 PM - 4:00 PM"
-location: "Kantipur Engineering College Auditorium"
+time: "2:00 PM - 3:00 PM"
+location: "Bhoos Games, Kupondole, Lalitpur"
 
 registration_link: "#"
-participants: "200+ people registered"
+participants: "10 Participants"
 
 completed: true
 
-tags: ["AI", "machine learning", "seminar"]
+tags: ["industry exposure", "office visit", "bhoos games"]
 published: true
 
 custom_layout: false

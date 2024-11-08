@@ -13,9 +13,8 @@ DESCRIPTION:{{ description }}
 LOCATION:{{ location }}
 URL:{{ url }}
 END:VEVENT
-END:VCALENDAR" download="{{ title | slugify }}.ics">
-  <button
-    class="inline-block border-2 border-orange-500 text-orange-500 font-semibold px-1.5 py-1.5 rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300">
+END:VCALENDAR" download="{{ title | slugify }}.ics"
+    class="border-2 border-[{{site.bg-colors.orange-button}}] text-[{{site.bg-colors.orange-button}}] font-inter font-semibold px-4 py-2 rounded-lg hover:bg-[{{site.bg-colors.orange-button}}] flex items-center gap-2 hover:text-white transition-colors duration-300">
+    <i class="fa-solid fa-calendar-plus text-sm"></i>
     Add to Calendar
-  </button>
 </a>

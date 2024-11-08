@@ -2,21 +2,21 @@
 layout: event
 
 title: "Editorial Board Revamp"
-description: "Enhance your coding skills in a collaborative environment with our immersive Coding Bootcamp."
+description: "The editorial board is back with fresh content! From AI/ML roadmaps, AWS Bootcamp highlights, and open-source insights to practical task management tips and tech memes—explore it all. Submissions are now open for all students!"
 thumbnail: "/assets/images/events/editorial-board-revamp-2024/thumbnail.jpg"
 banner_image: "/assets/images/events/editorial-board-revamp-2024/banner.png"
 
 date: 2024-07-06
 end_date:
-time: "9:00 AM - 6:00 PM"
-location: "Kantipur Engineering College Lab"
+time: 
+location: "Kantipur Engineering College, Dhapakhel, Lalitpur"
 
 registration_link: "#"
-participants: "100+ people registered"
+participants: 
 
 completed: true
 
-tags: ["bootcamp", "coding", "workshop"]
+tags: ["editorial board", "revamp", "notice board"]
 published: true
 
 custom_layout: false
