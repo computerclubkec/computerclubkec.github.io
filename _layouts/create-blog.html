@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include header.html %}
+  <style>
+
+    /* Wrapper Setup prevent problems with footer */
+    .wrapper {
+      display: flex;
+      justify-content: center; 
+      align-items: auto; 
+      min-height: 100vh; 
+      padding: 0; 
+      
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px; 
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: auto; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+
+    .card-header {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 12px; /* Rounded corners */
+      margin-top: 0.25rem;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    /* Image Preview and Remove Button */
+    .image-preview {
+      margin-top: 1rem;
+      max-width: 150px; 
+      height: auto;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      display: none; 
+    }
+
+    .remove-image-btn {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      display: none; 
+    }
+
+    /* Preview Button */
+    .preview-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .preview-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Blog Preview Section */
+    .blog-preview {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      display: none; 
+    }
+
+    .blog-preview h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Centered Layout Styling */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .card-header {
+        font-size: 1.5rem;
+      }
+
+      .form-group input, .form-group textarea {
+        font-size: 0.875rem;
+      }
+
+      .preview-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .remove-image-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  {% include nav.html %}
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          Create a new blog
+        </div>
+        <form id="blog-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Enter your blog title">
+          </div>
+          <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" placeholder="Write your blog content here"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="image">Upload an Image</label>
+            <input type="file" id="image" accept="image/*">
+            <img id="image-preview" class="image-preview" alt="Preview">
+            <button type="button" id="remove-image" class="remove-image-btn" style="display: none;">Remove Image</button>
+          </div>
+          <div class="form-group">
+            <button type="button" id="preview-btn" class="preview-btn">Preview</button>
+          </div>
+        </form>
+
+        <!-- Blog Preview Section -->
+        <div class="blog-preview">
+          <h2 id="preview-title">Blog Title Preview</h2>
+          <p id="preview-content">Your blog content will appear here...</p>
+          <img id="preview-image" class="image-preview" src="#" alt="Image Preview" style="display: none;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const titleInput = document.getElementById('title');
+    const contentInput = document.getElementById('content');
+    const imageInput = document.getElementById('image');
+    const previewBtn = document.getElementById('preview-btn');
+    const previewTitle = document.getElementById('preview-title');
+    const previewContent = document.getElementById('preview-content');
+    const imagePreview = document.getElementById('image-preview');
+    const previewImage = document.getElementById('preview-image');
+    const removeImageBtn = document.getElementById('remove-image');
+    const blogPreview = document.querySelector('.blog-preview');
+
+    // Update title preview
+    titleInput.addEventListener('input', () => {
+      previewTitle.textContent = titleInput.value || 'Blog Title Preview';
+    });
+
+    // Update content preview
+    contentInput.addEventListener('input', () => {
+      previewContent.textContent = contentInput.value || 'Your blog content will appear here...';
+    });
+
+    // Handle image upload
+    imageInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          imagePreview.src = e.target.result;
+          imagePreview.style.display = 'block';
+          previewImage.src = e.target.result;
+          previewImage.style.display = 'block';
+          removeImageBtn.style.display = 'inline-block';  
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Toggle Preview section
+    previewBtn.addEventListener('click', () => {
+      if (blogPreview.style.display === 'none') {
+        blogPreview.style.display = 'block';  
+        previewBtn.textContent = 'Hide Preview'; 
+      } else {
+        blogPreview.style.display = 'none';  
+        previewBtn.textContent = 'Preview';  
+      }
+    });
+
+    // Remove image
+    removeImageBtn.addEventListener('click', () => {
+      imagePreview.src = '';
+      imagePreview.style.display = 'none';
+      previewImage.src = '';
+      previewImage.style.display = 'none';
+      removeImageBtn.style.display = 'none';  
+      imageInput.value = '';  
+    });
+  </script>
+
+  {% include footer.html %}
+</body>
+</html>
