@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog-post
 title: "The Future of Remote Work Technology"
 date: 2024-10-14
 image: ../assets/images/blog/blog2.png
