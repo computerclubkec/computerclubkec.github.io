@@ -1,144 +1,58 @@
-import os
-import pytest
+import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Base URL for the application
-BASE_URL = "http://localhost:4000"
 
-@pytest.fixture(scope="function")
-def driver():
-    """
-    Fixture to initialize and quit the WebDriver.
-    """
-    driver = webdriver.Chrome()  # Ensure chromedriver is in PATH
-    driver.implicitly_wait(10)  
-    yield driver
-    driver.quit()
+class TestGoogleForm(unittest.TestCase):
+    def setUp(self):
+        """Set up the WebDriver."""
+        self.driver = webdriver.Chrome()  # Ensure ChromeDriver is installed and in PATH
+        self.driver.maximize_window()
 
+    def test_fill_google_form(self):
+        """Test case for filling out the Google Form."""
+        driver = self.driver
 
-def test_title_input_updates_preview(driver):
-    driver.get(f"{BASE_URL}/create-blog")
+        
+        driver.get("http://localhost:4000/create-blog")
 
-    # Locate and toggle the preview section
-    preview_btn = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "preview-btn"))
-    )
-    preview_btn.click()  # Ensure the preview section is visible
-    blog_preview = driver.find_element(By.CLASS_NAME, "blog-preview")
-    
-    # Wait for the preview section to be visible
-    WebDriverWait(driver, 5).until(
-        lambda d: blog_preview.is_displayed(),
-        message="Blog preview section did not show after clicking preview button"
-    )
+        # Switch to the iframe containing the Google Form
+        iframe = driver.find_element(By.TAG_NAME, "iframe")
+        driver.switch_to.frame(iframe)
 
-    # Locate title input and preview elements
-    title_input = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "title"))
-    )
-    preview_title = driver.find_element(By.ID, "preview-title")
+        # Wait for the form to load
+        wait = WebDriverWait(driver, 10)
 
-    # Test data
-    test_title = "Test Blog Title"
+        # Fill out the "Title" question
+        title_field = wait.until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, 'input[aria-labelledby="i1 i4"]'))
+        )
+        title_field.send_keys("Sample Title")
 
-    # Enter title, clear input first, and validate the preview updates
-    title_input.clear()  # Clear the existing text if any
-    title_input.send_keys(test_title)
+        # Fill out the "Content" question
+        content_field = wait.until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, 'textarea[aria-labelledby="i6 i9"]'))
+        )
+        content_field.send_keys("This is a test content for the Google Form.")
 
-    # Wait for the preview to update with the new title
-    WebDriverWait(driver, 5).until(
-        lambda d: preview_title.text == test_title,
-        message=f"Title preview did not update correctly. Expected: '{test_title}', but got: '{preview_title.text}'"
-    )
+        # Submit the form
+        submit_button = wait.until(
+            EC.element_to_be_clickable((By.XPATH, '//span[contains(@class, "NPEfkd") and text()="Submit"]'))
+        )
+        submit_button.click()
 
-    # Assertion to confirm title preview is updated
-    assert preview_title.text == test_title, f"Expected '{test_title}', but got '{preview_title.text}'"
+        # Verify submission
+        success_message = wait.until(
+            EC.presence_of_element_located((By.XPATH, '//div[contains(@class, "vHW8K") and text()="Your response has been recorded."]'))
+        )
+        self.assertTrue(success_message.is_displayed(), "Form submission failed!")
+
+    def tearDown(self):
+        """Tear down the WebDriver."""
+        self.driver.quit()
 
 
-
-
-def test_content_input_updates_preview(driver):
-    driver.get(f"{BASE_URL}/create-blog")
-
-    # Locate and toggle the preview section
-    preview_btn = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "preview-btn"))
-    )
-    preview_btn.click()  # Ensure the preview section is visible
-    blog_preview = driver.find_element(By.CLASS_NAME, "blog-preview")
-    WebDriverWait(driver, 5).until(
-        lambda d: blog_preview.is_displayed(),
-        message="Blog preview section did not show after clicking preview button"
-    )
-
-    # Locate content input and preview elements
-    content_input = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "content"))
-    )
-    preview_content = driver.find_element(By.ID, "preview-content")
-
-    # Test data
-    test_content = "This is a test blog content."
-
-    # Clear the input field, enter content, and validate the preview updates
-    content_input.clear()
-    content_input.send_keys(test_content)
-
-    # Wait for the preview content to update
-    WebDriverWait(driver, 5).until(
-        lambda d: preview_content.text == test_content,
-        message="Content preview did not update correctly"
-    )
-
-    # Assertion to check if the content preview updates correctly
-    assert preview_content.text == test_content, f"Expected '{test_content}', but got '{preview_content.text}'"
-
-
-def test_image_upload_and_preview(driver):
-    driver.get(f"{BASE_URL}/create-blog")
-
-    # Locate image input and preview elements
-    image_input = driver.find_element(By.ID, "image")
-    image_preview = driver.find_element(By.ID, "image-preview")
-
-    # Test image path
-    image_path = os.path.abspath("_test/test-image.jpg")  # Replace with actual path
-    if not os.path.exists(image_path):
-        raise FileNotFoundError(f"Test image not found at {image_path}")
-
-    # Upload image and validate the preview
-    image_input.send_keys(image_path)
-    WebDriverWait(driver, 5).until(
-        lambda d: image_preview.is_displayed(),
-        message="Image preview did not appear after upload"
-    )
-    assert image_preview.is_displayed(), "Image preview did not appear after upload"
-
-
-def test_preview_toggle(driver):
-    driver.get(f"{BASE_URL}/create-blog")
-
-    # Locate preview button and blog preview section
-    preview_btn = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "preview-btn"))
-    )
-    blog_preview = driver.find_element(By.CLASS_NAME, "blog-preview")
-
-    # Toggle preview section
-    preview_btn.click()
-    WebDriverWait(driver, 5).until(
-        lambda d: blog_preview.is_displayed(),
-        message="Blog preview section did not show after clicking preview button"
-    )
-    assert blog_preview.is_displayed(), "Blog preview section did not show after clicking preview button"
-
-    # Hide preview section and verify
-    preview_btn.click()
-    WebDriverWait(driver, 5).until(
-        lambda d: not blog_preview.is_displayed(),
-        message="Blog preview section did not hide after clicking preview button again"
-    )
-    assert not blog_preview.is_displayed(), "Blog preview section did not hide after clicking preview button again"
+if __name__ == "__main__":
+    unittest.main()
