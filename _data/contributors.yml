@@ -1,16 +1,16 @@
 contributors_list:
   - name: Aayush Shrestha
     title: Contributor
-    image: /assets/images/displaypicture.png
-    linkedin: 
-    twitter:
-    description: Aayush description here.
+    image: /assets/images/contributors/aayushshrestha.jpg
+    linkedin: aayushrestha
+    twitter: aayushrestha5
+    description: A software engineer who can spend hours perfecting a single line of code just to make the UI feel right. Loves building responsive apps, breaking things to fix them better, and asking “what if we try this?” more times than anyone can count.
   - name: Samrat Kumar Adhikari
     title: Contributor
     image: /assets/images/contributors/samratkumaradhikari.png
     linkedin: samrat-kumar-adhikari
     twitter: marcusdayounger
-    description: Tech-savvy student passionate about Python and JavaScript. Working on personal projects and skin cancer detection research. Enjoys history, music, sports and trekking. 
+    description: Tech-savvy student passionate about Python and JavaScript. Working on personal projects and skin cancer detection research. Enjoys history, music, sports and trekking.
   - name: Rakesh Pandey
     title: Contributor
     image: /assets/images/contributors/rakeshpandey.png
