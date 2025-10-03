@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {% include header.html %}
+      <style>
+         /* Blog header styles */
+         .blog-header {
+         background-color: #f8f9fa; 
+         color: #333333; 
+         text-align: center;
+         padding: 2.5rem 0;
+         }
+         .blog-header h2 {
+         font-size: 2.5rem;
+         font-weight: bold;
+         margin: 0;
+         }
+         .blog-header p {
+         font-size: 1rem;
+         margin-top: 0.5rem;
+         }
+         /* Blog card styles */
+         .blog-card {
+         background-color: rgb(255, 255, 255);
+         border: 2px solid #000000; 
+         border-radius: 10px; 
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+         padding: 1.5rem; 
+         max-width: 800px; 
+         margin: 2rem auto; 
+         }
+         .blog-card img {
+         border-radius: 8px;
+         margin: 2rem auto;
+         max-height: 400px;
+         max-width: 100%; 
+         object-fit: contain; 
+         }
+         .blog-card p {
+         font-size: 1.1rem;
+         line-height: 1.8;
+         color: #4a4a4a;
+         }
+      </style>
+   </head>
+   <body>
+      {% include nav.html %}
+      <div class="blog-header">
+         <h2>{{ page.title }}</h2>
+         <p>Published on {{ page.date | date: "%B %d, %Y" }} · Reading Time: {{ page.reading_time }} minutes</p>
+      </div>
+      <div class="content container mx-auto py-8 px-4">
+         <div class="blog-card">
+            <div class="blog-image">
+               {% if page.image %}
+               <img src="{{ page.image | relative_url }}" alt="Blog Image">
+               {% endif %}
+            </div>
+            <div class="blog-content">
+               <p>{{ content }}</p>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+   </body>
+</html>
