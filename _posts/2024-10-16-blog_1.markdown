@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog-post
 title: "The Rise of AI in Everyday Life"
 date: 2024-10-16
 image: ../assets/images/blog/blog3.png
