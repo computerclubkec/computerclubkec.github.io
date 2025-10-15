@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    {% include header.html %}
+    <style>
+      /* Wrapper Setup prevent problems with footer */
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: auto;
+        min-height: 100vh;
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+      }
+
+      /* Card Styling */
+      .card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .card-header {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      /* Google Form iframe */
+      iframe {
+        width: 100%;
+        height: 840px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Centered Layout Styling */
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .card-header {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body> 
+    {% include nav.html %}
+    <div class="wrapper">
+      <div class="container">
+        <div class="card">
+          <div class="card-header"> Form </div>
+          <!-- Google Form iframe -->
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBKJnsVFyDtfzmbY8FtCMEvExLt9nFUnzSLX4LRwasmV5Jwg/viewform?embedded=true" width="640" height="840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
