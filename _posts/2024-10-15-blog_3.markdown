@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog-detail
 title: "The Importance of Cybersecurity in the Digital Age"
 date: 2024-10-15
 image: ../assets/images/blog/blog1.png
@@ -8,6 +8,7 @@ excerpt: "As our world becomes increasingly digital, the importance of cybersecu
 ---
 
 <!-- Full blog content starts here -->
+
 As our world becomes increasingly digital, the importance of cybersecurity cannot be overstated. With more personal data online than ever before, individuals and organizations face constant threats from cybercriminals.
 Implementing robust security measures, such as strong passwords, two-factor authentication, and regular software updates, is crucial to safeguarding sensitive information. Furthermore, educating employees about phishing attacks and safe browsing practices can significantly reduce vulnerabilities.
 In an age where data breaches can have devastating consequences, prioritizing cybersecurity is essential for protecting our digital lives.

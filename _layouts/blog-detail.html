@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+    <style>
+      .blog-wrapper {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem 1rem;
+      }
+
+      .blog-title {
+        font-size: 2.3rem;
+        font-weight: bold;
+        text-align: center;
+        color: #1f2937;
+      }
+
+      .blog-meta {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-top: 8px;
+      }
+
+      .blog-image img {
+        width: 100%;
+        border-radius: 12px;
+        margin: 2rem 0;
+        object-fit: cover;
+      }
+
+      .blog-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #374151;
+      }
+
+      .blog-content img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 2.5rem auto 0;
+        padding: 10px 18px;
+        background: #003049;
+        color: white;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        background: #014266;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include nav.html %}
+
+    <div class="blog-wrapper">
+      <!-- Title -->
+      <h1 class="blog-title">{{ page.title }}</h1>
+      <p class="blog-meta">
+        {{ page.date | date: "%B %d, %Y" }} • {{ page.reading_time }} min read
+      </p>
+
+      <!-- Image -->
+      {% if page.image %}
+      <div class="blog-image">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" />
+      </div>
+      {% endif %}
+
+      <!-- Content -->
+      <div class="blog-content">{{ content }}</div>
+
+      <!-- Back to Blog -->
+      <a href="/blog" class="back-btn">← Back to Blogs</a>
+    </div>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>
