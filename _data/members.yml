@@ -1,3 +1,47 @@
+members_2025:
+  - name: Ananda Sagar Thapa
+    title: Coordinator
+    image: /assets/images/members/anandasagarthapa.jpg
+    linkedin: aananda-sagar-thapa
+    twitter: anandasagarthapa
+    description: Music, Tech and Nonchalant.
+  - name: Prabhav Pokharel
+    title: Assitant Coordinator
+    image: /assets/images/members/prabhavpokharel.png
+    linkedin: prabhavpokharel
+    twitter: prabhavpokharel
+    description: Curious engineer and nature lover passionate about UI/UX and graphic design. He blends tech with nature's beauty and enjoys learning, travel, and exploration.
+  - name: Sahaj Pokhrel
+    title: Secretary
+    image: /assets/images/members/sahajpokhrel.jpg
+    linkedin: sahajpokharel
+    twitter: sahajpokharel
+    description: Club Secretary focused on organization and backend development. Passionate about clean code, system architecture, and smooth event execution.
+  - name: Aakash Rana
+    title: Executive Member
+    image: /assets/images/members/aakashrana.png
+    linkedin: aakashrana7
+    twitter: AquariusAakash
+    description: Passionate about technology, programming, and sports, with expertise in Python, AI, SQL, JavaScript, C++, and more. Actively involved in Nepal's tech communities, former e-sports player, and constantly evolving coding approach.
+  - name: Richa Bhatta
+    title: Executive Member
+    image: /assets/images/members/richabhatta.png
+    linkedin: richa-bhatta-2b8a4a327/
+    twitter:
+    description: She is passionate about computer engineering, programming languages, and content creation. Enjoys spending time with friends, traveling, and watching movies. Enjoys conversations and procrastination, but struggles with nail biting.
+  - name: Arustha Thapa
+    title: Executive Member
+    image: /assets/images/members/arustha.png
+    linkedin: 
+    twitter:
+    description: Executive member skilled in frontend development and rapid prototyping. Enjoys exploring new frameworks and turning ideas into functional projects.
+  - name: Siddhant Pandey
+    title: Executive Member
+    image: /assets/images/members/siddhantaclub.jpeg
+    linkedin: siddhant-pandey
+    twitter:
+    description: Executive member with full-stack interests. Active in club workshops, problem-solving, and collaborative development.
+
 members_2024:
   - name: Gaurav Giri
     title: Coordinator
@@ -75,7 +119,7 @@ members_2023:
     description: 
   - name: Gaurav Giri
     title: Executive Member
-    image: /assets/images/members/prajwalkhatiwada.png
+    image: /assets/images/members/gauravgiri.png
     linkedin: gaurovgiri
     twitter:
     description: Gaurav is the coordinator.
