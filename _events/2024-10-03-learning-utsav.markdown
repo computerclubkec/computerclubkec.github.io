@@ -14,7 +14,7 @@ location: "Online"
 registration_link: "https://linktr.ee/learningutsav/"
 participants: "720+ Registrations"
 
-completed: false
+completed: true
 
 tags: ["challenge", "self-learning", "skills"]
 published: true
